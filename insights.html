@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insights: DeepSight Strategy™</title>
+  <meta name="description" content="Executive perspectives on strategy, transformation, leadership, AI, and the Executive Next Chapter™, from DeepSight Strategy™."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .insights-intro { background:var(--cream); padding:4rem 0; border-top:3px solid var(--gold); text-align:center; }
+    .insights-intro p { font-family:var(--serif); font-style:italic; font-size:1.25rem; color:var(--navy); max-width:680px; margin:0 auto; line-height:1.75; }
+
+    .category-nav { background:var(--white); border-bottom:1.5px solid var(--gray-l); position:sticky; top:72px; z-index:50; }
+    .cat-pills { display:flex; gap:0.5rem; padding:1.25rem 0; flex-wrap:wrap; }
+    .cat-pill { font-size:0.78rem; font-weight:500; letter-spacing:0.05em; padding:0.5rem 1.1rem; border:1.5px solid var(--gray-l); border-radius:20px; color:var(--navy); text-decoration:none; transition:var(--ease); }
+    .cat-pill:hover { border-color:var(--gold); color:var(--gold); }
+
+    .cat-section { padding:4.5rem 0; }
+    .cat-section:nth-child(even) { background:var(--cream); }
+    .cat-head { margin-bottom:2.5rem; }
+    .cat-head h2 { font-size:1.6rem; }
+    .cat-head p { color:var(--gray); margin-top:0.4rem; }
+
+    .article-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+    .article-card { background:var(--white); border:1.5px solid var(--gray-l); border-radius:var(--radius); overflow:hidden; transition:var(--ease); display:flex; flex-direction:column; }
+    .article-card:hover { border-color:var(--gold); }
+    .article-img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--navy); }
+    .article-body { padding:1.5rem; display:flex; flex-direction:column; flex-grow:1; }
+    .article-cat { font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem; }
+    .article-card h3 { font-size:1.05rem; margin-bottom:0.6rem; line-height:1.4; }
+    .article-preview { font-size:0.86rem; color:var(--gray); line-height:1.65; margin-bottom:1.25rem; flex-grow:1; }
+    .article-read { font-size:0.8rem; color:var(--gold); text-decoration:none; font-weight:500; }
+
+    .engine-band { background:var(--navy); padding:4.5rem 0; text-align:center; }
+    .engine-band .pull { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--white); max-width:640px; margin:1.25rem auto 0; line-height:1.6; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="32" stroke="white" stroke-width="1.5"/>
+        <circle cx="36" cy="36" r="26" fill="#0D1B2E" stroke="#A07820" stroke-width="0.8"/>
+        <circle cx="36" cy="36" r="16" fill="none" stroke="#4A9EC4" stroke-width="0.6" opacity="0.6"/>
+        <line x1="36" y1="6" x2="36" y2="66" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="6" y1="36" x2="66" y2="36" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="36" y1="3" x2="36" y2="10" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="36" y1="62" x2="36" y2="69" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="36" x2="10" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="62" y1="36" x2="69" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="36" cy="36" r="4" fill="#A07820"/>
+        <circle cx="36" cy="36" r="1.8" fill="#0D1B2E"/>
+        <text x="36" y="33" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="white" letter-spacing="2">DS</text>
+      </svg>
+      <div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="our-firm.html">Our Firm</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Insights</span>
+    <h1>Perspectives on What<br/>Growth Requires Next.</h1>
+  </div>
+</section>
+
+<section class="insights-intro">
+  <div class="container">
+    <p>Ideas and executive perspectives on strategy, transformation, leadership, AI, and building what comes next.</p>
+  </div>
+</section>
+
+<nav class="category-nav">
+  <div class="container">
+    <div class="cat-pills">
+      <a href="#enterprise-growth" class="cat-pill">Enterprise Growth</a>
+      <a href="#leadership-people" class="cat-pill">Leadership &amp; People</a>
+      <a href="#ai-future" class="cat-pill">AI + Future of Work</a>
+      <a href="#next-chapter" class="cat-pill">Executive Next Chapter™</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ENTERPRISE GROWTH -->
+<section class="cat-section" id="enterprise-growth">
+  <div class="container">
+    <div class="cat-head">
+      <span class="eyebrow">Category</span>
+      <h2>Enterprise Growth</h2>
+      <p>Scaling beyond current operating models, transformation lessons, and growth complexity.</p>
+    </div>
+    <div class="article-grid">
+      <div class="article-card">
+        <img class="article-img" src="images/enterprise-systems.svg" alt="Abstract architectural artwork representing enterprise systems"/>
+        <div class="article-body">
+          <span class="article-cat">Enterprise Growth</span>
+          <h3>Growth Creates Complexity: Why Successful Organizations Outgrow Their Operating Models</h3>
+          <p class="article-preview">The systems that took you from zero to scale are rarely the ones that take you from scale to the next stage. Here's why outgrowing your operating model is a sign of success, not failure.</p>
+          <a href="insights/growth-creates-complexity.html" class="article-read">Read Insight →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP & PEOPLE -->
+<section class="cat-section" id="leadership-people">
+  <div class="container">
+    <div class="cat-head">
+      <span class="eyebrow">Category</span>
+      <h2>Leadership &amp; People</h2>
+      <p>Leading through change, executive effectiveness, and building leadership systems.</p>
+    </div>
+    <div class="article-grid">
+      <div class="article-card">
+        <img class="article-img" src="images/enterprise-architecture.svg" alt="Diagram showing Vision, Strategy, Operating Model, Systems, and Execution"/>
+        <div class="article-body">
+          <span class="article-cat">Leadership &amp; People</span>
+          <h3>The Leadership System Behind Every Successful Transformation</h3>
+          <p class="article-preview">Transformation doesn't fail because of bad strategy. It fails because leadership systems weren't built to carry it. Here's what that infrastructure actually looks like.</p>
+          <a href="#" class="article-read">Read Insight →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI + FUTURE OF WORK -->
+<section class="cat-section" id="ai-future">
+  <div class="container">
+    <div class="cat-head">
+      <span class="eyebrow">Category</span>
+      <h2>AI + Future of Work</h2>
+      <p>AI adoption, workforce transformation, and human + AI operating models.</p>
+    </div>
+    <div class="article-grid">
+      <div class="article-card">
+        <img class="article-img" src="images/growth-system.svg" alt="Discover, Design, Activate journey graphic"/>
+        <div class="article-body">
+          <span class="article-cat">AI Transformation</span>
+          <h3>AI Won't Replace Leaders. But Leaders Who Redesign Work Will Move Faster.</h3>
+          <p class="article-preview">The organizations winning with AI aren't the ones with the best tools. They're the ones whose leaders rebuilt how work gets done around them.</p>
+          <a href="insights/ai-redesign-work.html" class="article-read">Read Insight →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXECUTIVE NEXT CHAPTER -->
+<section class="cat-section" id="next-chapter">
+  <div class="container">
+    <div class="cat-head">
+      <span class="eyebrow">Category</span>
+      <h2>Executive Next Chapter™</h2>
+      <p>Founder transition, portfolio careers, board and advisory readiness, and building after executive leadership.</p>
+    </div>
+    <div class="article-grid">
+      <div class="article-card">
+        <img class="article-img" src="images/next-chapter-ascent.svg" alt="Abstract ascending steps artwork representing reinvention"/>
+        <div class="article-body">
+          <span class="article-cat">Executive Next Chapter™</span>
+          <h3>The Question Every Executive Eventually Faces: What Am I Building Next?</h3>
+          <p class="article-preview">Most executives plan their exit financially. Almost none plan it strategically. Here's the question that actually matters once the title is gone.</p>
+          <a href="insights/what-am-i-building-next.html" class="article-read">Read Insight →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <img class="article-img" src="images/next-chapter-journey.svg" alt="Four-stage journey from Executive Leader to Legacy Architect"/>
+        <div class="article-body">
+          <span class="article-cat">Executive Next Chapter™</span>
+          <h3>The Shift from Operator to Enterprise Builder</h3>
+          <p class="article-preview">Operating inside someone else's organization and building your own platform require entirely different instincts. Most executives never make the shift on purpose.</p>
+          <a href="insights/operator-to-enterprise-builder.html" class="article-read">Read Insight →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGINE BAND -->
+<section class="engine-band">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--gold-l);">More Coming Soon</span>
+    <p class="pull">New perspectives are added regularly as DeepSight works with leaders navigating growth, transformation, and transition.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">Want These Insights Directly?</span>
+    <h2>Let's Start with a Conversation.</h2>
+    <p>If a perspective here resonates with where your organization or your own next chapter is headed, let's talk.</p>
+    <a href="contact.html" class="btn btn-gold">Schedule a Strategy Session</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
+        <p>A JWP Consulting LLC Company<br/>Building What Growth Requires Next™<br/>Atlanta, GA · National</p>
+      </div>
+      <div class="footer-links">
+        <h5>The Firm</h5>
+        <ul>
+          <li><a href="our-firm.html">Our Firm</a></li>
+          <li><a href="jackie-parker.html">Jackie Parker</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="solutions-strategy.html">Strategy &amp; Transformation</a></li>
+          <li><a href="solutions-operating-model.html">Operating Model Design</a></li>
+          <li><a href="solutions-leadership.html">People &amp; Leadership Systems</a></li>
+          <li><a href="solutions-ai.html">AI-Enabled Transformation</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@deepsightstrategy.com">hello@deepsightstrategy.com</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
+      <p>Building What Growth Requires Next™</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<svg viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>The Executive Next Chapter journey</title>
+<desc>A vertical transformation path showing four stages of evolution: Executive Leader, Founder, Enterprise Builder, and Legacy Architect, connected by a rising line.</desc>
+
+<rect width="600" height="900" fill="none"/>
+
+<line x1="300" y1="120" x2="300" y2="780" stroke="#D8D3C8" stroke-width="1.5" stroke-dasharray="2 6"/>
+
+<g>
+  <rect x="130" y="60" width="340" height="120" rx="6" fill="#F5F3EF" stroke="#D8D3C8" stroke-width="1"/>
+  <text x="300" y="105" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="11" fill="#A07820" letter-spacing="3" font-weight="600">STAGE 01</text>
+  <text x="300" y="135" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#0D1B2E" font-weight="bold">Executive Leader</text>
+  <text x="300" y="158" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="13" fill="#5A6A7A">Operating inside the organization</text>
+</g>
+
+<circle cx="300" cy="240" r="5" fill="#A07820"/>
+<path d="M 292 252 L 300 268 L 308 252" fill="none" stroke="#A07820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g>
+  <rect x="130" y="290" width="340" height="120" rx="6" fill="#F5F3EF" stroke="#D8D3C8" stroke-width="1"/>
+  <text x="300" y="335" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="11" fill="#A07820" letter-spacing="3" font-weight="600">STAGE 02</text>
+  <text x="300" y="365" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#0D1B2E" font-weight="bold">Founder</text>
+  <text x="300" y="388" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="13" fill="#5A6A7A">Defining your own platform</text>
+</g>
+
+<circle cx="300" cy="470" r="5" fill="#A07820"/>
+<path d="M 292 482 L 300 498 L 308 482" fill="none" stroke="#A07820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g>
+  <rect x="130" y="520" width="340" height="120" rx="6" fill="#0D1B2E" stroke="#A07820" stroke-width="1.2"/>
+  <text x="300" y="565" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="11" fill="#C4A96A" letter-spacing="3" font-weight="600">STAGE 03</text>
+  <text x="300" y="595" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#FFFFFF" font-weight="bold">Enterprise Builder</text>
+  <text x="300" y="618" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="13" fill="#C8D0DA">Scaling beyond the individual</text>
+</g>
+
+<circle cx="300" cy="700" r="5" fill="#A07820"/>
+<path d="M 292 712 L 300 728 L 308 712" fill="none" stroke="#A07820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g>
+  <rect x="130" y="750" width="340" height="120" rx="6" fill="#0D1B2E" stroke="#A07820" stroke-width="1.2"/>
+  <text x="300" y="795" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="11" fill="#C4A96A" letter-spacing="3" font-weight="600">STAGE 04</text>
+  <text x="300" y="825" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#FFFFFF" font-weight="bold">Legacy Architect</text>
+  <text x="300" y="848" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="13" fill="#C8D0DA">Building what outlasts you</text>
+</g>
+
+</svg>

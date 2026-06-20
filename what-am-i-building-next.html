@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Question Every Executive Eventually Faces: DeepSight Strategy™</title>
+  <meta name="description" content="Most executives plan their exit financially. Almost none plan it strategically. Here's the question that actually matters once the title is gone."/>
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    .article-hero { background:var(--navy); padding:9rem 0 4rem; border-bottom:3px solid var(--gold); position:relative; overflow:hidden; }
+    .article-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.45; }
+    .article-hero-fade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.92) 100%); }
+    .article-hero .container { position:relative; z-index:2; max-width:760px; }
+    .article-crumb { font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:1.5rem; }
+    .article-crumb a { color:var(--gold-l); text-decoration:none; }
+    .article-meta-row { display:flex; gap:1rem; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; }
+    .article-cat-badge { font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--white); background:var(--gold); padding:0.35rem 0.9rem; border-radius:2px; }
+    .article-readtime { font-size:0.82rem; color:rgba(255,255,255,0.45); }
+    .article-hero h1 { color:var(--white); font-weight:300; margin-bottom:1.25rem; font-size:clamp(1.9rem,4vw,2.6rem); line-height:1.3; }
+    .article-summary { color:rgba(255,255,255,0.65); font-size:1.1rem; line-height:1.8; font-family:var(--serif); font-style:italic; }
+
+    .article-body-section { background:var(--white); padding:4.5rem 0; }
+    .article-body-inner { max-width:680px; margin:0 auto; }
+    .article-body-inner h2 { font-size:1.5rem; margin:2.75rem 0 1.25rem; }
+    .article-body-inner h2:first-child { margin-top:0; }
+    .article-body-inner p { color:#2A3A4A; line-height:1.9; margin-bottom:1.25rem; font-size:1.02rem; }
+    .article-body-inner .lead-para { font-size:1.15rem; color:var(--navy); line-height:1.85; }
+    .article-pull { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--navy); border-left:2px solid var(--gold); padding-left:1.5rem; margin:2rem 0; line-height:1.65; }
+
+    .questions-block { background:var(--cream); border:1.5px solid var(--gray-l); border-radius:var(--radius); padding:2.25rem; margin:2.5rem 0; }
+    .questions-block h3 { font-size:0.95rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold); margin-bottom:1.25rem; }
+    .questions-block ol { list-style:none; counter-reset:q; }
+    .questions-block li { counter-increment:q; display:flex; gap:1rem; padding:0.75rem 0; border-top:1px solid var(--gray-l); font-size:1rem; color:var(--navy); line-height:1.6; }
+    .questions-block li:first-child { border-top:none; }
+    .questions-block li::before { content:counter(q); font-family:var(--serif); font-weight:bold; color:var(--gold); flex-shrink:0; font-size:1.1rem; }
+
+    .takeaways-section { background:var(--cream); padding:4rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); }
+    .takeaways-inner { max-width:680px; margin:0 auto; }
+    .takeaways-inner h2 { margin-bottom:1.5rem; }
+    .takeaway-list { list-style:none; }
+    .takeaway-list li { display:flex; gap:0.85rem; padding:0.85rem 0; border-top:1px solid var(--gray-l); font-size:0.98rem; color:var(--navy); line-height:1.6; align-items:flex-start; }
+    .takeaway-list li:first-child { border-top:none; }
+    .takeaway-list li::before { content:''; width:22px; height:1.5px; background:var(--gold); margin-top:0.7rem; flex-shrink:0; }
+
+    .related-section { background:var(--white); padding:4rem 0; }
+    .related-inner { max-width:680px; margin:0 auto; }
+    .related-card { display:flex; justify-content:space-between; align-items:center; border:1.5px solid var(--gray-l); border-radius:var(--radius); padding:1.5rem 1.75rem; transition:var(--ease); text-decoration:none; }
+    .related-card:hover { border-color:var(--gold); }
+    .related-card h4 { color:var(--navy); font-size:1rem; margin-bottom:0.25rem; }
+    .related-card span { font-size:0.82rem; color:var(--gray); }
+    .related-card .arrow { color:var(--gold); font-size:1.2rem; flex-shrink:0; margin-left:1rem; }
+
+    .article-cta-section { background:var(--navy); padding:5rem 0; text-align:center; border-top:3px solid var(--gold); }
+    .article-cta-inner { max-width:560px; margin:0 auto; }
+    .article-cta-inner .pull { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--white); line-height:1.5; margin-bottom:1rem; }
+    .article-cta-inner p { color:rgba(255,255,255,0.55); margin-bottom:2rem; line-height:1.8; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="32" stroke="white" stroke-width="1.5"/>
+        <circle cx="36" cy="36" r="26" fill="#0D1B2E" stroke="#A07820" stroke-width="0.8"/>
+        <circle cx="36" cy="36" r="16" fill="none" stroke="#4A9EC4" stroke-width="0.6" opacity="0.6"/>
+        <line x1="36" y1="6" x2="36" y2="66" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="6" y1="36" x2="66" y2="36" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="36" y1="3" x2="36" y2="10" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="36" y1="62" x2="36" y2="69" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="36" x2="10" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="62" y1="36" x2="69" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="36" cy="36" r="4" fill="#A07820"/>
+        <circle cx="36" cy="36" r="1.8" fill="#0D1B2E"/>
+        <text x="36" y="33" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="white" letter-spacing="2">DS</text>
+      </svg>
+      <div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../our-firm.html">Our Firm</a></li>
+      <li><a href="../solutions.html">Solutions</a></li>
+      <li><a href="../executive-next-chapter.html">Executive Next Chapter™</a></li>
+      <li><a href="../insights.html">Insights</a></li>
+      <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+  <img class="article-hero-bg" src="../images/next-chapter-ascent.svg" alt=""/>
+  <div class="article-hero-fade"></div>
+  <div class="container">
+    <p class="article-crumb"><a href="../insights.html">Insights</a> / Executive Next Chapter™</p>
+    <div class="article-meta-row">
+      <span class="article-cat-badge">Executive Next Chapter™</span>
+      <span class="article-readtime">7 min read</span>
+    </div>
+    <h1>The Question Every Executive Eventually Faces: What Am I Building Next?</h1>
+    <p class="article-summary">Most executives plan their exit financially. Almost none plan it strategically. Here is the question that actually matters once the title is gone, and why answering it requires a different kind of work than the career that came before it.</p>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<section class="article-body-section">
+  <div class="container">
+    <div class="article-body-inner">
+
+      <h2>Executive POV</h2>
+      <p class="lead-para">Every executive I have worked with eventually arrives at the same moment. It does not announce itself. There is no single bad meeting, no one resignation letter, no specific Tuesday. It arrives quietly, usually somewhere between a calendar invite for a transition conversation and a long flight home, in the form of a single, unscheduled thought: <em>What happens after this?</em></p>
+      <p>For most of a career, the answer to "what's next" is supplied by someone else: a promotion, a bigger mandate, a harder problem to solve inside someone else's organization. Then, at some point, that supply runs out. Not because the executive has run out of capability. Because the organization has run out of next roles to offer, or the executive has run out of appetite for offering their capability to someone else's vision.</p>
+      <p>That is the moment this article is about. Not retirement. Not a graceful exit. The actual strategic question underneath all of it: what do I build next, now that I am the one who has to decide?</p>
+
+      <h2>The Challenge</h2>
+      <p>The challenge is not a lack of options. Executives at this stage almost always have more options than they know what to do with: board seats, advisory roles, operating partner positions, angel investing, a dozen "let's grab coffee" conversations that could become something. The challenge is that having options is not the same as having a strategy.</p>
+      <p>Most executives navigate this transition the same way they navigated their careers: reactively, opportunistically, one good conversation at a time. That approach worked when someone else's organization was providing the structure. It does not work when the executive is now the organization.</p>
+      <p class="article-pull">"The skills that made you exceptional inside an organization are not automatically the skills required to build your own platform outside of one."</p>
+      <p>Being a brilliant operator and being a founder of your own enterprise are different disciplines. One is about executing inside a system someone else built. The other is about deciding what system to build in the first place, and that decision requires a strategic process most executives have never had to run on themselves.</p>
+
+      <h2>What Leaders Often Miss</h2>
+      <p>The most common mistake is treating this transition as a financial planning exercise instead of a strategic one. Executives will spend significant time and money on wealth advisors, tax structuring, and estate planning, and almost none on the question of what their next operating platform should actually look like.</p>
+      <p>The second most common mistake is underestimating the asset they are sitting on. Decades of relationships, pattern recognition, and credibility are not incidental to the next chapter. They are the raw material for it. Most executives treat these as things that happened to them during their career, rather than as a deliberate portfolio they can now architect into board seats, advisory retainers, operating ownership, or strategic investment.</p>
+      <p>The third mistake is moving too fast. The instinct, once free of a corporate calendar, is to say yes to the first three interesting opportunities that appear. Without a strategy, those three yeses often crowd out the one opportunity that would have actually mattered.</p>
+
+      <h2>DeepSight Perspective</h2>
+      <p>I believe this transition deserves the same strategic rigor an executive would apply to any major enterprise decision, because it is one. The question is not "what role is next." The question is "what platform am I building, and what does it require of me."</p>
+      <p>That reframe changes everything downstream. It changes which opportunities are worth pursuing. It changes how relationships get activated. It changes whether the next chapter is a series of disconnected gigs or a coherent enterprise with its own architecture, revenue model, and trajectory.</p>
+      <p>This is the thinking behind <a href="../executive-next-chapter.html" style="color:var(--gold);text-decoration:none;">Executive Next Chapter™</a>, DeepSight's advisory experience built specifically for this moment. It exists because very few firms treat this transition as a strategic discipline rather than a lifestyle event.</p>
+
+      <div class="questions-block">
+        <h3>Strategic Questions Worth Asking Yourself</h3>
+        <ol>
+          <li>If I could not use the words "retire" or "slow down," how would I describe what I want to build next?</li>
+          <li>What have I built, led, or fixed that other organizations would pay to have access to, even briefly?</li>
+          <li>Which of my current relationships are dormant assets I have not yet activated?</li>
+          <li>Am I optimizing for income, ownership, influence, or legacy, and do I know which one matters most right now?</li>
+          <li>If I said yes to nothing for the next 90 days, what would that silence reveal about what I actually want?</li>
+        </ol>
+      </div>
+
+      <h2>Recommended Next Move</h2>
+      <p>Before saying yes to the next board seat, advisory conversation, or investment opportunity, it is worth pausing to ask whether you are choosing from strategy or from momentum. The two can look identical in the moment and produce very different next chapters five years out.</p>
+      <p>The Founder Transition Assessment™ exists to surface that distinction early, before the calendar fills up with commitments that were easy to say yes to, but were never actually the plan.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- KEY TAKEAWAYS -->
+<section class="takeaways-section">
+  <div class="container">
+    <div class="takeaways-inner">
+      <span class="eyebrow">Key Takeaways</span>
+      <h2 style="margin-top:0.75rem;">What to Carry Forward</h2>
+      <ul class="takeaway-list">
+        <li>This transition is a strategic decision, not a financial planning exercise. Treat it with the same rigor as any major enterprise decision.</li>
+        <li>Your relationships, pattern recognition, and credibility are assets to be architected, not history to be summarized in a bio.</li>
+        <li>Moving fast without a strategy often means the right opportunity gets crowded out by three good-enough ones.</li>
+        <li>Trade the question "what role is next" for the harder one: what platform am I building, and what does it require of me.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED SOLUTIONS -->
+<section class="related-section">
+  <div class="container">
+    <div class="related-inner">
+      <span class="eyebrow">Related Solution</span>
+      <div class="gold-rule"></div>
+      <a href="../executive-next-chapter.html" class="related-card">
+        <div>
+          <h4>Executive Next Chapter™</h4>
+          <span>A strategic advisory experience for CEOs, founders, and senior executives preparing for transition</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE CTA -->
+<section class="article-cta-section">
+  <div class="container">
+    <div class="article-cta-inner">
+      <p class="pull">Your experience is an asset. Let's build the strategy behind it.</p>
+      <p>Take the Founder Transition Assessment™ to identify your Founder Profile™, your Opportunity Fit™, and your Next Chapter Roadmap™.</p>
+      <a href="../executive-next-chapter.html" class="btn btn-gold">Discover Your Next Chapter</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
+        <p>A JWP Consulting LLC Company<br/>Building What Growth Requires Next™<br/>Atlanta, GA · National</p>
+      </div>
+      <div class="footer-links">
+        <h5>The Firm</h5>
+        <ul>
+          <li><a href="../our-firm.html">Our Firm</a></li>
+          <li><a href="../jackie-parker.html">Jackie Parker</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="../solutions-strategy.html">Strategy &amp; Transformation</a></li>
+          <li><a href="../solutions-operating-model.html">Operating Model Design</a></li>
+          <li><a href="../solutions-leadership.html">People &amp; Leadership Systems</a></li>
+          <li><a href="../solutions-ai.html">AI-Enabled Transformation</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@deepsightstrategy.com">hello@deepsightstrategy.com</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="../executive-next-chapter.html">Executive Next Chapter™</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
+      <p>Building What Growth Requires Next™</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

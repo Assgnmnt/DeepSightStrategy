@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Abstract artwork representing reinvention and ascent for executives building their next chapter</title>
+<desc>A composition of ascending navy and gold geometric steps rising from lower left to upper right, suggesting forward momentum and transformation rather than retirement.</desc>
+
+<rect width="1600" height="900" fill="#0D1B2E"/>
+
+<g opacity="0.95">
+<rect x="120" y="700" width="200" height="140" fill="#16324E"/>
+<rect x="340" y="600" width="200" height="240" fill="#122A42"/>
+<rect x="560" y="490" width="200" height="350" fill="#0F2236"/>
+<rect x="780" y="370" width="200" height="470" fill="#16324E"/>
+<rect x="1000" y="250" width="200" height="590" fill="#122A42"/>
+<rect x="1220" y="150" width="200" height="690" fill="#0F2236"/>
+</g>
+
+<g stroke="#A07820" stroke-width="0.5" opacity="0.5">
+<line x1="120" y1="700" x2="320" y2="700"/>
+<line x1="340" y1="600" x2="540" y2="600"/>
+<line x1="560" y1="490" x2="760" y2="490"/>
+<line x1="780" y1="370" x2="980" y2="370"/>
+<line x1="1000" y1="250" x2="1200" y2="250"/>
+<line x1="1220" y1="150" x2="1420" y2="150"/>
+</g>
+
+<path d="M170,700 L390,600 L610,490 L830,370 L1050,250 L1270,150" stroke="#C4A96A" stroke-width="1" fill="none" stroke-dasharray="2 8" opacity="0.6"/>
+
+<circle cx="1270" cy="150" r="40" fill="#A07820" opacity="0.15"/>
+<circle cx="1270" cy="150" r="24" fill="#A07820" opacity="0.3"/>
+<circle cx="1270" cy="150" r="10" fill="#E8D9B0"/>
+
+<g opacity="0.5">
+<circle cx="1380" cy="90" r="2" fill="#E8D9B0"/>
+<circle cx="1440" cy="130" r="1.6" fill="#E8D9B0"/>
+<circle cx="1350" cy="200" r="1.8" fill="#E8D9B0"/>
+<circle cx="1480" cy="200" r="2" fill="#E8D9B0"/>
+</g>
+
+<text x="170" y="770" font-family="DM Sans, Arial, sans-serif" font-size="13" fill="#5A6A7A" letter-spacing="2">EXECUTIVE LEADER</text>
+<text x="1130" y="220" font-family="DM Sans, Arial, sans-serif" font-size="13" fill="#C4A96A" letter-spacing="2" text-anchor="end">LEGACY ARCHITECT</text>
+
+</svg>

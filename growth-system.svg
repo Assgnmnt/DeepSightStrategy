@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>DeepSight Growth System: Discover, Design, Activate</title>
+<desc>A horizontal strategic journey showing three connected stages: Discover, Design, and Activate, each with a brief description.</desc>
+
+<rect width="1000" height="360" fill="none"/>
+
+<line x1="160" y1="180" x2="840" y2="180" stroke="#D8D3C8" stroke-width="1.5" stroke-dasharray="2 6"/>
+
+<circle cx="200" cy="180" r="6" fill="#A07820"/>
+<circle cx="500" cy="180" r="6" fill="#A07820"/>
+<circle cx="800" cy="180" r="6" fill="#A07820"/>
+
+<g>
+  <circle cx="200" cy="180" r="68" fill="#0D1B2E"/>
+  <circle cx="200" cy="180" r="68" fill="none" stroke="#A07820" stroke-width="1.5" opacity="0.5"/>
+  <text x="200" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#C4A96A" letter-spacing="2">01</text>
+  <text x="200" y="195" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="500">Discover</text>
+</g>
+<text x="200" y="278" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="15" fill="#0D1B2E">Find your highest-value path.</text>
+<text x="200" y="300" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="12.5" fill="#5A6A7A">Vision, role fit,</text>
+<text x="200" y="317" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="12.5" fill="#5A6A7A">opportunity alignment</text>
+
+<g>
+  <circle cx="500" cy="180" r="68" fill="#0D1B2E"/>
+  <circle cx="500" cy="180" r="68" fill="none" stroke="#A07820" stroke-width="1.5" opacity="0.5"/>
+  <text x="500" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#C4A96A" letter-spacing="2">02</text>
+  <text x="500" y="195" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="500">Design</text>
+</g>
+<text x="500" y="278" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="15" fill="#0D1B2E">Build your enterprise model.</text>
+<text x="500" y="300" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="12.5" fill="#5A6A7A">Business architecture,</text>
+<text x="500" y="317" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="12.5" fill="#5A6A7A">revenue strategy</text>
+
+<g>
+  <circle cx="800" cy="180" r="68" fill="#0D1B2E"/>
+  <circle cx="800" cy="180" r="68" fill="none" stroke="#A07820" stroke-width="1.5" opacity="0.5"/>
+  <text x="800" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#C4A96A" letter-spacing="2">03</text>
+  <text x="800" y="195" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="500">Activate</text>
+</g>
+<text x="800" y="278" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="15" fill="#0D1B2E">Turn strategy into momentum.</text>
+<text x="800" y="300" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="12.5" fill="#5A6A7A">Relationships,</text>
+<text x="800" y="317" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="12.5" fill="#5A6A7A">execution priorities</text>
+
+</svg>

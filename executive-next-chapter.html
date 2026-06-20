@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Executive Next Chapter™: DeepSight Strategy™</title>
+  <meta name="description" content="Executive Next Chapter™ helps CEOs, founders, and senior executives transform decades of experience into their next platform for growth, ownership, and impact."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .enc-hero { background:var(--navy); padding:9rem 0 5.5rem; border-bottom:3px solid var(--gold); position:relative; overflow:hidden; text-align:center; }
+    .enc-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.6; }
+    .enc-hero-fade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,27,46,0.5) 0%, rgba(13,27,46,0.92) 100%); }
+    .enc-hero-inner { max-width:700px; margin:0 auto; position:relative; }
+    .enc-hero .eyebrow { color:var(--gold-l); margin-bottom:1.25rem; }
+    .enc-hero h1 { color:var(--white); font-weight:300; margin-bottom:1.25rem; }
+    .enc-hero .sub { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--gold-l); margin-bottom:1.75rem; }
+    .enc-hero p { color:rgba(255,255,255,0.6); font-size:1.05rem; line-height:1.85; margin-bottom:2.25rem; max-width:580px; margin-left:auto; margin-right:auto; }
+
+    .problem-section { background:var(--white); padding:5.5rem 0; text-align:center; }
+    .problem-inner { max-width:680px; margin:0 auto; }
+    .problem-inner h2 { margin-bottom:1.5rem; }
+    .problem-inner > p { color:var(--gray); line-height:1.85; margin-bottom:1.5rem; }
+    .asset-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin:2.5rem 0; text-align:left; }
+    .asset-item { display:flex; gap:0.7rem; align-items:flex-start; font-size:0.92rem; color:var(--navy); }
+    .asset-check { color:var(--gold); font-weight:bold; flex-shrink:0; }
+    .shift-block { background:var(--cream); border:1.5px solid var(--gray-l); border-radius:var(--radius); padding:2.5rem; margin-top:2rem; }
+    .shift-from { font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--gray); text-decoration:line-through; text-decoration-color:var(--gray-l); margin-bottom:0.75rem; }
+    .shift-arrow { color:var(--gold); font-size:1.3rem; margin:0.5rem 0; }
+    .shift-to { font-family:var(--serif); font-style:italic; font-size:1.4rem; color:var(--navy); font-weight:bold; }
+
+    .framework-section { background:var(--cream); padding:5.5rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); }
+    .framework-section .section-head { text-align:center; max-width:600px; margin:0 auto 3.5rem; }
+    .framework-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:var(--gray-l); border:1.5px solid var(--gray-l); }
+    .fw-card { background:var(--white); padding:3rem 2rem; position:relative; }
+    .fw-step { font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:1rem; }
+    .fw-card h3 { font-size:1.5rem; margin-bottom:0.6rem; }
+    .fw-card .fw-sub { font-family:var(--serif); font-style:italic; color:var(--gray); font-size:0.95rem; margin-bottom:1.5rem; display:block; }
+    .fw-tag { display:inline-block; background:var(--navy); color:var(--gold-l); font-size:0.7rem; letter-spacing:0.1em; padding:0.3rem 0.75rem; border-radius:2px; margin-bottom:1.25rem; }
+    .fw-list { list-style:none; }
+    .fw-list li { font-size:0.88rem; color:var(--navy); padding:0.5rem 0; border-top:1px solid var(--gray-l); }
+    .fw-list li:first-child { border-top:none; }
+
+    .assessment-section { background:var(--navy); padding:6rem 0; text-align:center; position:relative; overflow:hidden; }
+    .assessment-section::before { content:''; position:absolute; bottom:-200px; right:-150px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(74,158,196,0.08) 0%,transparent 70%); pointer-events:none; }
+    .assessment-inner { max-width:620px; margin:0 auto; position:relative; }
+    .assessment-section .eyebrow { color:var(--gold-l); margin-bottom:1.25rem; }
+    .assessment-section h2 { color:var(--white); font-weight:300; margin-bottom:1rem; }
+    .assessment-section p { color:rgba(255,255,255,0.55); line-height:1.85; margin-bottom:2rem; }
+    .profile-pills { display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .profile-pill { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); color:var(--gold-l); font-size:0.82rem; padding:0.55rem 1.25rem; border-radius:20px; }
+
+    .who-section { background:var(--white); padding:5.5rem 0; text-align:center; }
+    .who-inner { max-width:680px; margin:0 auto; }
+    .who-inner .pull { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--navy); margin:1.5rem 0 2.5rem; }
+    .who-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; text-align:left; margin-top:2rem; }
+    .who-item { display:flex; gap:0.7rem; align-items:flex-start; font-size:0.92rem; color:var(--navy); border:1.5px solid var(--gray-l); padding:1.25rem 1.5rem; border-radius:var(--radius); }
+
+    .outcomes-section { background:var(--cream); padding:5.5rem 0; border-top:1.5px solid var(--gray-l); text-align:center; }
+    .outcomes-inner { max-width:680px; margin:0 auto; }
+    .outcomes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; text-align:left; margin-top:2.5rem; }
+    .outcome-pill { display:flex; gap:0.7rem; align-items:flex-start; font-size:0.92rem; color:var(--navy); background:var(--white); border:1.5px solid var(--gray-l); padding:1rem 1.25rem; border-radius:var(--radius); }
+
+    .final-cta { background:var(--navy); padding:6rem 0; text-align:center; border-top:3px solid var(--gold); }
+    .final-cta-inner { max-width:560px; margin:0 auto; }
+    .final-cta .pull { font-family:var(--serif); font-style:italic; font-size:1.6rem; color:var(--white); line-height:1.4; margin-bottom:0.75rem; }
+    .final-cta p { color:rgba(255,255,255,0.55); margin-bottom:2.5rem; }
+
+    @media(max-width:900px){ .framework-cards{grid-template-columns:1fr;} .asset-row,.outcomes-grid,.who-list{grid-template-columns:1fr 1fr;} }
+    @media(max-width:600px){ .asset-row,.outcomes-grid,.who-list{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="32" stroke="white" stroke-width="1.5"/>
+        <circle cx="36" cy="36" r="26" fill="#0D1B2E" stroke="#A07820" stroke-width="0.8"/>
+        <circle cx="36" cy="36" r="16" fill="none" stroke="#4A9EC4" stroke-width="0.6" opacity="0.6"/>
+        <line x1="36" y1="6" x2="36" y2="66" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="6" y1="36" x2="66" y2="36" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="36" y1="3" x2="36" y2="10" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="36" y1="62" x2="36" y2="69" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="36" x2="10" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="62" y1="36" x2="69" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="36" cy="36" r="4" fill="#A07820"/>
+        <circle cx="36" cy="36" r="1.8" fill="#0D1B2E"/>
+        <text x="36" y="33" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="white" letter-spacing="2">DS</text>
+      </svg>
+      <div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="our-firm.html">Our Firm</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="enc-hero">
+  <img class="enc-hero-bg" src="images/next-chapter-ascent.svg" alt=""/>
+  <div class="enc-hero-fade"></div>
+  <div class="container">
+    <div class="enc-hero-inner">
+      <span class="eyebrow">Executive Next Chapter™</span>
+      <h1>You built companies.<br/>Now build what comes next.</h1>
+      <p class="sub">Your experience is an asset. Let's build the strategy behind it.</p>
+      <p>For CEOs, founders, and senior executives preparing for transition, DeepSight Strategy™ helps transform decades of experience, relationships, and expertise into your next platform for growth, ownership, and impact.</p>
+      <a href="contact.html" class="btn btn-gold">Take the Founder Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="problem-section">
+  <div class="container">
+    <div class="problem-inner">
+      <span class="eyebrow">The Problem</span>
+      <div class="gold-rule" style="margin:1.2rem auto 2rem;"></div>
+      <h2>The transition no one prepares leaders for.</h2>
+      <p>Leaving an executive seat does not mean stepping away from value creation. Many leaders have built extraordinary assets over their careers, but no clear strategy for converting them into their next chapter.</p>
+
+      <div class="asset-row">
+        <div class="asset-item"><span class="asset-check">✓</span> Decades of expertise</div>
+        <div class="asset-item"><span class="asset-check">✓</span> Powerful relationships</div>
+        <div class="asset-item"><span class="asset-check">✓</span> Proven leadership capability</div>
+        <div class="asset-item"><span class="asset-check">✓</span> Access to opportunities</div>
+      </div>
+
+      <div class="shift-block">
+        <p class="shift-from">"What am I retiring from?"</p>
+        <div class="shift-arrow">↓</div>
+        <p class="shift-to">"What am I building next?"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY GRAPHIC -->
+<section style="background:var(--cream);padding:5rem 0;border-top:1.5px solid var(--gray-l);border-bottom:1.5px solid var(--gray-l);text-align:center;">
+  <div class="container">
+    <span class="eyebrow">The Journey</span>
+    <div class="gold-rule" style="margin:1.2rem auto 2rem;"></div>
+    <h2>From Executive Leader to Legacy Architect</h2>
+    <img src="images/next-chapter-journey.svg" alt="A four-stage journey: Executive Leader, Founder, Enterprise Builder, Legacy Architect" style="max-width:480px;width:100%;margin:2rem auto 0;display:block;"/>
+  </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section class="framework-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our Approach</span>
+      <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
+      <h2 style="margin-top:1.25rem;">The Executive Next Chapter™ Framework</h2>
+    </div>
+    <div class="framework-cards">
+      <div class="fw-card">
+        <span class="fw-step">Step One</span>
+        <h3>Discover</h3>
+        <span class="fw-sub">Find your highest-value path.</span>
+        <span class="fw-tag">Founder Strategy Assessment™</span>
+        <ul class="fw-list">
+          <li>Vision</li>
+          <li>Role fit</li>
+          <li>Opportunity alignment</li>
+        </ul>
+      </div>
+      <div class="fw-card">
+        <span class="fw-step">Step Two</span>
+        <h3>Design</h3>
+        <span class="fw-sub">Build your enterprise model.</span>
+        <span class="fw-tag">Enterprise Growth Blueprint™</span>
+        <ul class="fw-list">
+          <li>Business architecture</li>
+          <li>Revenue strategy</li>
+          <li>Market positioning</li>
+        </ul>
+      </div>
+      <div class="fw-card">
+        <span class="fw-step">Step Three</span>
+        <h3>Activate</h3>
+        <span class="fw-sub">Turn strategy into momentum.</span>
+        <span class="fw-tag">90-Day Founder Roadmap™</span>
+        <ul class="fw-list">
+          <li>Relationships</li>
+          <li>Investments &amp; board strategy</li>
+          <li>Execution plan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSESSMENT -->
+<section class="assessment-section">
+  <div class="container">
+    <div class="assessment-inner" style="max-width:900px;">
+      <span class="eyebrow">Start With Clarity</span>
+      <h2>Founder Transition Assessment™</h2>
+      <p>A strategic diagnostic designed to identify the shape of your next chapter, before you commit to a direction.</p>
+      <div class="profile-pills">
+        <span class="profile-pill">Your Founder Profile™</span>
+        <span class="profile-pill">Your Opportunity Fit™</span>
+        <span class="profile-pill">Your Next Chapter Roadmap™</span>
+      </div>
+      <img src="images/assessment-dashboard.svg" alt="A mock dashboard showing Founder Profile score, Opportunity Fit breakdown, Enterprise Readiness index, and a 90-day roadmap" style="width:100%;max-width:820px;margin:1rem auto 2.5rem;display:block;border-radius:6px;"/>
+      <a href="contact.html" class="btn btn-gold">Take the Founder Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR STRATEGIC ADVISOR -->
+<section style="background:var(--white);padding:5.5rem 0;">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;display:grid;grid-template-columns:180px 1fr;gap:2.5rem;align-items:center;">
+      <img src="images/jackie-parker.jpg" alt="Jackie Parker, Founder of DeepSight Strategy" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:3px solid var(--cream2);"/>
+      <div>
+        <span class="eyebrow">Your Strategic Advisor</span>
+        <h3 style="font-size:1.4rem;margin:0.5rem 0 0.75rem;">Jackie Parker, Founder</h3>
+        <p style="color:var(--gray);line-height:1.8;font-family:var(--serif);font-style:italic;">"I have built enterprise functions, led global transformations, and advised leaders through complex transitions. I bring the perspective of someone who has made these decisions, not just studied them."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who-section">
+  <div class="container">
+    <div class="who-inner">
+      <span class="eyebrow">Who It's For</span>
+      <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
+      <p class="pull">"After leading organizations, what do I build next?"</p>
+      <div class="who-list">
+        <div class="who-item"><span class="asset-check">✓</span> CEOs approaching transition</div>
+        <div class="who-item"><span class="asset-check">✓</span> Executives preparing their next chapter</div>
+        <div class="who-item"><span class="asset-check">✓</span> Founders after an exit</div>
+        <div class="who-item"><span class="asset-check">✓</span> Leaders exploring advisory, board, or investment opportunities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes-section">
+  <div class="container">
+    <div class="outcomes-inner">
+      <span class="eyebrow">The Outcome</span>
+      <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
+      <h2 style="margin-top:1.25rem;">Leave with a strategy, not just ideas.</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-pill"><span class="asset-check">✓</span> Your next operating model</div>
+        <div class="outcome-pill"><span class="asset-check">✓</span> Your highest-value opportunities</div>
+        <div class="outcome-pill"><span class="asset-check">✓</span> Your revenue strategy</div>
+        <div class="outcome-pill"><span class="asset-check">✓</span> Your enterprise structure</div>
+        <div class="outcome-pill"><span class="asset-check">✓</span> Your execution roadmap</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner">
+      <p class="pull">Your experience is an asset.</p>
+      <p class="pull" style="color:var(--gold-l);font-size:1.3rem;">Let's build the strategy behind it.</p>
+      <p style="margin-top:1.5rem;">Every Executive Next Chapter™ engagement begins with a Founder Strategy Session, a focused conversation to map what you are building next.</p>
+      <a href="contact.html" class="btn btn-gold">Schedule a Strategy Session</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
+        <p>A JWP Consulting LLC Company<br/>Building What Growth Requires Next™<br/>Atlanta, GA · National</p>
+      </div>
+      <div class="footer-links">
+        <h5>The Firm</h5>
+        <ul>
+          <li><a href="our-firm.html">Our Firm</a></li>
+          <li><a href="jackie-parker.html">Jackie Parker</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="solutions-strategy.html">Strategy &amp; Transformation</a></li>
+          <li><a href="solutions-operating-model.html">Operating Model Design</a></li>
+          <li><a href="solutions-leadership.html">People &amp; Leadership Systems</a></li>
+          <li><a href="solutions-ai.html">AI-Enabled Transformation</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@deepsightstrategy.com">hello@deepsightstrategy.com</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="contact.html">Request Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
+      <p>Building What Growth Requires Next™</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

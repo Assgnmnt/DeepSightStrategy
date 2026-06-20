@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Shift From Operator to Enterprise Builder: DeepSight Strategy™</title>
+  <meta name="description" content="Operating inside someone else's organization and building your own platform require entirely different instincts. Most executives never make the shift on purpose."/>
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    .article-hero { background:var(--navy); padding:9rem 0 4rem; border-bottom:3px solid var(--gold); position:relative; overflow:hidden; }
+    .article-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.45; }
+    .article-hero-fade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.92) 100%); }
+    .article-hero .container { position:relative; z-index:2; max-width:760px; }
+    .article-crumb { font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:1.5rem; }
+    .article-crumb a { color:var(--gold-l); text-decoration:none; }
+    .article-meta-row { display:flex; gap:1rem; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; }
+    .article-cat-badge { font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--white); background:var(--gold); padding:0.35rem 0.9rem; border-radius:2px; }
+    .article-readtime { font-size:0.82rem; color:rgba(255,255,255,0.45); }
+    .article-hero h1 { color:var(--white); font-weight:300; margin-bottom:1.25rem; font-size:clamp(1.9rem,4vw,2.6rem); line-height:1.3; }
+    .article-summary { color:rgba(255,255,255,0.65); font-size:1.1rem; line-height:1.8; font-family:var(--serif); font-style:italic; }
+
+    .article-body-section { background:var(--white); padding:4.5rem 0; }
+    .article-body-inner { max-width:680px; margin:0 auto; }
+    .article-body-inner h2 { font-size:1.5rem; margin:2.75rem 0 1.25rem; }
+    .article-body-inner h2:first-child { margin-top:0; }
+    .article-body-inner p { color:#2A3A4A; line-height:1.9; margin-bottom:1.25rem; font-size:1.02rem; }
+    .article-body-inner .lead-para { font-size:1.15rem; color:var(--navy); line-height:1.85; }
+    .article-pull { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--navy); border-left:2px solid var(--gold); padding-left:1.5rem; margin:2rem 0; line-height:1.65; }
+
+    .questions-block { background:var(--cream); border:1.5px solid var(--gray-l); border-radius:var(--radius); padding:2.25rem; margin:2.5rem 0; }
+    .questions-block h3 { font-size:0.95rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold); margin-bottom:1.25rem; }
+    .questions-block ol { list-style:none; counter-reset:q; }
+    .questions-block li { counter-increment:q; display:flex; gap:1rem; padding:0.75rem 0; border-top:1px solid var(--gray-l); font-size:1rem; color:var(--navy); line-height:1.6; }
+    .questions-block li:first-child { border-top:none; }
+    .questions-block li::before { content:counter(q); font-family:var(--serif); font-weight:bold; color:var(--gold); flex-shrink:0; font-size:1.1rem; }
+
+    .takeaways-section { background:var(--cream); padding:4rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); }
+    .takeaways-inner { max-width:680px; margin:0 auto; }
+    .takeaways-inner h2 { margin-bottom:1.5rem; }
+    .takeaway-list { list-style:none; }
+    .takeaway-list li { display:flex; gap:0.85rem; padding:0.85rem 0; border-top:1px solid var(--gray-l); font-size:0.98rem; color:var(--navy); line-height:1.6; align-items:flex-start; }
+    .takeaway-list li:first-child { border-top:none; }
+    .takeaway-list li::before { content:''; width:22px; height:1.5px; background:var(--gold); margin-top:0.7rem; flex-shrink:0; }
+
+    .related-section { background:var(--white); padding:4rem 0; }
+    .related-inner { max-width:680px; margin:0 auto; }
+    .related-card { display:flex; justify-content:space-between; align-items:center; border:1.5px solid var(--gray-l); border-radius:var(--radius); padding:1.5rem 1.75rem; transition:var(--ease); text-decoration:none; }
+    .related-card:hover { border-color:var(--gold); }
+    .related-card h4 { color:var(--navy); font-size:1rem; margin-bottom:0.25rem; }
+    .related-card span { font-size:0.82rem; color:var(--gray); }
+    .related-card .arrow { color:var(--gold); font-size:1.2rem; flex-shrink:0; margin-left:1rem; }
+
+    .article-cta-section { background:var(--navy); padding:5rem 0; text-align:center; border-top:3px solid var(--gold); }
+    .article-cta-inner { max-width:560px; margin:0 auto; }
+    .article-cta-inner .pull { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--white); line-height:1.5; margin-bottom:1rem; }
+    .article-cta-inner p { color:rgba(255,255,255,0.55); margin-bottom:2rem; line-height:1.8; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="32" stroke="white" stroke-width="1.5"/>
+        <circle cx="36" cy="36" r="26" fill="#0D1B2E" stroke="#A07820" stroke-width="0.8"/>
+        <circle cx="36" cy="36" r="16" fill="none" stroke="#4A9EC4" stroke-width="0.6" opacity="0.6"/>
+        <line x1="36" y1="6" x2="36" y2="66" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="6" y1="36" x2="66" y2="36" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="36" y1="3" x2="36" y2="10" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="36" y1="62" x2="36" y2="69" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="36" x2="10" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="62" y1="36" x2="69" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="36" cy="36" r="4" fill="#A07820"/>
+        <circle cx="36" cy="36" r="1.8" fill="#0D1B2E"/>
+        <text x="36" y="33" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="white" letter-spacing="2">DS</text>
+      </svg>
+      <div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../our-firm.html">Our Firm</a></li>
+      <li><a href="../solutions.html">Solutions</a></li>
+      <li><a href="../executive-next-chapter.html">Executive Next Chapter™</a></li>
+      <li><a href="../insights.html">Insights</a></li>
+      <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+  <img class="article-hero-bg" src="../images/next-chapter-journey.svg" alt=""/>
+  <div class="article-hero-fade"></div>
+  <div class="container">
+    <p class="article-crumb"><a href="../insights.html">Insights</a> / Executive Leadership</p>
+    <div class="article-meta-row">
+      <span class="article-cat-badge">Executive Leadership</span>
+      <span class="article-readtime">6 min read</span>
+    </div>
+    <h1>The Shift From Operator to Enterprise Builder</h1>
+    <p class="article-summary">Operating inside someone else's organization and building your own platform require entirely different instincts. Most executives never make the shift on purpose.</p>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<section class="article-body-section">
+  <div class="container">
+    <div class="article-body-inner" style="text-align:center;padding:2rem 0;">
+      <span class="eyebrow">Coming Soon</span>
+      <h2 style="margin-top:0.75rem;">This Insight Is in Development</h2>
+      <p style="max-width:520px;margin:0 auto 1.5rem;">DeepSight Strategy™ is preparing a full executive perspective on this topic. Check back soon, or reach out directly to discuss this subject with Jackie Parker.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED SOLUTIONS -->
+<section class="related-section">
+  <div class="container">
+    <div class="related-inner">
+      <span class="eyebrow">Related Solution</span>
+      <div class="gold-rule"></div>
+      <a href="../executive-next-chapter.html" class="related-card">
+        <div>
+          <h4>Executive Next Chapter™</h4>
+          <span>A strategic advisory experience for CEOs, founders, and senior executives preparing for transition</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE CTA -->
+<section class="article-cta-section">
+  <div class="container">
+    <div class="article-cta-inner">
+      <p class="pull">The leader must evolve before the enterprise can.</p>
+      <p>Take the Founder Transition Assessment™ to identify your Founder Profile™, your Opportunity Fit™, and your Next Chapter Roadmap™.</p>
+      <a href="../executive-next-chapter.html" class="btn btn-gold">Take the Founder Assessment</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
+        <p>A JWP Consulting LLC Company<br/>Building What Growth Requires Next™<br/>Atlanta, GA · National</p>
+      </div>
+      <div class="footer-links">
+        <h5>The Firm</h5>
+        <ul>
+          <li><a href="../our-firm.html">Our Firm</a></li>
+          <li><a href="../jackie-parker.html">Jackie Parker</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="../solutions-strategy.html">Strategy &amp; Transformation</a></li>
+          <li><a href="../solutions-operating-model.html">Operating Model Design</a></li>
+          <li><a href="../solutions-leadership.html">People &amp; Leadership Systems</a></li>
+          <li><a href="../solutions-ai.html">AI-Enabled Transformation</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@deepsightstrategy.com">hello@deepsightstrategy.com</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="../executive-next-chapter.html">Executive Next Chapter™</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
+      <p>Building What Growth Requires Next™</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
