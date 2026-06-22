@@ -3,23 +3,48 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Solutions: DeepSight Strategy™</title>
-  <meta name="description" content="DeepSight Strategy™ helps organizations build what growth requires next through Strategy & Transformation, Operating Model Design, People & Leadership Systems, and AI-Enabled Transformation."/>
+  <title>How We Partner: DeepSight Strategy™</title>
+  <meta name="description" content="DeepSight does not offer a traditional consulting menu. DeepSight partners with founders, CEOs, and senior executive teams during defining moments when growth, complexity, transition, or transformation requires the company to operate differently."/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .sol-section { background:var(--white); padding:5.5rem 0; }
+    .partner-intro { background:var(--white); padding:4.5rem 0; text-align:center; }
+    .partner-intro p { max-width:620px; margin:0 auto; color:var(--gray); font-size:1.1rem; line-height:1.85; font-family:var(--serif); font-style:italic; }
+
+    .sol-section { background:var(--cream); padding:5.5rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); }
     .sol-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5px; background:var(--gray-l); border:1.5px solid var(--gray-l); }
     .sol-card { background:var(--white); padding:3rem 2.5rem; transition:var(--ease); display:flex; flex-direction:column; }
     .sol-card:hover { background:var(--cream); }
     .sol-num { font-family:var(--serif); font-size:1.4rem; color:var(--gold); margin-bottom:1rem; }
     .sol-card h3 { font-size:1.4rem; margin-bottom:0.5rem; }
     .sol-card .sol-lead { font-family:var(--serif); font-style:italic; color:var(--navy); margin-bottom:1.25rem; }
-    .sol-card p.sol-body { color:var(--gray); margin-bottom:1.75rem; flex-grow:1; line-height:1.8; }
+    .sol-card .sol-focus { list-style:none; margin-bottom:1.25rem; }
+    .sol-card .sol-focus li { font-size:0.88rem; color:var(--navy); padding:0.4rem 0; border-top:1px solid var(--gray-l); }
+    .sol-card .sol-focus li:first-child { border-top:none; }
 
-    .architecture-band { background:var(--cream); padding:5.5rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); text-align:center; }
-    .architecture-band img { max-width:520px; width:100%; margin:2.5rem auto 0; display:block; }
+    .fss-section { background:var(--navy); padding:6rem 0; position:relative; overflow:hidden; }
+    .fss-bg { position:absolute; right:-5%; top:0; height:100%; width:55%; object-fit:cover; opacity:0.5; }
+    .fss-fade { position:absolute; inset:0; background:linear-gradient(90deg, #0D1B2E 35%, rgba(13,27,46,0.2) 100%); }
+    .fss-inner { position:relative; z-index:2; max-width:620px; }
+    .fss-section .eyebrow { color:var(--gold-l); margin-bottom:1rem; }
+    .fss-section h2 { color:var(--white); font-weight:300; margin-bottom:1rem; font-size:2.2rem; }
+    .fss-section p { color:rgba(255,255,255,0.6); margin-bottom:2rem; line-height:1.85; }
+    .fss-map { display:flex; gap:0; margin-bottom:2.5rem; }
+    .fss-stage { flex:1; padding:1rem 1.25rem 1rem 0; border-left:2px solid rgba(255,255,255,0.12); padding-left:1.25rem; }
+    .fss-stage:first-child { border-left:none; padding-left:0; }
+    .fss-stage h5 { color:var(--white); font-size:0.95rem; margin-bottom:0.3rem; }
+    .fss-stage p { color:rgba(255,255,255,0.45); font-size:0.8rem; margin:0; }
 
-    @media(max-width:900px){ .sol-grid{grid-template-columns:1fr;} }
+    .capability-band { background:var(--white); padding:5.5rem 0; text-align:center; }
+    .capability-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; margin-top:2.5rem; }
+    .cap-tile { border:1.5px solid var(--gray-l); border-radius:var(--radius); padding:1.5rem 1.25rem; transition:var(--ease); }
+    .cap-tile:hover { border-color:var(--gold); }
+    .cap-tile h4 { font-size:0.92rem; margin-bottom:0.4rem; }
+    .cap-tile p { font-size:0.8rem; color:var(--gray); }
+
+    .enc-callout { background:var(--cream); padding:4rem 0; border-top:1.5px solid var(--gray-l); }
+    .enc-callout-inner { display:grid; grid-template-columns:1fr auto; gap:2.5rem; align-items:center; }
+
+    @media(max-width:900px){ .sol-grid,.capability-grid{grid-template-columns:1fr;} .fss-bg{display:none;} .fss-fade{background:#0D1B2E;} .fss-map{flex-wrap:wrap;} .fss-stage{flex:0 0 48%;} .enc-callout-inner{grid-template-columns:1fr;text-align:center;} }
   </style>
 </head>
 <body>
@@ -44,20 +69,27 @@
       <div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
     </a>
     <ul class="nav-links">
-      <li><a href="our-firm.html">Our Firm</a></li>
-      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="who-we-help.html">Who We Help</a></li>
+      <li><a href="solutions.html">How We Partner</a></li>
       <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+      <li><a href="our-firm.html">Our Firm</a></li>
       <li><a href="insights.html">Insights</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Start a Conversation</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">Solutions</span>
-    <h1>Build What Your Next<br/>Stage of Growth Requires.</h1>
-    <p>Four ways DeepSight helps organizations navigate growth, complexity, and transformation, with the depth of a strategy firm and the discipline of an operator.</p>
+    <span class="eyebrow">How We Partner</span>
+    <h1>Not a Consulting Menu.<br/>An Advisory Partnership.</h1>
+    <p>DeepSight does not offer a traditional consulting menu. DeepSight partners with leaders during defining moments when growth, complexity, transition, or transformation requires the company to operate differently.</p>
+  </div>
+</section>
+
+<section class="partner-intro">
+  <div class="container">
+    <p>"The goal is not corporate bureaucracy. The goal is structure that protects momentum."</p>
   </div>
 </section>
 
@@ -65,49 +97,137 @@
   <div class="container">
     <div class="sol-grid">
 
-      <div class="sol-card" id="strategy">
+      <div class="sol-card" id="ceo-advisory">
         <span class="sol-num">01</span>
-        <h3>Strategy &amp; Transformation</h3>
-        <p class="sol-lead">Build the roadmap for what comes next.</p>
-        <p class="sol-body">We help leaders navigate growth, change, and complexity through clear strategy and execution alignment.</p>
-        <a href="solutions-strategy.html" class="btn btn-navy">Explore Strategy Solutions</a>
+        <h3>Founder &amp; CEO Advisory</h3>
+        <p class="sol-lead">Strategic thought partnership for the shift from founder-led momentum to scalable operating discipline.</p>
+        <ul class="sol-focus">
+          <li>CEO thought partnership</li>
+          <li>Founder evolution</li>
+          <li>Leadership systems</li>
+          <li>Scaling decisions</li>
+          <li>Organizational effectiveness</li>
+          <li>Next-stage leadership capacity</li>
+        </ul>
+        <a href="contact.html" class="btn btn-navy">Start a Conversation</a>
       </div>
 
-      <div class="sol-card" id="operating-model">
+      <div class="sol-card" id="csuite">
         <span class="sol-num">02</span>
-        <h3>Operating Model Design</h3>
-        <p class="sol-lead">Build the structure growth requires.</p>
-        <p class="sol-body">We align organizations, processes, systems, and ways of working to support scale.</p>
-        <a href="solutions-operating-model.html" class="btn btn-navy">Explore Operating Models</a>
+        <h3>C-Suite Scaling Advisory</h3>
+        <p class="sol-lead">Advisory support for executive teams translating growth strategy into operating reality.</p>
+        <ul class="sol-focus">
+          <li>Leadership team effectiveness</li>
+          <li>Enterprise decision-making</li>
+          <li>Operating rhythms</li>
+          <li>Role clarity</li>
+          <li>Cross-functional alignment</li>
+          <li>AI-enabled ways of working</li>
+        </ul>
+        <a href="contact.html" class="btn btn-navy">Start a Conversation</a>
       </div>
 
-      <div class="sol-card" id="people">
+      <div class="sol-card" id="scaling">
         <span class="sol-num">03</span>
-        <h3>People &amp; Leadership Systems</h3>
-        <p class="sol-lead">Build the capability behind growth.</p>
-        <p class="sol-body">We design leadership, culture, and talent systems that enable sustainable performance.</p>
-        <a href="solutions-leadership.html" class="btn btn-navy">Explore Leadership Solutions</a>
+        <h3>Scaling Advisory Engagements</h3>
+        <p class="sol-lead">Helping organizations build what the next stage requires.</p>
+        <ul class="sol-focus">
+          <li>Operating model evolution</li>
+          <li>Decision systems</li>
+          <li>Leadership alignment</li>
+          <li>Accountability rhythms</li>
+          <li>Talent strategy</li>
+          <li>Succession depth</li>
+        </ul>
+        <a href="contact.html" class="btn btn-navy">Start a Conversation</a>
       </div>
 
-      <div class="sol-card" id="ai">
+      <div class="sol-card" id="transitions">
         <span class="sol-num">04</span>
-        <h3>AI-Enabled Transformation</h3>
-        <p class="sol-lead">Build readiness for the future of work.</p>
-        <p class="sol-body">We help organizations understand, adopt, and integrate AI into how work gets done.</p>
-        <a href="solutions-ai.html" class="btn btn-navy">Explore AI Transformation</a>
+        <h3>Executive Transition Advisory</h3>
+        <p class="sol-lead">Protecting continuity during critical leadership moments.</p>
+        <ul class="sol-focus">
+          <li>Founder transitions</li>
+          <li>CEO succession</li>
+          <li>Executive advisory structures</li>
+          <li>Continuity planning</li>
+          <li>Next-stage identity and operating clarity</li>
+        </ul>
+        <a href="executive-next-chapter.html" class="btn btn-navy">See Executive Next Chapter™</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="architecture-band">
+<!-- FOUNDER SCALE SESSION -->
+<section class="fss-section" id="founder-scale-session">
+  <img class="fss-bg" src="next-chapter-ascent.svg" alt=""/>
+  <div class="fss-fade"></div>
   <div class="container">
-    <span class="eyebrow">The DeepSight View</span>
+    <div class="fss-inner">
+      <span class="eyebrow">Signature Offering</span>
+      <h2>Founder Scale Session™</h2>
+      <p>A focused advisory experience for founders and CEOs of founder-led, growth-stage, and scaling companies asking: what needs to evolve for this company to scale without losing what made it successful?</p>
+      <div class="fss-map">
+        <div class="fss-stage">
+          <h5>Protect</h5>
+          <p>What made the company successful.</p>
+        </div>
+        <div class="fss-stage">
+          <h5>Evolve</h5>
+          <p>What must change for the next stage.</p>
+        </div>
+        <div class="fss-stage">
+          <h5>Build</h5>
+          <p>What the next stage requires.</p>
+        </div>
+      </div>
+      <p style="font-size:0.92rem;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;">The output is the DeepSight Growth Map™, a practical view of what to protect, what must evolve, and what to build next.</p>
+      <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXECUTIVE NEXT CHAPTER CALLOUT -->
+<section class="enc-callout">
+  <div class="container">
+    <div class="enc-callout-inner">
+      <div>
+        <span class="eyebrow">For the Leader's Next Stage</span>
+        <h3 style="font-size:1.4rem;margin:0.5rem 0 0.5rem;">Looking for Executive Next Chapter™?</h3>
+        <p style="color:var(--gray);">Founder Scale Session™ is for the company. Executive Next Chapter™ is for the leader, helping founders and senior executives clarify what comes after this chapter and turn experience into a platform for what's next.</p>
+      </div>
+      <a href="executive-next-chapter.html" class="btn btn-outline-dark" style="white-space:nowrap;">Explore Executive Next Chapter™</a>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITY DEPTH -->
+<section class="capability-band">
+  <div class="container">
+    <span class="eyebrow">Proof of Depth</span>
     <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
-    <h2 style="margin-top:1.25rem;">From Vision to Execution</h2>
-    <p style="color:var(--gray);max-width:520px;margin:0.5rem auto 0;">Every solution area connects to the same enterprise architecture: vision drives strategy, strategy shapes the operating model, and systems carry it through to execution.</p>
-    <img src="enterprise-architecture.svg" alt="Enterprise architecture diagram showing Vision leading to Strategy, Operating Model, Systems, and Execution"/>
+    <h2 style="margin-top:1.25rem;">The Experience Beneath the Advisory Work</h2>
+    <p style="color:var(--gray);max-width:580px;margin:0.75rem auto 0;">DeepSight's advisory work draws from deep experience in strategy, operating model design, leadership systems, talent strategy, culture infrastructure, and AI-enabled transformation.</p>
+    <div class="capability-grid">
+      <div class="cap-tile">
+        <h4>Strategy &amp; Transformation</h4>
+        <p>Clarify priorities and build execution roadmaps.</p>
+      </div>
+      <div class="cap-tile">
+        <h4>Operating Model Design</h4>
+        <p>Build structures and systems that support scale.</p>
+      </div>
+      <div class="cap-tile">
+        <h4>People &amp; Leadership Systems</h4>
+        <p>Develop leadership capability and talent strategy.</p>
+      </div>
+      <div class="cap-tile">
+        <h4>AI-Enabled Transformation</h4>
+        <p>Prepare leaders and teams for how work is changing.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -115,8 +235,8 @@
   <div class="container">
     <span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">Not Sure Where to Start?</span>
     <h2>Let's Talk Through Your Situation.</h2>
-    <p>Every engagement begins with a conversation to understand where you are and what's needed next.</p>
-    <a href="contact.html" class="btn btn-gold">Schedule a Strategy Session</a>
+    <p>Every partnership begins with a conversation to understand where you are and what's needed next.</p>
+    <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
   </div>
 </section>
 
@@ -125,38 +245,38 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
-        <p>A JWP Consulting LLC Company<br/>Building What Growth Requires Next™<br/>Atlanta, GA · National</p>
+        <p>A JWP Consulting LLC Company<br/>Scale Without Breaking What Made You Successful.<br/>Atlanta, GA · National</p>
       </div>
       <div class="footer-links">
         <h5>The Firm</h5>
         <ul>
+          <li><a href="who-we-help.html">Who We Help</a></li>
           <li><a href="our-firm.html">Our Firm</a></li>
           <li><a href="jackie-parker.html">Jackie Parker</a></li>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h5>Solutions</h5>
+        <h5>How We Partner</h5>
         <ul>
-          <li><a href="solutions-strategy.html">Strategy &amp; Transformation</a></li>
-          <li><a href="solutions-operating-model.html">Operating Model Design</a></li>
-          <li><a href="solutions-leadership.html">People &amp; Leadership Systems</a></li>
-          <li><a href="solutions-ai.html">AI-Enabled Transformation</a></li>
+          <li><a href="solutions.html#founder-scale-session">Founder Scale Session™</a></li>
+          <li><a href="solutions.html#ceo-advisory">Founder &amp; CEO Advisory</a></li>
+          <li><a href="solutions.html#scaling">Scaling Advisory</a></li>
+          <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
         </ul>
       </div>
       <div class="footer-links">
         <h5>Contact</h5>
         <ul>
           <li><a href="mailto:hello@deepsightstrategy.com">hello@deepsightstrategy.com</a></li>
-          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-          <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+          <li><a href="https://www.linkedin.com/in/jackie-parker-atlanta" target="_blank">LinkedIn</a></li>
+          <li><a href="contact.html">Start a Conversation</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
-      <p>Building What Growth Requires Next™</p>
+      <p>Scale Without Breaking What Made You Successful.</p>
     </div>
   </div>
 </footer>
