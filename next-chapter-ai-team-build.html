@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="style.css"/>
   <style>
     .nca-hero { background:var(--navy); padding:9rem 0 5.5rem; border-bottom:3px solid var(--gold); position:relative; overflow:hidden; text-align:center; }
-    .nca-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.5; }
-    .nca-hero-fade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.94) 100%); }
+    .nca-hero::before { content:''; position:absolute; top:-160px; left:50%; transform:translateX(-50%); width:780px; height:560px; background:radial-gradient(ellipse at center, rgba(74,158,196,0.10) 0%, transparent 68%); pointer-events:none; }
+    .nca-hero::after { content:''; position:absolute; bottom:-220px; right:-160px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(160,120,32,0.10) 0%, transparent 70%); pointer-events:none; }
     .nca-hero-inner { max-width:720px; margin:0 auto; position:relative; }
     .nca-hero .eyebrow { color:var(--gold-l); margin-bottom:1.25rem; }
     .nca-hero h1 { color:var(--white); font-weight:300; margin-bottom:1.25rem; }
@@ -143,8 +143,6 @@
 
 <!-- HERO -->
 <section class="nca-hero">
-  <img class="nca-hero-bg" src="next-chapter-journey.svg" alt=""/>
-  <div class="nca-hero-fade"></div>
   <div class="container">
     <div class="nca-hero-inner">
       <span class="eyebrow">Executive Next Chapter™</span>
