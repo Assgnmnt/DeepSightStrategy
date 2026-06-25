@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Next Chapter AI Team Build™: DeepSight Strategy™</title>
+  <meta name="description" content="The Next Chapter AI Team Build™ helps experienced leaders design a custom AI operating team around the business they are building next. Part of Executive Next Chapter™ at DeepSight Strategy™."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .nca-hero { background:var(--navy); padding:9rem 0 5.5rem; border-bottom:3px solid var(--gold); position:relative; overflow:hidden; text-align:center; }
+    .nca-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.5; }
+    .nca-hero-fade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.94) 100%); }
+    .nca-hero-inner { max-width:720px; margin:0 auto; position:relative; }
+    .nca-hero .eyebrow { color:var(--gold-l); margin-bottom:1.25rem; }
+    .nca-hero h1 { color:var(--white); font-weight:300; margin-bottom:1.25rem; }
+    .nca-hero .sub { font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--gold-l); margin-bottom:1.75rem; }
+    .nca-hero p { color:rgba(255,255,255,0.62); font-size:1.05rem; line-height:1.85; margin:0 auto 2.25rem; max-width:600px; }
+
+    .nca-opening { background:var(--white); padding:5.5rem 0; text-align:center; }
+    .nca-opening-inner { max-width:680px; margin:0 auto; }
+    .nca-opening h2 { margin-bottom:1.25rem; }
+    .nca-opening p { color:var(--gray); line-height:1.85; }
+
+    .nca-builds { background:var(--cream); padding:5.5rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); text-align:center; }
+    .nca-builds-inner { max-width:680px; margin:0 auto; }
+    .nca-builds p { color:var(--gray); line-height:1.85; margin-top:1.25rem; }
+
+    .nca-walk { background:var(--white); padding:5.5rem 0; }
+    .nca-walk .section-head { text-align:center; max-width:600px; margin:0 auto 3.25rem; }
+    .nca-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5px; background:var(--gray-l); border:1.5px solid var(--gray-l); }
+    .nca-card { background:var(--white); padding:2.25rem 1.9rem; }
+    .nca-card h3 { font-size:1.15rem; margin-bottom:0.65rem; }
+    .nca-card p { font-size:0.9rem; color:var(--gray); line-height:1.7; }
+    .nca-card .ic { width:26px; height:2px; background:var(--gold); display:block; margin-bottom:1.1rem; }
+
+    .nca-method { background:var(--cream); padding:5.5rem 0; border-top:1.5px solid var(--gray-l); }
+    .nca-method .section-head { text-align:center; max-width:600px; margin:0 auto 3.25rem; }
+    .nca-method-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5px; background:var(--gray-l); border:1.5px solid var(--gray-l); }
+    .nca-step { background:var(--white); padding:2.5rem 1.6rem; }
+    .nca-step .letter { font-family:var(--serif); font-size:2rem; color:var(--gold); display:block; line-height:1; margin-bottom:0.9rem; }
+    .nca-step h3 { font-size:1.08rem; margin-bottom:0.6rem; }
+    .nca-step p { font-size:0.86rem; color:var(--gray); line-height:1.65; }
+
+    .nca-tiers { background:var(--navy); padding:6rem 0; position:relative; overflow:hidden; }
+    .nca-tiers::before { content:''; position:absolute; top:-180px; left:-150px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle,rgba(74,158,196,0.07) 0%,transparent 70%); pointer-events:none; }
+    .nca-tiers .section-head { text-align:center; max-width:600px; margin:0 auto 3.25rem; position:relative; }
+    .nca-tiers .section-head .eyebrow { color:var(--gold-l); }
+    .nca-tiers .section-head h2 { color:var(--white); font-weight:300; }
+    .nca-tier-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; position:relative; max-width:920px; margin:0 auto; }
+    .nca-tier { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:2.75rem 2.4rem; display:flex; flex-direction:column; }
+    .nca-tier.feature { border-color:var(--gold); }
+    .nca-tier .tier-tag { font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-l); margin-bottom:1rem; }
+    .nca-tier h3 { color:var(--white); font-size:1.4rem; font-weight:400; margin-bottom:0.9rem; }
+    .nca-tier .tier-lede { color:rgba(255,255,255,0.6); font-size:0.95rem; line-height:1.7; margin-bottom:1.6rem; }
+    .nca-tier ul { list-style:none; margin-bottom:1.9rem; }
+    .nca-tier li { font-size:0.88rem; color:rgba(255,255,255,0.78); padding:0.55rem 0; border-top:1px solid rgba(255,255,255,0.09); display:flex; gap:0.7rem; align-items:flex-start; }
+    .nca-tier li:first-child { border-top:none; }
+    .nca-tier li .dot { color:var(--gold); flex-shrink:0; }
+    .nca-tier .tier-note { font-size:0.82rem; color:rgba(255,255,255,0.45); margin-bottom:1.6rem; line-height:1.6; }
+    .nca-tier .btn { margin-top:auto; text-align:center; }
+
+    .nca-fit { background:var(--white); padding:5.5rem 0; }
+    .nca-fit-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; max-width:920px; margin:0 auto; }
+    .nca-fit-col h3 { font-size:1.2rem; margin-bottom:1.4rem; }
+    .nca-fit-col ul { list-style:none; }
+    .nca-fit-col li { font-size:0.92rem; color:var(--navy); padding:0.7rem 0; border-top:1px solid var(--gray-l); display:flex; gap:0.7rem; align-items:flex-start; line-height:1.6; }
+    .nca-fit-col li:first-child { border-top:none; }
+    .nca-fit-col.is-for li .mk { color:var(--gold); font-weight:bold; flex-shrink:0; }
+    .nca-fit-col.not-for { background:var(--cream); border-radius:var(--radius); padding:2rem 2.25rem; }
+    .nca-fit-col.not-for li .mk { color:var(--gray); flex-shrink:0; }
+    .nca-fit-col.not-for p { font-size:0.92rem; color:var(--gray); line-height:1.75; }
+
+    .nca-form-section { background:var(--cream); padding:6rem 0; border-top:1.5px solid var(--gray-l); }
+    .nca-form-inner { max-width:640px; margin:0 auto; }
+    .nca-form-head { text-align:center; margin-bottom:2.75rem; }
+    .nca-form-head p { color:var(--gray); margin-top:1rem; }
+    .nca-form .row { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem; }
+    .nca-field { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.25rem; }
+    .nca-field.half { margin-bottom:0; }
+    .nca-field label { font-size:0.82rem; font-weight:600; color:var(--navy); }
+    .nca-field label .opt { font-weight:400; color:var(--gray); }
+    .nca-field input, .nca-field textarea, .nca-field select { font-family:var(--font); font-size:0.95rem; color:var(--navy); background:var(--white); border:1px solid var(--gray-l); border-radius:var(--radius); padding:0.8rem 0.9rem; width:100%; transition:var(--ease); }
+    .nca-field textarea { resize:vertical; min-height:96px; line-height:1.6; }
+    .nca-field input:focus, .nca-field textarea:focus, .nca-field select:focus { outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(160,120,32,0.14); }
+    .nca-field.error input, .nca-field.error textarea { border-color:#B4452F; }
+    .nca-err { font-size:0.78rem; color:#B4452F; display:none; }
+    .nca-field.error .nca-err { display:block; }
+    .nca-submit-wrap { text-align:center; margin-top:0.5rem; }
+    .nca-form .btn { border:none; }
+    .nca-confirm { display:none; text-align:center; max-width:560px; margin:0 auto; }
+    .nca-confirm.on { display:block; }
+    .nca-confirm .seal { width:54px; height:54px; border-radius:50%; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; }
+    .nca-confirm h2 { margin-bottom:1rem; }
+    .nca-confirm p { color:var(--gray); line-height:1.8; }
+    .nca-form-note { text-align:center; font-size:0.84rem; color:var(--gray); margin-top:1.25rem; }
+
+    .nca-final { background:var(--navy); padding:6rem 0; text-align:center; border-top:3px solid var(--gold); }
+    .nca-final-inner { max-width:580px; margin:0 auto; }
+    .nca-final .pull { font-family:var(--serif); font-style:italic; font-size:1.6rem; color:var(--white); line-height:1.4; margin-bottom:0.75rem; }
+    .nca-final p { color:rgba(255,255,255,0.55); margin-bottom:2.5rem; }
+
+    @media(max-width:900px){
+      .nca-method-cards { grid-template-columns:1fr 1fr; }
+      .nca-tier-grid, .nca-fit-grid { grid-template-columns:1fr; }
+    }
+    @media(max-width:600px){
+      .nca-method-cards { grid-template-columns:1fr; }
+      .nca-form .row { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="32" stroke="white" stroke-width="1.5"/>
+        <circle cx="36" cy="36" r="26" fill="#0D1B2E" stroke="#A07820" stroke-width="0.8"/>
+        <circle cx="36" cy="36" r="16" fill="none" stroke="#4A9EC4" stroke-width="0.6" opacity="0.6"/>
+        <line x1="36" y1="6" x2="36" y2="66" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="6" y1="36" x2="66" y2="36" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
+        <line x1="36" y1="3" x2="36" y2="10" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="36" y1="62" x2="36" y2="69" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="36" x2="10" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <line x1="62" y1="36" x2="69" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="36" cy="36" r="4" fill="#A07820"/>
+        <circle cx="36" cy="36" r="1.8" fill="#0D1B2E"/>
+        <text x="36" y="33" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="white" letter-spacing="2">DS</text>
+      </svg>
+      <div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="who-we-help.html">Who We Help</a></li>
+      <li><a href="solutions.html">How We Partner</a></li>
+      <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+      <li><a href="our-firm.html">Our Firm</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="contact.html" class="nav-cta">Start a Conversation</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="nca-hero">
+  <img class="nca-hero-bg" src="next-chapter-journey.svg" alt=""/>
+  <div class="nca-hero-fade"></div>
+  <div class="container">
+    <div class="nca-hero-inner">
+      <span class="eyebrow">Executive Next Chapter™</span>
+      <h1>Build the team behind your next chapter before you hire one.</h1>
+      <p class="sub">The support model comes first. The headcount can wait.</p>
+      <p>A custom AI operating team for experienced leaders who want more leverage, structure, and support as they build what comes next. I design the roles your next chapter needs, define what each one does, and give you the prompts and rhythm to run them well.</p>
+      <a href="#start" class="btn btn-gold">Start a Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- OPENING -->
+<section class="nca-opening">
+  <div class="container">
+    <div class="nca-opening-inner">
+      <span class="eyebrow">The Real Gap</span>
+      <div class="gold-rule" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>Your expertise is not the gap. Support is.</h2>
+      <p>You have the experience, the judgment, and the relationships. What you may not have yet is the team structure around the work you are building next. The Next Chapter AI Team Build™ gives you a practical way to create that support before you add staff, contractors, or complexity you do not need.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THIS BUILDS -->
+<section class="nca-builds">
+  <div class="container">
+    <div class="nca-builds-inner">
+      <span class="eyebrow">What This Builds</span>
+      <h2 style="margin-top:0.75rem;">A custom operating team built around how you work.</h2>
+      <p>This is a focused build, not a course and not a tutorial. Together we identify the roles your next chapter actually needs, define what each one is responsible for, and create the prompts and working rhythm that let you use the team consistently. You stay in the leadership seat. The team carries the work behind you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU WALK AWAY WITH -->
+<section class="nca-walk">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Deliverables</span>
+      <h2 style="margin-top:0.75rem;">What you walk away with.</h2>
+    </div>
+    <div class="nca-cards">
+      <div class="nca-card"><span class="ic"></span><h3>AI Team Map</h3><p>A clear view of the roles your next chapter needs and how they work together.</p></div>
+      <div class="nca-card"><span class="ic"></span><h3>Role Charters</h3><p>Defined responsibilities, inputs, and outputs for each member of your AI team.</p></div>
+      <div class="nca-card"><span class="ic"></span><h3>Custom Prompts</h3><p>Ready-to-use prompts written for your goals, your voice, and your business model.</p></div>
+      <div class="nca-card"><span class="ic"></span><h3>Weekly Team Rhythm</h3><p>A simple cadence for using the team without overcomplicating your week.</p></div>
+      <div class="nca-card"><span class="ic"></span><h3>Delegation Guide</h3><p>What to hand off, what to review, and what stays with you.</p></div>
+      <div class="nca-card"><span class="ic"></span><h3>Use Case Library</h3><p>Worked examples across strategy, content, follow-up, outreach, and planning.</p></div>
+      <div class="nca-card"><span class="ic"></span><h3>Handoff Guide</h3><p>A practical reference you can return to long after the build is done.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE T.E.A.M. METHOD -->
+<section class="nca-method">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Method</span>
+      <h2 style="margin-top:0.75rem;">The T.E.A.M. Method™</h2>
+      <p style="color:var(--gray);margin-top:1rem;">A practical way to build the support model behind your next chapter.</p>
+    </div>
+    <div class="nca-method-cards">
+      <div class="nca-step"><span class="letter">T</span><h3>Translate the Work</h3><p>We start by naming the support your next chapter actually requires, not a generic version of it.</p></div>
+      <div class="nca-step"><span class="letter">E</span><h3>Establish the Roles</h3><p>We define each AI team member, its responsibilities, and the decisions that stay with you.</p></div>
+      <div class="nca-step"><span class="letter">A</span><h3>Activate the Prompts</h3><p>We build role-specific prompts that reflect your goals, your voice, and your business model.</p></div>
+      <div class="nca-step"><span class="letter">M</span><h3>Manage the Rhythm</h3><p>We set a simple weekly cadence so the team becomes a habit rather than another thing to figure out.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="nca-tiers">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Engagements</span>
+      <h2 style="margin-top:0.75rem;">Two ways to build.</h2>
+    </div>
+    <div class="nca-tier-grid">
+      <div class="nca-tier">
+        <span class="tier-tag">The Build</span>
+        <h3>Next Chapter AI Team Build™</h3>
+        <p class="tier-lede">A private build that creates your custom AI operating team from the ground up.</p>
+        <ul>
+          <li><span class="dot">·</span>AI team map and role charters</li>
+          <li><span class="dot">·</span>Custom prompts in your voice</li>
+          <li><span class="dot">·</span>Weekly working rhythm</li>
+          <li><span class="dot">·</span>Delegation and decision-support guides</li>
+          <li><span class="dot">·</span>Use case library and handoff guide</li>
+        </ul>
+        <p class="tier-note">Delivered across two to three working sessions and a final handoff.</p>
+        <a href="#start" class="btn btn-gold">Start a Conversation</a>
+      </div>
+      <div class="nca-tier feature">
+        <span class="tier-tag">The Premium Build</span>
+        <h3>Executive AI Team Build™</h3>
+        <p class="tier-lede">For senior leaders developing advisory, consulting, speaking, author, or portfolio-based platforms.</p>
+        <ul>
+          <li><span class="dot">·</span>Executive positioning review</li>
+          <li><span class="dot">·</span>AI team strategy and custom role design</li>
+          <li><span class="dot">·</span>Advanced prompt library</li>
+          <li><span class="dot">·</span>Relationship and visibility use cases</li>
+          <li><span class="dot">·</span>Private handoff and optional 30-day review</li>
+        </ul>
+        <p class="tier-note">A deeper engagement for more complex, platform-driven next chapters.</p>
+        <a href="#start" class="btn btn-gold">Start a Conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="nca-fit">
+  <div class="container">
+    <div class="section-head" style="text-align:center;max-width:600px;margin:0 auto 3.25rem;">
+      <span class="eyebrow">The Fit</span>
+      <h2 style="margin-top:0.75rem;">Who this is built for.</h2>
+    </div>
+    <div class="nca-fit-grid">
+      <div class="nca-fit-col is-for">
+        <h3>This may be a fit if you are</h3>
+        <ul>
+          <li><span class="mk">→</span>Building a consulting, advisory, or service-based next chapter</li>
+          <li><span class="mk">→</span>Starting or growing a solo practice</li>
+          <li><span class="mk">→</span>Carrying too much of the business alone</li>
+          <li><span class="mk">→</span>Not ready to hire a full team</li>
+          <li><span class="mk">→</span>Curious about AI, but past the point of basic training</li>
+          <li><span class="mk">→</span>Building an author, speaker, or thought-leadership platform</li>
+        </ul>
+      </div>
+      <div class="nca-fit-col not-for">
+        <h3>This is not</h3>
+        <p>Basic AI training, a full business strategy buildout, daily admin support, or someone to run the business for you. You are building the team model, not handing off the business. You stay the decision-maker. The team supports the work behind you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTAKE FORM -->
+<section class="nca-form-section" id="start">
+  <div class="container">
+    <div class="nca-form-inner">
+      <div class="nca-form-head" id="ncaFormHead">
+        <span class="eyebrow">Start</span>
+        <h2 style="margin-top:0.75rem;">Tell me what you're building.</h2>
+        <p>A few questions to understand your next chapter. I read every one personally.</p>
+      </div>
+
+      <form id="ncaForm" novalidate>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"/>
+        <div class="row">
+          <div class="nca-field half" data-require="name">
+            <label for="nca_name">Name</label>
+            <input type="text" id="nca_name" name="name" autocomplete="name" placeholder="First and last"/>
+            <span class="nca-err">Add your name so I know who I'm writing back to.</span>
+          </div>
+          <div class="nca-field half" data-require="email">
+            <label for="nca_email">Email</label>
+            <input type="email" id="nca_email" name="email" autocomplete="email" placeholder="you@domain.com"/>
+            <span class="nca-err">I need a working email to reach you.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="nca-field half">
+            <label for="nca_linkedin">LinkedIn <span class="opt">(optional)</span></label>
+            <input type="text" id="nca_linkedin" name="linkedin" placeholder="linkedin.com/in/you"/>
+          </div>
+          <div class="nca-field half">
+            <label for="nca_website">Website <span class="opt">(optional)</span></label>
+            <input type="text" id="nca_website" name="website" placeholder="yoursite.com"/>
+          </div>
+        </div>
+        <div class="nca-field">
+          <label for="nca_building">What are you building next?</label>
+          <textarea id="nca_building" name="building_next" placeholder="The advisory practice, platform, or business you're building."></textarea>
+        </div>
+        <div class="nca-field">
+          <label for="nca_support">What kind of support do you wish you had? <span class="opt">(optional)</span></label>
+          <textarea id="nca_support" name="support_wanted" placeholder="Where the work piles up, or what keeps falling through the cracks."></textarea>
+        </div>
+        <div class="row">
+          <div class="nca-field half">
+            <label for="nca_engagement">Which engagement fits?</label>
+            <select id="nca_engagement" name="engagement_interest">
+              <option value="" selected disabled>Choose one</option>
+              <option>Next Chapter AI Team Build™</option>
+              <option>Executive AI Team Build™</option>
+              <option>Not sure yet, open to your read</option>
+            </select>
+          </div>
+          <div class="nca-field half">
+            <label for="nca_ai">Have you used AI tools before?</label>
+            <select id="nca_ai" name="ai_experience">
+              <option value="" selected disabled>Choose one</option>
+              <option>Not really, I'm early</option>
+              <option>A little, inconsistently</option>
+              <option>Regularly, but not as a business tool</option>
+              <option>Yes, comfortably</option>
+            </select>
+          </div>
+        </div>
+        <div class="nca-submit-wrap">
+          <button type="button" class="btn btn-gold" id="ncaSubmit">Start the conversation</button>
+          <p class="nca-form-note" id="ncaNote">This goes directly to Jackie. You'll hear back within two business days.</p>
+        </div>
+      </form>
+
+      <div class="nca-confirm" id="ncaConfirm" aria-live="polite">
+        <div class="seal"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M6 13.5l4.5 4.5L20 8" stroke="#A07820" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>Your conversation has started.</h2>
+        <p>I read every Next Chapter AI Team Build™ inquiry myself. You'll have a first read from me within two business days, with a clear sense of which team would create the most leverage for what you're building.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="nca-final">
+  <div class="container">
+    <div class="nca-final-inner">
+      <span class="eyebrow" style="color:var(--gold-l);">Next Chapter AI Team Build™</span>
+      <p class="pull" style="margin-top:1.25rem;">Build the support model before you hire the team.</p>
+      <p>Your next chapter does not have to run on memory and willpower. Start with a team designed around how you think, lead, and build.</p>
+      <a href="#start" class="btn btn-gold">Start a Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
+        <p>A JWP Consulting LLC Company<br/>Scale Without Breaking What Made You Successful.<br/>Atlanta, GA · National</p>
+      </div>
+      <div class="footer-links">
+        <h5>The Firm</h5>
+        <ul>
+          <li><a href="who-we-help.html">Who We Help</a></li>
+          <li><a href="our-firm.html">Our Firm</a></li>
+          <li><a href="jackie-parker.html">Jackie Parker</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>How We Partner</h5>
+        <ul>
+          <li><a href="solutions.html#founder-scale-session">Founder Scale Session™</a></li>
+          <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+          <li><a href="next-chapter-ai-team-build.html">Next Chapter AI Team Build™</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@deepsightstrategy.com">hello@deepsightstrategy.com</a></li>
+          <li><a href="https://www.linkedin.com/in/jackie-parker-atlanta" target="_blank">LinkedIn</a></li>
+          <li><a href="contact.html">Request Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DeepSight Strategy™, A JWP Consulting LLC Company. All Rights Reserved.</p>
+      <p>Scale Without Breaking What Made You Successful.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/mqevpdbl";
+  var INTAKE_TYPE = "Next Chapter AI Team Build";
+
+  var form = document.getElementById('ncaForm');
+  var submit = document.getElementById('ncaSubmit');
+  var note = document.getElementById('ncaNote');
+  var head = document.getElementById('ncaFormHead');
+  var confirmEl = document.getElementById('ncaConfirm');
+
+  function validate(){
+    var ok = true;
+    form.querySelectorAll('[data-require]').forEach(function(field){
+      var input = field.querySelector('input');
+      var v = (input.value||'').trim();
+      var valid = v.length > 0;
+      if(field.getAttribute('data-require') === 'email'){
+        valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      }
+      field.classList.toggle('error', !valid);
+      if(!valid) ok = false;
+    });
+    return ok;
+  }
+
+  form.addEventListener('input', function(e){
+    var f = e.target.closest('.nca-field');
+    if(f) f.classList.remove('error');
+  });
+
+  function collect(){
+    var data = { "Intake Type": INTAKE_TYPE };
+    var labels = {
+      name:"Name", email:"Email", linkedin:"LinkedIn", website:"Website",
+      building_next:"Building Next", support_wanted:"Support Wanted",
+      engagement_interest:"Engagement Interest", ai_experience:"AI Experience"
+    };
+    new FormData(form).forEach(function(v,k){
+      if(k === '_gotcha') return;
+      data[labels[k]||k] = v;
+    });
+    data["Source Page"] = window.location.href;
+    data["_subject"] = "New Next Chapter AI Team Build inquiry: " + (data["Name"]||"unknown");
+    return data;
+  }
+
+  function showConfirm(){
+    form.style.display = 'none';
+    head.style.display = 'none';
+    confirmEl.classList.add('on');
+    confirmEl.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  submit.addEventListener('click', function(){
+    if(!validate()) return;
+    var payload = collect();
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    fetch(FORMSPREE_ENDPOINT, {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      if(res.ok){ showConfirm(); }
+      else { throw new Error('bad'); }
+    }).catch(function(){
+      submit.disabled = false;
+      submit.textContent = 'Start the conversation';
+      note.innerHTML = "Something went wrong sending this. Email me directly at <a href='mailto:jackie@deepsightstrategy.com'>jackie@deepsightstrategy.com</a>.";
+      note.style.color = '#B4452F';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
