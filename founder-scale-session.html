@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Founder Scale Session&trade; | DeepSight Strategy&trade;</title>
+<meta name="description" content="The Founder Scale Session is the starting point for founders and CEOs whose companies have outgrown the systems that built their success. Reviewed personally by Jackie Parker.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#102A3D;
+    --navy-deep:#0A1C29;
+    --navy-line:rgba(255,255,255,0.12);
+    --gold:#B68B45;
+    --gold-bright:#CBA665;
+    --gold-soft:#E3D2A8;
+    --cream:#F4EEE1;
+    --cream-pure:#FBF7EE;
+    --paper:#FFFFFF;
+    --ink:#15232E;
+    --muted:#5D6C77;
+    --line:rgba(16,42,61,0.14);
+    --line-soft:rgba(16,42,61,0.08);
+    --shadow:0 18px 50px rgba(10,28,41,0.10);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Spectral',Georgia,serif;font-weight:400;line-height:1.15;letter-spacing:-0.01em}
+  a{color:inherit}
+
+  .eyebrow{
+    font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  /* ---------- Shell ---------- */
+  .shell{display:grid;grid-template-columns:360px 1fr;min-height:100vh}
+
+  /* ---------- Rail ---------- */
+  .rail{
+    background:var(--navy);
+    color:#EAF0F4;
+    padding:48px 44px;
+    display:flex;flex-direction:column;
+    position:sticky;top:0;height:100vh;
+  }
+  .rail-top{display:flex;flex-direction:column;gap:36px}
+
+  .wordmark{display:flex;align-items:center;gap:13px;text-decoration:none}
+  .lens{flex:none}
+  .wordmark-text{display:flex;flex-direction:column;line-height:1}
+  .wordmark-text .name{font-family:'Spectral',serif;font-size:1.28rem;letter-spacing:.04em;font-weight:500;color:#fff}
+  .wordmark-text .sub{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft);margin-top:6px}
+
+  .rail-title .eyebrow{color:var(--gold-bright)}
+  .rail-title h2{font-size:1.62rem;color:#fff;margin-top:12px;font-weight:300}
+
+  .steps{list-style:none;display:flex;flex-direction:column;gap:2px;margin-top:8px}
+  .step{
+    display:flex;align-items:center;gap:14px;
+    padding:11px 0;color:rgba(234,240,244,0.45);
+    font-size:.92rem;font-weight:500;
+    transition:color .4s var(--ease);
+  }
+  .step .dot{
+    flex:none;width:9px;height:9px;border-radius:50%;
+    border:1.5px solid rgba(234,240,244,0.30);
+    transition:all .4s var(--ease);
+  }
+  .step.is-active{color:#fff}
+  .step.is-active .dot{background:var(--gold-bright);border-color:var(--gold-bright);box-shadow:0 0 0 4px rgba(203,166,101,0.18)}
+  .step.is-done{color:rgba(234,240,244,0.72)}
+  .step.is-done .dot{background:var(--gold);border-color:var(--gold)}
+
+  .rail-foot{margin-top:auto;padding-top:34px;border-top:1px solid var(--navy-line)}
+  .map-words{display:flex;gap:10px;align-items:center;font-family:'Spectral',serif;font-size:.96rem;letter-spacing:.02em;color:rgba(234,240,244,0.40);transition:color .5s var(--ease)}
+  .map-words .mw{transition:color .5s var(--ease)}
+  .map-words.lit .mw{color:var(--gold-soft)}
+  .map-words .sep{color:rgba(234,240,244,0.25)}
+  .rail-note{font-size:.82rem;color:rgba(234,240,244,0.55);margin-top:16px;line-height:1.5}
+  .rail-note strong{color:#fff;font-weight:600}
+
+  /* ---------- Stage ---------- */
+  .stage{position:relative;display:flex;flex-direction:column}
+  .topbar{display:none}
+  .stage-inner{
+    flex:1;display:flex;align-items:flex-start;
+    padding:72px 7vw 96px;
+    max-width:840px;
+  }
+  .panel{display:none;width:100%;animation:rise .55s var(--ease) both}
+  .panel.is-active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .panel-head{margin-bottom:34px}
+  .panel-head .eyebrow{display:block;margin-bottom:16px}
+  .panel-head h1{font-size:2.7rem;font-weight:300}
+  .panel-head h2{font-size:2.1rem;font-weight:300}
+  .panel-head .lede{font-size:1.12rem;color:var(--muted);margin-top:20px;max-width:60ch;line-height:1.62}
+  .panel-head .lede.tight{margin-top:14px}
+
+  /* welcome */
+  .welcome-meta{display:flex;flex-wrap:wrap;gap:0;margin:38px 0 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .meta-item{flex:1 1 180px;padding:22px 28px 22px 0;border-right:1px solid var(--line-soft)}
+  .meta-item:last-child{border-right:none}
+  .meta-item .k{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .meta-item .v{font-family:'Spectral',serif;font-size:1.15rem;margin-top:8px;color:var(--ink)}
+  .signed{display:flex;align-items:center;gap:14px;margin-top:30px}
+  .signed .badge{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-family:'Spectral',serif;font-size:1.15rem;flex:none}
+  .signed .who{font-size:.9rem;color:var(--muted)}
+  .signed .who strong{display:block;color:var(--ink);font-weight:600;font-size:.98rem}
+
+  /* fields */
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:24px 28px}
+  .field{display:flex;flex-direction:column;gap:9px}
+  .field.full{grid-column:1 / -1}
+  .field label{font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--ink)}
+  .field label .opt{font-weight:400;color:var(--muted);letter-spacing:0}
+  .field input,.field textarea,.field select{
+    font-family:inherit;font-size:1rem;color:var(--ink);
+    background:var(--paper);
+    border:1px solid var(--line);border-radius:2px;
+    padding:13px 15px;width:100%;
+    transition:border-color .25s,box-shadow .25s;
+  }
+  .field textarea{resize:vertical;min-height:104px;line-height:1.55}
+  .field input:focus,.field textarea:focus,.field select:focus{
+    outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(182,139,69,0.15);
+  }
+  .field .hint{font-size:.8rem;color:var(--muted)}
+  .field.error input,.field.error textarea{border-color:#B4452F;box-shadow:0 0 0 3px rgba(180,69,47,0.12)}
+  .err-msg{font-size:.8rem;color:#B4452F;display:none}
+  .field.error .err-msg{display:block}
+
+  /* diagnostic groups */
+  .movement{margin-bottom:40px;padding-bottom:38px;border-bottom:1px solid var(--line-soft)}
+  .movement:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+  .movement-head{display:flex;align-items:baseline;gap:16px;margin-bottom:6px}
+  .movement-head .mnum{font-family:'Spectral',serif;font-size:1rem;color:var(--gold);font-weight:500}
+  .movement-head h3{font-size:1.5rem;font-weight:400}
+  .movement-head .mtag{font-size:.78rem;color:var(--muted);letter-spacing:.02em}
+  .movement-sub{font-size:.96rem;color:var(--muted);margin:4px 0 22px;max-width:58ch}
+
+  .q{margin-bottom:26px}
+  .q:last-child{margin-bottom:0}
+  .q-label{font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+  .options{display:grid;gap:10px}
+  .opt-card{
+    display:flex;align-items:center;gap:14px;
+    border:1px solid var(--line);border-radius:3px;background:var(--paper);
+    padding:14px 17px;cursor:pointer;
+    transition:border-color .2s,background .2s,box-shadow .2s;
+    font-size:.97rem;color:var(--ink);
+  }
+  .opt-card:hover{border-color:var(--gold-soft);background:#fffdf8}
+  .opt-card .mark{
+    flex:none;width:18px;height:18px;border-radius:50%;
+    border:1.5px solid var(--line);position:relative;transition:all .2s;
+  }
+  .opt-card input{position:absolute;opacity:0;pointer-events:none}
+  .opt-card.sel{border-color:var(--gold);background:#fcf8ef;box-shadow:0 0 0 1px var(--gold) inset}
+  .opt-card.sel .mark{border-color:var(--gold);background:var(--gold)}
+  .opt-card.sel .mark::after{content:"";position:absolute;inset:4px;border-radius:50%;background:#fff}
+
+  /* footer controls */
+  .controls{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    margin-top:46px;padding-top:30px;border-top:1px solid var(--line);
+  }
+  .progress-text{font-size:.82rem;color:var(--muted);letter-spacing:.02em}
+  .btn-row{display:flex;gap:14px;align-items:center}
+  .btn{
+    font-family:inherit;font-size:.95rem;font-weight:600;letter-spacing:.01em;
+    border:none;border-radius:3px;padding:14px 30px;cursor:pointer;
+    transition:transform .15s,background .2s,box-shadow .2s,color .2s;
+  }
+  .btn-primary{background:var(--navy);color:#fff}
+  .btn-primary:hover{background:var(--navy-deep);box-shadow:var(--shadow)}
+  .btn-primary:active{transform:translateY(1px)}
+  .btn-ghost{background:transparent;color:var(--muted);padding:14px 8px}
+  .btn-ghost:hover{color:var(--ink)}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .btn:focus-visible,.opt-card:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  /* confirmation */
+  .confirm{display:none;text-align:left;max-width:680px}
+  .confirm.is-active{display:block;animation:rise .6s var(--ease) both}
+  .confirm .seal{width:58px;height:58px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:30px}
+  .confirm h1{font-size:2.5rem;font-weight:300;margin-bottom:22px}
+  .confirm .reflect{font-size:1.14rem;line-height:1.66;color:var(--ink);max-width:62ch}
+  .confirm .reflect strong{color:var(--navy);font-weight:600}
+  .confirm .next{margin-top:30px;padding:26px 30px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:3px}
+  .confirm .next .k{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .confirm .next p{font-size:1rem;color:var(--muted);line-height:1.6}
+  .confirm .next p + p{margin-top:10px}
+  .confirm .home-link{display:inline-block;margin-top:32px;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+
+  /* site footer */
+  .legal{padding:26px 7vw;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);background:var(--cream-pure)}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:880px){
+    .shell{grid-template-columns:1fr}
+    .rail{display:none}
+    .topbar{
+      display:flex;flex-direction:column;gap:16px;
+      background:var(--navy);color:#fff;padding:22px 24px 24px;
+      position:sticky;top:0;z-index:5;
+    }
+    .topbar .tb-head{display:flex;justify-content:space-between;align-items:center}
+    .topbar .tb-step{font-size:.78rem;letter-spacing:.04em;color:var(--gold-soft)}
+    .tb-bar{height:3px;background:var(--navy-line);border-radius:2px;overflow:hidden}
+    .tb-bar span{display:block;height:100%;background:var(--gold-bright);width:0;transition:width .5s var(--ease)}
+    .stage-inner{padding:40px 24px 64px}
+    .panel-head h1{font-size:2rem}
+    .panel-head h2{font-size:1.7rem}
+    .fields{grid-template-columns:1fr}
+    .welcome-meta{flex-direction:column}
+    .meta-item{border-right:none;border-bottom:1px solid var(--line-soft);padding:18px 0}
+    .meta-item:last-child{border-bottom:none}
+    .controls{flex-direction:column-reverse;align-items:stretch;gap:16px}
+    .btn-row{justify-content:space-between}
+    .btn{flex:1;text-align:center}
+    .btn-ghost{flex:0}
+    .confirm h1{font-size:1.9rem}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- RAIL -->
+  <aside class="rail">
+    <div class="rail-top">
+      <a class="wordmark" href="index.html" aria-label="DeepSight Strategy home">
+        <svg class="lens" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <circle cx="17" cy="17" r="15.5" stroke="#CBA665" stroke-width="1.4"/>
+          <circle cx="17" cy="17" r="8.5" stroke="#CBA665" stroke-width="1.4" opacity="0.6"/>
+          <circle cx="17" cy="17" r="2.6" fill="#CBA665"/>
+        </svg>
+        <span class="wordmark-text">
+          <span class="name">DeepSight</span>
+          <span class="sub">Strategy</span>
+        </span>
+      </a>
+
+      <div class="rail-title">
+        <span class="eyebrow">Signature Session</span>
+        <h2>Founder Scale<br>Session&trade;</h2>
+      </div>
+
+      <ul class="steps" id="steps">
+        <li class="step" data-step="0"><span class="dot"></span>Before we begin</li>
+        <li class="step" data-step="1"><span class="dot"></span>You &amp; the company</li>
+        <li class="step" data-step="2"><span class="dot"></span>Where growth is straining</li>
+        <li class="step" data-step="3"><span class="dot"></span>The moment you're in</li>
+        <li class="step" data-step="4"><span class="dot"></span>How to reach you</li>
+      </ul>
+    </div>
+
+    <div class="rail-foot">
+      <div class="map-words" id="mapWords">
+        <span class="mw">Protect</span><span class="sep">/</span>
+        <span class="mw">Evolve</span><span class="sep">/</span>
+        <span class="mw">Build</span>
+      </div>
+      <p class="rail-note">The DeepSight Growth Map&trade;.<br><strong>Reviewed personally by Jackie Parker.</strong></p>
+    </div>
+  </aside>
+
+  <!-- STAGE -->
+  <main class="stage">
+    <div class="topbar">
+      <div class="tb-head">
+        <span class="wordmark-text"><span class="name" style="font-family:'Spectral',serif;font-size:1.05rem;letter-spacing:.04em">DeepSight</span></span>
+        <span class="tb-step" id="tbStep">Step 1 of 5</span>
+      </div>
+      <div class="tb-bar"><span id="tbBar"></span></div>
+    </div>
+
+    <div class="stage-inner">
+      <form id="fssForm" novalidate style="width:100%">
+
+        <!-- honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
+        <!-- PANEL 0 — Welcome -->
+        <section class="panel is-active" data-panel="0">
+          <div class="panel-head">
+            <span class="eyebrow">The starting point</span>
+            <h1>The systems that built you<br>are not the systems that scale you.</h1>
+            <p class="lede">The Founder Scale Session is where we name that gap precisely. You answer a short set of questions about where your company is straining as it grows. I read every response myself, and I come back to you with a first read on what your next stage actually requires.</p>
+          </div>
+
+          <div class="welcome-meta">
+            <div class="meta-item"><div class="k">Takes about</div><div class="v">Five minutes</div></div>
+            <div class="meta-item"><div class="k">Organized by</div><div class="v">Protect / Evolve / Build</div></div>
+            <div class="meta-item"><div class="k">You'll hear back</div><div class="v">Within two business days</div></div>
+          </div>
+
+          <div class="signed">
+            <div class="badge" aria-hidden="true">JP</div>
+            <div class="who"><strong>Jackie Parker</strong>Principal, DeepSight Strategy&trade;</div>
+          </div>
+
+          <div class="controls">
+            <span class="progress-text">No account, no obligation. Just the start of a conversation.</span>
+            <div class="btn-row">
+              <button type="button" class="btn btn-primary" data-next>Begin</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PANEL 1 — Context -->
+        <section class="panel" data-panel="1">
+          <div class="panel-head">
+            <span class="eyebrow">First, the basics</span>
+            <h2>You and the company.</h2>
+            <p class="lede tight">Enough for me to understand who I'm reading and the scale you're operating at.</p>
+          </div>
+
+          <div class="fields">
+            <div class="field" data-require="name">
+              <label for="f_name">Your name</label>
+              <input type="text" id="f_name" name="name" autocomplete="name" placeholder="First and last">
+              <span class="err-msg">Add your name so I know who I'm writing back to.</span>
+            </div>
+            <div class="field">
+              <label for="f_role">Your role <span class="opt">(optional)</span></label>
+              <input type="text" id="f_role" name="role" placeholder="Founder, CEO, etc.">
+            </div>
+            <div class="field">
+              <label for="f_company">Company</label>
+              <input type="text" id="f_company" name="company" placeholder="Company name">
+            </div>
+            <div class="field">
+              <label for="f_website">Website <span class="opt">(optional)</span></label>
+              <input type="text" id="f_website" name="website" placeholder="yourcompany.com">
+            </div>
+            <div class="field full">
+              <label for="f_stage">Where is the company today?</label>
+              <select id="f_stage" name="company_stage">
+                <option value="" selected disabled>Select the closest fit</option>
+                <option>Under $5M revenue, finding our footing</option>
+                <option>$5M&ndash;$25M, growing fast</option>
+                <option>$25M&ndash;$100M, scaling the organization</option>
+                <option>$100M&ndash;$500M, building enterprise structure</option>
+                <option>$500M+, operating at enterprise scale</option>
+                <option>Pre-revenue or early, but moving quickly</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="controls">
+            <span class="progress-text"></span>
+            <div class="btn-row">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PANEL 2 — Diagnostic -->
+        <section class="panel" data-panel="2">
+          <div class="panel-head">
+            <span class="eyebrow">The Growth Map</span>
+            <h2>Where is growth straining?</h2>
+            <p class="lede tight">Three movements. Choose the answer closest to where you actually are, not where you'd like to be.</p>
+          </div>
+
+          <!-- PROTECT -->
+          <div class="movement">
+            <div class="movement-head"><span class="mnum">01</span><h3>Protect</h3><span class="mtag">What made you successful, now at risk</span></div>
+            <p class="movement-sub">The things that got you here, founder instinct, culture, key people, can quietly become the things most exposed as you grow.</p>
+
+            <div class="q" data-q="dependency" data-movement="protect">
+              <div class="q-label">How much of the business still depends on you personally?</div>
+              <div class="options">
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="dependency" value="Most critical decisions still route through me" data-w="2">Most critical decisions still route through me</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="dependency" value="Key areas do; others have real owners" data-w="1">Key areas do; others have real owners</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="dependency" value="It runs largely without me day to day" data-w="0">It runs largely without me day to day</label>
+              </div>
+            </div>
+
+            <div class="q" data-q="exposed" data-movement="protect">
+              <div class="q-label">What feels most exposed right now?</div>
+              <div class="options">
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="exposed" value="Founder or key-person dependency" data-w="2">Founder or key-person dependency</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="exposed" value="Culture diluting as we hire" data-w="2">Culture diluting as we hire</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="exposed" value="Knowledge living in people's heads, not systems" data-w="1">Knowledge living in people's heads, not systems</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="exposed" value="Nothing feels exposed yet" data-w="0">Nothing feels exposed yet</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- EVOLVE -->
+          <div class="movement">
+            <div class="movement-head"><span class="mnum">02</span><h3>Evolve</h3><span class="mtag">The operating model has to change</span></div>
+            <p class="movement-sub">The structure that worked at one size starts to strain at the next. This is where most scaling pain actually lives.</p>
+
+            <div class="q" data-q="strain" data-movement="evolve">
+              <div class="q-label">Where is the operating model straining most?</div>
+              <div class="options">
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="strain" value="Decision-making is bottlenecked" data-w="2">Decision-making is bottlenecked</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="strain" value="Roles and accountability are blurred" data-w="2">Roles and accountability are blurred</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="strain" value="Process and systems can't keep pace" data-w="1">Process and systems can't keep pace</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="strain" value="It's holding for now" data-w="0">It's holding for now</label>
+              </div>
+            </div>
+
+            <div class="q" data-q="team" data-movement="evolve">
+              <div class="q-label">Your leadership team is&hellip;</div>
+              <div class="options">
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="team" value="Mostly early hires who scaled with me" data-w="2">Mostly early hires who scaled with me</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="team" value="A mix I'm actively reshaping" data-w="1">A mix I'm actively reshaping</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="team" value="Largely built for where we're going" data-w="0">Largely built for where we're going</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- BUILD -->
+          <div class="movement">
+            <div class="movement-head"><span class="mnum">03</span><h3>Build</h3><span class="mtag">What the next stage requires</span></div>
+            <p class="movement-sub">Scaling is not only fixing what strains. It's building the thing that doesn't exist yet.</p>
+
+            <div class="q" data-q="next" data-movement="build">
+              <div class="q-label">What does the next 12 to 24 months most require that isn't in place yet?</div>
+              <div class="options">
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="next" value="A real operating model and org design" data-w="2">A real operating model and org design</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="next" value="A leadership team built for scale" data-w="2">A leadership team built for scale</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="next" value="An AI-enabled way of working" data-w="2">An AI-enabled way of working</label>
+                <label class="opt-card"><span class="mark"></span><input type="radio" name="next" value="A clearer strategy for the next stage" data-w="2">A clearer strategy for the next stage</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <span class="progress-text"></span>
+            <div class="btn-row">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PANEL 3 — The moment -->
+        <section class="panel" data-panel="3">
+          <div class="panel-head">
+            <span class="eyebrow">Context that matters</span>
+            <h2>The moment you're in.</h2>
+            <p class="lede tight">Timing tells me as much as the diagnostic does.</p>
+          </div>
+
+          <div class="q" data-q="timing" style="margin-bottom:34px">
+            <div class="q-label">What's driving the timing?</div>
+            <div class="options">
+              <label class="opt-card"><span class="mark"></span><input type="radio" name="timing" value="Growth is outpacing our structure">Growth is outpacing our structure</label>
+              <label class="opt-card"><span class="mark"></span><input type="radio" name="timing" value="Fundraise or board pressure">Fundraise or board pressure</label>
+              <label class="opt-card"><span class="mark"></span><input type="radio" name="timing" value="A transition (mine or a key leader's)">A transition (mine or a key leader's)</label>
+              <label class="opt-card"><span class="mark"></span><input type="radio" name="timing" value="Preparing for a transaction">Preparing for a transaction</label>
+              <label class="opt-card"><span class="mark"></span><input type="radio" name="timing" value="No single trigger; thinking ahead">No single trigger; thinking ahead</label>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="f_success">What would make this conversation worth your time? <span class="opt">(optional, but the most useful thing you can tell me)</span></label>
+            <textarea id="f_success" name="what_success_looks_like" placeholder="A sentence or two on what you'd want to walk away understanding."></textarea>
+          </div>
+
+          <div class="controls">
+            <span class="progress-text"></span>
+            <div class="btn-row">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PANEL 4 — Contact -->
+        <section class="panel" data-panel="4">
+          <div class="panel-head">
+            <span class="eyebrow">Last step</span>
+            <h2>How to reach you.</h2>
+            <p class="lede tight">This goes directly to me. Not a list, not a sequence.</p>
+          </div>
+
+          <div class="fields">
+            <div class="field full" data-require="email">
+              <label for="f_email">Email</label>
+              <input type="email" id="f_email" name="email" autocomplete="email" placeholder="you@company.com">
+              <span class="err-msg">I need a working email to send your read back to.</span>
+            </div>
+            <div class="field">
+              <label for="f_phone">Phone <span class="opt">(optional)</span></label>
+              <input type="tel" id="f_phone" name="phone" autocomplete="tel" placeholder="For scheduling, if you prefer">
+            </div>
+            <div class="field">
+              <label for="f_next">Preferred next step</label>
+              <select id="f_next" name="preferred_next_step">
+                <option value="" selected disabled>Choose one</option>
+                <option>A short Google Meet to talk it through</option>
+                <option>A written read back from me first</option>
+                <option>Not sure yet, open to your suggestion</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="controls">
+            <span class="progress-text">By sending this you agree I can use it to respond. Nothing more.</span>
+            <div class="btn-row">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" id="submitBtn">Start the conversation</button>
+            </div>
+          </div>
+        </section>
+
+      </form>
+
+      <!-- CONFIRMATION -->
+      <section class="confirm" id="confirm" aria-live="polite">
+        <div class="seal" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M6 13.5l4.5 4.5L20 8" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h1 id="confirmTitle">Your conversation has started.</h1>
+        <p class="reflect" id="confirmReflect"></p>
+        <div class="next">
+          <div class="k">What happens now</div>
+          <p>I read every Founder Scale Session intake personally, not a team, not a tool. You'll have a first read from me within two business days.</p>
+          <p>If you chose a Google Meet, I'll send a few times that work. If you asked for a written read first, that's what will land in your inbox.</p>
+        </div>
+        <a class="home-link" href="index.html">Return to DeepSight Strategy&trade;</a>
+      </section>
+
+    </div>
+
+    <footer class="legal">
+      &copy; 2026 DeepSight Strategy&trade;, A JWP Consulting LLC Company. All Rights Reserved.
+    </footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- CONFIG ----------------------------------------------------------
+  // Swap REPLACE_WITH_FORMSPREE_ID for the real Formspree form ID.
+  // The Executive Next Chapter intake will post to the SAME endpoint with
+  // intake_type = "Executive Next Chapter" so the two route separately.
+  var FORMSPREE_ID = "mqevpdbl";
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/" + FORMSPREE_ID;
+  var INTAKE_TYPE = "Founder Scale Session";
+  var STEP_LABELS = ["Before we begin","You & the company","Where growth is straining","The moment you're in","How to reach you"];
+  // ----------------------------------------------------------------------
+
+  var form = document.getElementById('fssForm');
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+  var stepEls = Array.prototype.slice.call(document.querySelectorAll('.step'));
+  var mapWords = document.getElementById('mapWords');
+  var tbStep = document.getElementById('tbStep');
+  var tbBar = document.getElementById('tbBar');
+  var confirmEl = document.getElementById('confirm');
+  var submitBtn = document.getElementById('submitBtn');
+  var current = 0;
+  var total = panels.length;
+
+  function render(){
+    panels.forEach(function(p,i){ p.classList.toggle('is-active', i===current); });
+    stepEls.forEach(function(s,i){
+      s.classList.toggle('is-active', i===current);
+      s.classList.toggle('is-done', i<current);
+    });
+    // light the Growth Map words once the diagnostic is reached
+    mapWords.classList.toggle('lit', current>=2);
+    // mobile topbar
+    tbStep.textContent = 'Step ' + (current+1) + ' of ' + total;
+    tbBar.style.width = (((current)/(total-1))*100) + '%';
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function clearError(field){ field.classList.remove('error'); }
+
+  function validate(panel){
+    var ok = true;
+    panel.querySelectorAll('[data-require]').forEach(function(field){
+      var input = field.querySelector('input');
+      var v = (input.value||'').trim();
+      var valid = v.length>0;
+      if(field.getAttribute('data-require')==='email'){
+        valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      }
+      if(!valid){ field.classList.add('error'); ok=false; }
+      else { clearError(field); }
+    });
+    return ok;
+  }
+
+  function go(dir){
+    if(dir>0){
+      var panel = panels[current];
+      if(!validate(panel)) return;
+    }
+    current = Math.max(0, Math.min(total-1, current+dir));
+    render();
+  }
+
+  // nav buttons
+  form.addEventListener('click', function(e){
+    if(e.target.matches('[data-next]')) go(1);
+    if(e.target.matches('[data-back]')) go(-1);
+  });
+
+  // option card selection styling
+  form.addEventListener('change', function(e){
+    if(e.target.matches('.opt-card input')){
+      var name = e.target.name;
+      form.querySelectorAll('input[name="'+name+'"]').forEach(function(inp){
+        inp.closest('.opt-card').classList.toggle('sel', inp.checked);
+      });
+    }
+  });
+
+  // clear field error on input
+  form.addEventListener('input', function(e){
+    var field = e.target.closest('.field');
+    if(field && field.classList.contains('error')) clearError(field);
+  });
+
+  // ---- dominant movement (for the personalized reflection) -------------
+  function dominantMovement(){
+    var sums = {protect:0, evolve:0, build:0};
+    form.querySelectorAll('.q[data-movement]').forEach(function(q){
+      var mv = q.getAttribute('data-movement');
+      var checked = q.querySelector('input:checked');
+      if(checked){ sums[mv] += parseInt(checked.getAttribute('data-w')||'0',10); }
+    });
+    var max = Math.max(sums.protect, sums.evolve, sums.build);
+    if(max===0) return 'balanced';
+    // resolve ties by Evolve > Build > Protect (operating model is the usual core)
+    if(sums.evolve===max) return 'evolve';
+    if(sums.build===max) return 'build';
+    return 'protect';
+  }
+
+  var REFLECTIONS = {
+    protect: "From your answers, the sharpest pressure right now sits in <strong>Protect</strong>. The things that built the company, your own judgment, the culture, a few critical people, are carrying more than they safely can at this size. That's the first thing I'll want to look at with you: how to take what made you successful and make it survivable without you in the room.",
+    evolve: "From your answers, the center of gravity is <strong>Evolve</strong>. The operating model that worked at one size is straining at the next, and that's where most scaling pain actually lives. The useful question isn't whether to change it. It's which parts to redesign first so growth stops fighting the structure.",
+    build: "From your answers, the work ahead is mostly <strong>Build</strong>. You're less about fixing what strains and more about putting in place the thing your next stage requires but doesn't have yet. That's a clearer brief than most founders arrive with, and a good one to start from.",
+    balanced: "Your answers spread across all three movements of the Growth Map, <strong>Protect, Evolve, and Build</strong>. That's common at a real inflection point, and it's exactly the moment a session like this earns its place: sequencing matters more than doing everything at once. I'll come back with a view on where to start."
+  };
+
+  // ---- submit ----------------------------------------------------------
+  function collect(){
+    var data = { "Intake Type": INTAKE_TYPE };
+    var fd = new FormData(form);
+    var labels = {
+      name:"Name", role:"Role", company:"Company", website:"Website",
+      company_stage:"Company Stage", dependency:"Founder Dependency",
+      exposed:"Most Exposed", strain:"Operating Model Strain", team:"Leadership Team",
+      next:"Next Stage Need", timing:"Timing Driver",
+      what_success_looks_like:"What Success Looks Like",
+      email:"Email", phone:"Phone", preferred_next_step:"Preferred Next Step"
+    };
+    fd.forEach(function(v,k){
+      if(k==='_gotcha') return;
+      data[labels[k]||k] = v;
+    });
+    data["Dominant Movement"] = dominantMovement();
+    data["Source Page"] = window.location.href;
+    data["_subject"] = "New Founder Scale Session intake — " + (data["Name"]||"unknown");
+    return data;
+  }
+
+  function showConfirmation(){
+    var mv = dominantMovement();
+    document.getElementById('confirmReflect').innerHTML = REFLECTIONS[mv];
+    form.style.display = 'none';
+    document.querySelector('.rail') && stepEls.forEach(function(s){ s.classList.add('is-done'); s.classList.remove('is-active'); });
+    tbStep.textContent = 'Complete';
+    tbBar.style.width = '100%';
+    confirmEl.classList.add('is-active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  submitBtn.addEventListener('click', function(){
+    if(!validate(panels[current])) return;
+    var payload = collect();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    // If the Formspree ID hasn't been set yet, demonstrate the flow without
+    // a live network call so the experience is fully clickable in preview.
+    if(FORMSPREE_ID === "REPLACE_WITH_FORMSPREE_ID"){
+      console.log('[Founder Scale Session] Formspree ID not set. Payload that WOULD be sent:', payload);
+      setTimeout(showConfirmation, 500);
+      return;
+    }
+
+    fetch(FORMSPREE_ENDPOINT, {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      if(res.ok){ showConfirmation(); }
+      else { throw new Error('bad response'); }
+    }).catch(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Start the conversation';
+      var c = panels[current].querySelector('.progress-text');
+      c.innerHTML = "Something went wrong sending this. Email me directly at <a href='mailto:jackie@deepsightstrategy.com' style='color:var(--gold);font-weight:600'>jackie@deepsightstrategy.com</a> and I'll pick it up.";
+      c.style.color = '#B4452F';
+    });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
