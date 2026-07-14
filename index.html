@@ -38,6 +38,7 @@
     .teaser-bar { width:28px; height:2px; background:var(--gold); margin-bottom:1.1rem; }
     .teaser-card h4 { font-size:0.95rem; margin-bottom:0.5rem; }
     .teaser-card p { font-size:0.82rem; color:var(--gray); line-height:1.6; }
+    .teaser-card .teaser-link { display:inline-block; margin-top:0.9rem; font-size:0.8rem; font-weight:600; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px; }
 
     .signature-section { background:var(--navy); padding:6rem 0; position:relative; overflow:hidden; }
     .signature-bg { position:absolute; right:-5%; top:0; height:100%; width:55%; object-fit:cover; opacity:0.5; }
@@ -52,6 +53,12 @@
     .sig-stage h5 { color:var(--white); font-size:0.95rem; margin-bottom:0.3rem; }
     .sig-stage p { color:rgba(255,255,255,0.45); font-size:0.8rem; margin:0; }
 
+    .companion-band { background:var(--cream); padding:4rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); }
+    .companion-row { display:grid; grid-template-columns:1fr auto; gap:2.5rem; align-items:center; }
+    .companion-row + .companion-row { margin-top:2.5rem; padding-top:2.5rem; border-top:1px solid var(--gray-l); }
+    .companion-row h3 { font-size:1.5rem; margin:0.6rem 0 0.5rem; }
+    .companion-row p { color:var(--gray); max-width:480px; }
+
     .why-section { background:var(--white); padding:5.5rem 0; }
     .why-inner { max-width:980px; margin:0 auto; display:grid; grid-template-columns:280px 1fr; gap:3.5rem; align-items:center; }
     .why-photo { width:100%; aspect-ratio:1; border-radius:50%; object-fit:cover; border:3px solid var(--cream2); }
@@ -59,7 +66,7 @@
 
     @media(max-width:768px) { .why-inner { grid-template-columns:1fr; text-align:center; } .why-photo { max-width:220px; margin:0 auto; } }
 
-    @media(max-width:900px) { .path-grid,.teaser-grid { grid-template-columns:1fr 1fr; } .signature-bg { display:none; } .signature-fade { background:#0D1B2E; } .signature-journey { flex-wrap:wrap; } .sig-stage { flex:0 0 48%; } }
+    @media(max-width:900px) { .path-grid,.teaser-grid { grid-template-columns:1fr 1fr; } .signature-bg { display:none; } .signature-fade { background:#0D1B2E; } .signature-journey { flex-wrap:wrap; } .sig-stage { flex:0 0 48%; } .companion-row { grid-template-columns:1fr; text-align:left; } }
     @media(max-width:640px) { .path-grid,.teaser-grid { grid-template-columns:1fr; } .sig-stage { flex:0 0 100%; border-left:none; padding-left:0; border-top:1px solid rgba(255,255,255,0.12); padding-top:1rem; } .sig-stage:first-child { border-top:none; padding-top:0; } }
   </style>
 </head>
@@ -166,6 +173,7 @@
         <div class="teaser-bar"></div>
         <h4>AI-Enabled Ways of Working</h4>
         <p>Preparing leaders and teams for how work, decisions, and accountability are changing.</p>
+        <a href="ai-adoption-read.html" class="teaser-link">Take the AI Adoption Read™ →</a>
       </div>
     </div>
     <br/>
@@ -203,16 +211,24 @@
   </div>
 </section>
 
-<!-- EXECUTIVE NEXT CHAPTER (SEPARATE) -->
-<section style="background:var(--cream);padding:4rem 0;border-top:1.5px solid var(--gray-l);border-bottom:1.5px solid var(--gray-l);">
+<!-- COMPANION OFFERINGS -->
+<section class="companion-band">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:center;">
+    <div class="companion-row">
       <div>
         <span class="eyebrow">For the Leader's Next Stage</span>
-        <h3 style="font-size:1.5rem;margin:0.6rem 0 0.5rem;">Executive Next Chapter™</h3>
-        <p style="color:var(--gray);max-width:480px;">Founder Scale Session™ is for the company's next stage. Executive Next Chapter™ is for the leader's, helping founders and senior executives turn experience into a platform for what comes after this chapter.</p>
+        <h3>Executive Next Chapter™</h3>
+        <p>Founder Scale Session™ is for the company's next stage. Executive Next Chapter™ is for the leader's, helping founders and senior executives turn experience into a platform for what comes after this chapter.</p>
       </div>
       <a href="executive-next-chapter.html" class="btn btn-outline-dark" style="white-space:nowrap;">Explore Executive Next Chapter™</a>
+    </div>
+    <div class="companion-row">
+      <div>
+        <span class="eyebrow">For Leadership Teams Navigating AI</span>
+        <h3>The AI Adoption Read™</h3>
+        <p>A short, personal read on where AI adoption is actually breaking down in your leadership team, not the technology, the behavior around it. Five minutes, reviewed personally by Jackie Parker.</p>
+      </div>
+      <a href="ai-adoption-read.html" class="btn btn-outline-dark" style="white-space:nowrap;">Take the AI Adoption Read™</a>
     </div>
   </div>
 </section>
@@ -267,6 +283,7 @@
           <li><a href="solutions.html#ceo-advisory">Founder &amp; CEO Advisory</a></li>
           <li><a href="solutions.html#scaling">Scaling Advisory</a></li>
           <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
+          <li><a href="ai-adoption-read.html">The AI Adoption Read™</a></li>
         </ul>
       </div>
       <div class="footer-links">
