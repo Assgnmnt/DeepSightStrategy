@@ -245,6 +245,19 @@
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
   }
+
+  .triad{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0 26px}
+  .tcard{background:var(--cream-pure);border:1px solid var(--line);border-radius:4px;padding:24px 16px 20px;text-align:center;transition:all .5s var(--ease)}
+  .tcard svg{display:block;margin:0 auto 14px;width:76px;height:76px}
+  .tcard h4{font-family:'Spectral',serif;font-size:1.25rem;font-weight:400;color:var(--ink)}
+  .tcard p{font-size:.86rem;color:var(--muted);margin-top:4px}
+  .tcard.lit{border-color:var(--gold);background:#fcf8ef;box-shadow:0 0 0 1px var(--gold) inset,0 10px 26px rgba(182,139,69,.16);transform:translateY(-3px)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px}
+  .chips span{font-size:.8rem;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 16px;background:var(--cream-pure)}
+  .movement-head{align-items:center}
+  .movement-head svg{flex-shrink:0}
+  .triad.small{margin:6px 0 30px}
+  @media(max-width:560px){.triad{gap:8px}.tcard{padding:18px 8px 14px}.tcard svg{width:42px;height:42px}}
 </style>
 </head>
 <body>
@@ -310,14 +323,11 @@
           <div class="panel-head">
             <span class="eyebrow">The starting point</span>
             <h1>You built something that works.<br>Now everything runs through you.</h1>
-            <p class="lede">The Founder Scale Session is where we sort that out. You answer a short set of questions about what still depends on you. I read every response myself, and I come back to you with a first read on what to keep, what to hand off, and what I could take on for you.</p>
+            <p class="lede">Five minutes. I read every answer myself.</p>
           </div>
 
-          <div class="welcome-meta">
-            <div class="meta-item"><div class="k">Takes about</div><div class="v">Five minutes</div></div>
-            <div class="meta-item"><div class="k">Organized by</div><div class="v">Keep / Hand Off / Take On</div></div>
-            <div class="meta-item"><div class="k">You'll hear back</div><div class="v">Within two business days</div></div>
-          </div>
+          <div class="triad"><div class="tcard" data-k="keep"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="22" stroke="#14293F" stroke-width="1.6"/><circle cx="32" cy="32" r="13" stroke="#14293F" stroke-width="1.6" opacity=".35"/><circle cx="32" cy="32" r="4.5" fill="#B68B45"/></svg><h4>Keep</h4><p>Only you decide</p></div><div class="tcard" data-k="hand"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M38.72 40.50A17 17 0 1 1 38.72 23.50" stroke="#14293F" stroke-width="1.6" stroke-linecap="round"/><circle cx="24" cy="32" r="4.5" fill="#14293F"/><path d="M44 32h6" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="0.5 4.5"/><circle cx="57" cy="32" r="4.5" fill="#B68B45"/></svg><h4>Hand Off</h4><p>Others own it</p></div><div class="tcard" data-k="take"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M43.00 12.95A22 22 0 1 1 12.95 21.00" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round"/><circle cx="32" cy="32" r="11" stroke="#14293F" stroke-width="1.6"/><circle cx="32" cy="32" r="4.5" fill="#14293F"/><circle cx="43.0" cy="12.9" r="3.2" fill="#B68B45"/></svg><h4>Take On</h4><p>I carry it</p></div></div>
+          <div class="chips"><span>About five minutes</span><span>Reply within two business days</span></div>
 
           <div class="signed">
             <div class="badge" aria-hidden="true">JP</div>
@@ -337,7 +347,7 @@
           <div class="panel-head">
             <span class="eyebrow">First, the basics</span>
             <h2>You and the company.</h2>
-            <p class="lede tight">Enough for me to understand who I'm reading and the scale you're operating at.</p>
+            <p class="lede tight">Who I'm reading, and the scale you run at.</p>
           </div>
 
           <div class="fields">
@@ -386,13 +396,12 @@
           <div class="panel-head">
             <span class="eyebrow">The Hand-Off Map</span>
             <h2>Where are you the middle?</h2>
-            <p class="lede tight">Three movements. Choose the answer closest to where you actually are, not where you'd like to be.</p>
+            <p class="lede tight">Pick the closest answer, not the one you wish were true.</p>
           </div>
 
           <!-- PROTECT -->
           <div class="movement">
-            <div class="movement-head"><span class="mnum">01</span><h3>Keep</h3><span class="mtag">What only you should decide</span></div>
-            <p class="movement-sub">Some calls should stay with you. The trouble starts when everything else stays with you too.</p>
+            <div class="movement-head"><svg width="44" height="44" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="22" stroke="#14293F" stroke-width="1.6"/><circle cx="32" cy="32" r="13" stroke="#14293F" stroke-width="1.6" opacity=".35"/><circle cx="32" cy="32" r="4.5" fill="#B68B45"/></svg><h3>Keep</h3><span class="mtag">What only you should decide</span></div>
 
             <div class="q" data-q="dependency" data-movement="protect">
               <div class="q-label">How much of the business still depends on you personally?</div>
@@ -416,8 +425,7 @@
 
           <!-- EVOLVE -->
           <div class="movement">
-            <div class="movement-head"><span class="mnum">02</span><h3>Hand Off</h3><span class="mtag">What moves, and to whom</span></div>
-            <p class="movement-sub">A hand-off holds when the person, the authority and the expectation are all clear.</p>
+            <div class="movement-head"><svg width="44" height="44" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M38.72 40.50A17 17 0 1 1 38.72 23.50" stroke="#14293F" stroke-width="1.6" stroke-linecap="round"/><circle cx="24" cy="32" r="4.5" fill="#14293F"/><path d="M44 32h6" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="0.5 4.5"/><circle cx="57" cy="32" r="4.5" fill="#B68B45"/></svg><h3>Hand Off</h3><span class="mtag">What moves, and to whom</span></div>
 
             <div class="q" data-q="strain" data-movement="evolve">
               <div class="q-label">Where does hand-off break down most?</div>
@@ -441,8 +449,7 @@
 
           <!-- BUILD -->
           <div class="movement">
-            <div class="movement-head"><span class="mnum">03</span><h3>Take On</h3><span class="mtag">What I carry for you, and where AI helps</span></div>
-            <p class="movement-sub">Some work has no owner yet. I can take it on, and show you where AI can carry part of it.</p>
+            <div class="movement-head"><svg width="44" height="44" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M43.00 12.95A22 22 0 1 1 12.95 21.00" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round"/><circle cx="32" cy="32" r="11" stroke="#14293F" stroke-width="1.6"/><circle cx="32" cy="32" r="4.5" fill="#14293F"/><circle cx="43.0" cy="12.9" r="3.2" fill="#B68B45"/></svg><h3>Take On</h3><span class="mtag">What I carry for you, and where AI helps</span></div>
 
             <div class="q" data-q="next" data-movement="build">
               <div class="q-label">What would you most want off your plate in the next 12 months?</div>
@@ -469,7 +476,7 @@
           <div class="panel-head">
             <span class="eyebrow">Context that matters</span>
             <h2>The moment you're in.</h2>
-            <p class="lede tight">Timing tells me as much as the diagnostic does.</p>
+            <p class="lede tight">Why now?</p>
           </div>
 
           <div class="q" data-q="timing" style="margin-bottom:34px">
@@ -502,7 +509,7 @@
           <div class="panel-head">
             <span class="eyebrow">Last step</span>
             <h2>How to reach you.</h2>
-            <p class="lede tight">This goes directly to me. Not a list, not a sequence.</p>
+            <p class="lede tight">This goes straight to me.</p>
           </div>
 
           <div class="fields">
@@ -543,11 +550,11 @@
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M6 13.5l4.5 4.5L20 8" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h1 id="confirmTitle">Your conversation has started.</h1>
+        <div class="triad small" id="confirmTriad"><div class="tcard" data-k="keep"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="22" stroke="#14293F" stroke-width="1.6"/><circle cx="32" cy="32" r="13" stroke="#14293F" stroke-width="1.6" opacity=".35"/><circle cx="32" cy="32" r="4.5" fill="#B68B45"/></svg><h4>Keep</h4><p>Only you decide</p></div><div class="tcard" data-k="hand"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M38.72 40.50A17 17 0 1 1 38.72 23.50" stroke="#14293F" stroke-width="1.6" stroke-linecap="round"/><circle cx="24" cy="32" r="4.5" fill="#14293F"/><path d="M44 32h6" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="0.5 4.5"/><circle cx="57" cy="32" r="4.5" fill="#B68B45"/></svg><h4>Hand Off</h4><p>Others own it</p></div><div class="tcard" data-k="take"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M43.00 12.95A22 22 0 1 1 12.95 21.00" stroke="#B68B45" stroke-width="1.6" stroke-linecap="round"/><circle cx="32" cy="32" r="11" stroke="#14293F" stroke-width="1.6"/><circle cx="32" cy="32" r="4.5" fill="#14293F"/><circle cx="43.0" cy="12.9" r="3.2" fill="#B68B45"/></svg><h4>Take On</h4><p>I carry it</p></div></div>
         <p class="reflect" id="confirmReflect"></p>
         <div class="next">
           <div class="k">What happens now</div>
-          <p>I read every Founder Scale Session intake personally, not a team, not a tool. You'll have a first read from me within two business days.</p>
-          <p>If you chose a Google Meet, I'll send a few times that work. If you asked for a written read first, that's what will land in your inbox.</p>
+          <p>I read every intake myself. Expect my first read within two business days.</p>
         </div>
         <a class="home-link" href="index.html">Return to DeepSight Strategy&trade;</a>
       </section>
@@ -693,6 +700,8 @@
   function showConfirmation(){
     var mv = dominantMovement();
     document.getElementById('confirmReflect').innerHTML = REFLECTIONS[mv];
+    var tk={protect:'keep',evolve:'hand',build:'take'}[mv];
+    document.querySelectorAll('#confirmTriad .tcard').forEach(function(c){ c.classList.toggle('lit', mv==='balanced' || c.getAttribute('data-k')===tk); });
     form.style.display = 'none';
     document.querySelector('.rail') && stepEls.forEach(function(s){ s.classList.add('is-done'); s.classList.remove('is-active'); });
     tbStep.textContent = 'Complete';
