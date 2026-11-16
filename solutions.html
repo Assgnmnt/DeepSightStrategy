@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <!-- Google tag (DeepSight Strategy analytics) -->
@@ -8,12 +9,215 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 </script>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>How I Work With You: DeepSight Strategy™</title>
-  <meta name="description" content="I work directly with founders and business owners on the decisions and the work they are carrying. I build the structure to hand it off and stay on for the calls you cannot make alone."/>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How I Work With You: DeepSight Strategy™</title>
+<meta content="I work directly with founders and business owners on the decisions and the work they are carrying. I build the structure to hand it off and stay on for the calls you cannot make alone." name="description"/>
+<style>/* ================================================
+   DeepSight Strategy™ — Brand Stylesheet v2
+   Navy #0D1B2E · Gold #A07820 · Cream #F5F3EF
+   DM Sans + Georgia
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0D1B2E;
+  --navy2:  #1A3A5C;
+  --navy3:  #08111C;
+  --gold:   #A07820;
+  --gold-l: #C4A96A;
+  --cream:  #F5F3EF;
+  --cream2: #EDE9E1;
+  --white:  #FFFFFF;
+  --gray:   #5A6A7A;
+  --gray-l: #D8D3C8;
+  --font:   'DM Sans', sans-serif;
+  --serif:  Georgia, serif;
+  --radius: 3px;
+  --max:    1160px;
+  --ease:   0.25s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--navy);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4 { font-family: var(--font); font-weight: 400; line-height: 1.2; color: var(--navy); }
+h1 { font-size: clamp(2.2rem,5vw,3.5rem); }
+h2 { font-size: clamp(1.7rem,3.5vw,2.4rem); }
+h3 { font-size: clamp(1.1rem,2.5vw,1.4rem); }
+h4 { font-size: 1rem; font-weight: 500; }
+p  { color: #3A4A5A; line-height: 1.85; }
+
+.eyebrow {
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--gold); display: block;
+}
+.serif-italic { font-family: var(--serif); font-style: italic; }
+
+.container  { max-width: var(--max); margin: 0 auto; padding: 0 2.5rem; }
+.section    { padding: 5.5rem 0; }
+
+.gold-rule { width: 40px; height: 2px; background: var(--gold); margin: 1.2rem 0 2rem; }
+
+/* ── Buttons ── */
+.btn { display:inline-block; padding:0.85rem 2.2rem; font-family:var(--font); font-size:0.82rem; font-weight:500; letter-spacing:0.1em; text-decoration:none; border-radius:var(--radius); cursor:pointer; transition:var(--ease); border:none; }
+.btn-gold { background:var(--gold); color:var(--white); }
+.btn-gold:hover { background:#8A6818; }
+.btn-navy { background:var(--navy); color:var(--white); }
+.btn-navy:hover { background:var(--navy2); }
+.btn-outline { background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,0.4); }
+.btn-outline:hover { border-color:var(--gold-l); color:var(--gold-l); }
+.btn-outline-dark { background:transparent; color:var(--navy); border:1.5px solid var(--gray-l); }
+.btn-outline-dark:hover { border-color:var(--gold); color:var(--gold); }
+
+/* ── Nav ── */
+nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(13,27,46,0.97); backdrop-filter:blur(10px); border-bottom:1px solid rgba(160,120,32,0.18); }
+.nav-inner { display:flex; align-items:center; justify-content:space-between; height:72px; max-width:var(--max); margin:0 auto; padding:0 2.5rem; }
+.nav-logo { display:flex; align-items:center; gap:0.7rem; text-decoration:none; }
+.nav-logo-mark { width:34px; height:34px; flex-shrink:0; }
+.nav-logo-text { display:flex; flex-direction:column; }
+.nav-logo-name { font-family:var(--serif); font-size:1rem; color:var(--white); letter-spacing:0.04em; line-height:1.1; }
+.nav-logo-sub  { font-size:0.55rem; letter-spacing:0.24em; color:var(--gold-l); text-transform:uppercase; }
+.nav-links { display:flex; align-items:center; gap:1.6rem; list-style:none; }
+.nav-links a { font-size:0.76rem; font-weight:400; letter-spacing:0.05em; color:rgba(255,255,255,0.7); text-decoration:none; transition:var(--ease); white-space:nowrap; }
+.nav-links a:hover { color:var(--gold-l); }
+.nav-cta { font-size:0.73rem !important; padding:0.48rem 1.2rem; background:var(--gold) !important; color:var(--white) !important; border-radius:var(--radius); }
+.nav-cta:hover { background:#8A6818 !important; }
+
+/* ── Logo SVG helper ── */
+.ds-mark { overflow:visible; }
+
+/* ── Page hero (interior) ── */
+.page-hero { background:var(--navy); padding:9rem 0 5rem; border-bottom:3px solid var(--gold); position:relative; overflow:hidden; }
+.page-hero::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(42,100,150,0.1) 0%,transparent 70%); pointer-events:none; }
+.page-hero .eyebrow { color:var(--gold-l); margin-bottom:1rem; }
+.page-hero h1 { color:var(--white); font-weight:300; margin-bottom:1.5rem; }
+.page-hero p  { color:rgba(255,255,255,0.55); max-width:560px; font-size:1.08rem; line-height:1.85; }
+
+/* ── Pull quote ── */
+.pull-quote { font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--navy); border-left:2px solid var(--gold); padding-left:1.5rem; line-height:1.75; margin:2rem 0; }
+
+/* ── Intro band ── */
+.intro-band { background:var(--cream); padding:4.5rem 0; border-top:3px solid var(--gold); }
+.intro-band p { font-family:var(--serif); font-style:italic; font-size:clamp(1.1rem,2.5vw,1.4rem); color:var(--navy); text-align:center; max-width:800px; margin:0 auto; line-height:1.8; }
+
+/* ── Stats band ── */
+.stats-band { background:var(--navy); padding:4rem 0; }
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2rem; text-align:center; }
+.stat-num   { font-family:var(--serif); font-size:2.6rem; color:var(--gold-l); display:block; line-height:1; margin-bottom:0.4rem; }
+.stat-label { font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.4); }
+
+/* ── CTA band ── */
+.cta-band { background:var(--navy); padding:5.5rem 0; text-align:center; border-top:3px solid var(--gold); }
+.cta-band h2 { color:var(--white); margin-bottom:1rem; }
+.cta-band p  { color:rgba(255,255,255,0.55); margin:0 auto 2.5rem; max-width:500px; }
+
+/* ── Service cards ── */
+.services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5px; background:var(--gray-l); border:1.5px solid var(--gray-l); }
+.service-card { background:var(--white); padding:2.5rem 2rem; transition:var(--ease); }
+.service-card:hover { background:var(--cream); }
+.service-icon { width:36px; height:2px; background:var(--gold); margin-bottom:1.5rem; }
+.service-card h3 { margin-bottom:0.6rem; font-size:1.05rem; }
+.service-card p  { font-size:0.88rem; color:var(--gray); line-height:1.7; }
+
+/* ── Who cards ── */
+.who-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:3rem; }
+.who-card { border:1.5px solid var(--gray-l); padding:2rem 1.75rem; border-radius:var(--radius); transition:var(--ease); }
+.who-card:hover { border-color:var(--gold); background:var(--cream); }
+.who-card h4 { margin-bottom:0.4rem; }
+.who-card p  { font-size:0.84rem; color:var(--gray); }
+
+/* ── Belief cards ── */
+.belief-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; margin-top:3rem; }
+.belief-card { background:var(--white); border:1.5px solid var(--gray-l); padding:2rem; border-radius:var(--radius); transition:var(--ease); }
+.belief-card:hover { border-color:var(--gold); }
+.belief-num  { font-family:var(--serif); font-size:1.5rem; color:var(--gold); display:block; margin-bottom:0.75rem; line-height:1; }
+.belief-card h4 { margin-bottom:0.4rem; }
+.belief-card p  { font-size:0.86rem; color:var(--gray); line-height:1.7; }
+
+/* ── Dark grid ── */
+.dark-section { background:var(--navy); padding:5rem 0; }
+.dark-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.07); margin-top:3rem; }
+.dark-item { background:var(--navy); padding:2rem 1.75rem; transition:var(--ease); }
+.dark-item:hover { background:#1A3A5C; }
+.dark-item .item-num { font-family:var(--serif); font-size:1.8rem; color:rgba(160,120,32,0.3); display:block; margin-bottom:0.75rem; line-height:1; }
+.dark-item h4 { color:var(--white); font-size:0.95rem; margin-bottom:0.35rem; }
+.dark-item p  { color:rgba(255,255,255,0.4); font-size:0.82rem; }
+
+/* ── Two-col ── */
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+.two-col-center { align-items:center; }
+
+/* ── Sidebar card ── */
+.sidebar-card { border:1.5px solid var(--gray-l); border-radius:var(--radius); overflow:hidden; margin-bottom:1rem; }
+.sidebar-header { background:var(--navy); padding:0.85rem 1.5rem; }
+.sidebar-header h5 { font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-l); }
+.sidebar-body { padding:1.5rem; }
+.sidebar-body p { font-size:0.86rem; color:var(--gray); }
+.sidebar-body ul { list-style:none; }
+.sidebar-body li { font-size:0.86rem; color:var(--navy); padding:0.45rem 0; border-bottom:1px solid var(--gray-l); display:flex; gap:0.6rem; align-items:flex-start; line-height:1.5; }
+.sidebar-body li:last-child { border-bottom:none; }
+.sidebar-body li::before { content:''; width:14px; height:1.5px; background:var(--gold); margin-top:0.6rem; flex-shrink:0; }
+
+/* ── Dash list ── */
+.dash-list { list-style:none; }
+.dash-list li { display:flex; gap:0.75rem; padding:0.6rem 0; border-bottom:1px solid var(--gray-l); font-size:0.9rem; color:var(--navy); align-items:flex-start; line-height:1.5; }
+.dash-list li:last-child { border-bottom:none; }
+.dash-list li::before { content:''; width:20px; height:1.5px; background:var(--gold); margin-top:0.65rem; flex-shrink:0; }
+
+/* ── Method steps ── */
+.method-steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); border:1.5px solid var(--gray-l); margin-top:3rem; }
+.method-step { padding:2.5rem 1.75rem; border-right:1.5px solid var(--gray-l); }
+.method-step:last-child { border-right:none; }
+.step-num { font-family:var(--serif); font-size:2.4rem; color:var(--cream2); line-height:1; margin-bottom:1rem; }
+.method-step h4 { margin-bottom:0.4rem; font-size:0.95rem; }
+.method-step p  { font-size:0.83rem; color:var(--gray); }
+
+/* ── Form ── */
+.contact-form-wrap { background:var(--white); border:1.5px solid var(--gray-l); border-radius:var(--radius); overflow:hidden; }
+.form-header { background:var(--navy); padding:1.5rem 2rem; border-bottom:2px solid var(--gold); }
+.form-header h3 { color:var(--white); font-size:1rem; font-weight:500; margin-bottom:0.2rem; }
+.form-header p  { color:rgba(255,255,255,0.4); font-size:0.78rem; }
+.form-body { padding:2rem; }
+.form-group { margin-bottom:1.2rem; }
+.form-group label { display:block; font-size:0.73rem; font-weight:500; letter-spacing:0.09em; text-transform:uppercase; color:var(--navy); margin-bottom:0.45rem; }
+.form-group input,.form-group select,.form-group textarea { width:100%; padding:0.75rem 1rem; font-family:var(--font); font-size:0.9rem; color:var(--navy); background:var(--white); border:1.5px solid var(--gray-l); border-radius:var(--radius); transition:var(--ease); outline:none; appearance:none; }
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(160,120,32,0.07); }
+.form-group textarea { resize:vertical; min-height:100px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.form-submit { width:100%; padding:0.95rem; font-family:var(--font); font-size:0.85rem; font-weight:500; letter-spacing:0.1em; color:var(--white); background:var(--gold); border:none; border-radius:var(--radius); cursor:pointer; transition:var(--ease); margin-top:0.5rem; }
+.form-submit:hover { background:#8A6818; }
+.form-note { font-size:0.73rem; color:var(--gray); text-align:center; margin-top:0.85rem; line-height:1.6; }
+
+/* ── Footer ── */
+footer { background:var(--navy3); padding:3.5rem 0 2rem; border-top:1px solid rgba(160,120,32,0.15); }
+.footer-inner { display:flex; justify-content:space-between; align-items:flex-start; gap:2rem; flex-wrap:wrap; }
+.footer-brand p { font-size:0.77rem; color:rgba(255,255,255,0.28); margin-top:0.75rem; max-width:230px; line-height:1.65; }
+.footer-links h5 { font-size:0.66rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-l); margin-bottom:1rem; }
+.footer-links ul { list-style:none; }
+.footer-links li { margin-bottom:0.5rem; }
+.footer-links a  { font-size:0.8rem; color:rgba(255,255,255,0.38); text-decoration:none; transition:var(--ease); }
+.footer-links a:hover { color:var(--gold-l); }
+.footer-bottom { margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.05); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+.footer-bottom p { font-size:0.72rem; color:rgba(255,255,255,0.2); }
+
+/* ── Responsive ── */
+@media(max-width:900px) { .two-col{grid-template-columns:1fr;gap:2.5rem;} .nav-links{display:none;} }
+@media(max-width:640px) { .container{padding:0 1.25rem;} .form-row{grid-template-columns:1fr;} .method-steps{grid-template-columns:1fr 1fr;} .method-step{border-bottom:1.5px solid var(--gray-l);} }
+</style>
+<style>
     .partner-intro { background:var(--white); padding:4.5rem 0; text-align:center; }
     .partner-intro p { max-width:620px; margin:0 auto; color:var(--gray); font-size:1.1rem; line-height:1.85; font-family:var(--serif); font-style:italic; }
 
@@ -53,196 +257,174 @@
 
     @media(max-width:900px){ .sol-grid,.capability-grid{grid-template-columns:1fr;} .fss-bg{display:none;} .fss-fade{background:#0D1B2E;} .fss-map{flex-wrap:wrap;} .fss-stage{flex:0 0 48%;} .enc-callout-inner{grid-template-columns:1fr;text-align:center;} }
   </style>
-</head>
+<style>
+ @media(max-width:900px){.nav-toggle{display:block;border:1px solid #C4A96A;color:white;background:transparent;padding:.55rem .85rem;font:500 .82rem DM Sans,sans-serif;cursor:pointer}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#0D1B2E;padding:1.25rem 2rem;flex-direction:column;align-items:flex-start;gap:1rem;border-bottom:2px solid #A07820}.nav-links.nav-open{display:flex}}
+ @media(min-width:901px){.nav-toggle{display:none}}
+ .nav-toggle:focus-visible,.nav-links a:focus-visible{outline:2px solid #C4A96A;outline-offset:3px}
+ .page-hero p{color:rgba(255,255,255,.84)}.cta-band p{color:rgba(255,255,255,.82)}
+ .fss-section p{color:rgba(255,255,255,.82)}.fss-stage p{color:rgba(255,255,255,.76)}
+ .footer-brand p,.footer-links a,.footer-bottom p{color:rgba(255,255,255,.7)}
+ </style></head>
 <body>
-
 <nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <svg class="nav-logo-mark" viewBox="0 0 72 72" fill="none">
-        <circle cx="36" cy="36" r="32" stroke="white" stroke-width="1.5"/>
-        <circle cx="36" cy="36" r="26" fill="#0D1B2E" stroke="#A07820" stroke-width="0.8"/>
-        <circle cx="36" cy="36" r="16" fill="none" stroke="#4A9EC4" stroke-width="0.6" opacity="0.6"/>
-        <line x1="36" y1="6" x2="36" y2="66" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
-        <line x1="6" y1="36" x2="66" y2="36" stroke="#4A9EC4" stroke-width="0.6" opacity="0.35"/>
-        <line x1="36" y1="3" x2="36" y2="10" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
-        <line x1="36" y1="62" x2="36" y2="69" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
-        <line x1="3" y1="36" x2="10" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
-        <line x1="62" y1="36" x2="69" y2="36" stroke="#A07820" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="36" cy="36" r="4" fill="#A07820"/>
-        <circle cx="36" cy="36" r="1.8" fill="#0D1B2E"/>
-        <text x="36" y="33" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="white" letter-spacing="2">DS</text>
-      </svg>
-      <div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="who-we-help.html">Who We Help</a></li>
-      <li><a href="solutions.html">How We Partner</a></li>
-      <li><a href="our-firm.html">Our Firm</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="insights.html">Insights</a></li>
-      <li><a href="contact.html" class="nav-cta">Start a Conversation</a></li>
-    </ul>
-  </div>
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<svg class="nav-logo-mark" fill="none" viewbox="0 0 72 72">
+<circle cx="36" cy="36" r="32" stroke="white" stroke-width="1.5"></circle>
+<circle cx="36" cy="36" fill="#0D1B2E" r="26" stroke="#A07820" stroke-width="0.8"></circle>
+<circle cx="36" cy="36" fill="none" opacity="0.6" r="16" stroke="#4A9EC4" stroke-width="0.6"></circle>
+<line opacity="0.35" stroke="#4A9EC4" stroke-width="0.6" x1="36" x2="36" y1="6" y2="66"></line>
+<line opacity="0.35" stroke="#4A9EC4" stroke-width="0.6" x1="6" x2="66" y1="36" y2="36"></line>
+<line stroke="#A07820" stroke-linecap="round" stroke-width="2" x1="36" x2="36" y1="3" y2="10"></line>
+<line stroke="#A07820" stroke-linecap="round" stroke-width="2" x1="36" x2="36" y1="62" y2="69"></line>
+<line stroke="#A07820" stroke-linecap="round" stroke-width="2" x1="3" x2="10" y1="36" y2="36"></line>
+<line stroke="#A07820" stroke-linecap="round" stroke-width="2" x1="62" x2="69" y1="36" y2="36"></line>
+<circle cx="36" cy="36" fill="#A07820" r="4"></circle>
+<circle cx="36" cy="36" fill="#0D1B2E" r="1.8"></circle>
+<text fill="white" font-family="Georgia,serif" font-size="8" font-weight="bold" letter-spacing="2" text-anchor="middle" x="36" y="33">DS</text>
+</svg>
+<div class="nav-logo-text"><span class="nav-logo-name">DeepSight</span><span class="nav-logo-sub">Strategy™</span></div>
+</a>
+<ul class="nav-links" id="main-nav">
+<li><a href="who-we-help.html">Who We Help</a></li>
+<li><a href="solutions.html">How We Partner</a></li>
+<li><a href="our-firm.html">Our Firm</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="insights.html">Insights</a></li>
+<li><a class="nav-cta" href="contact.html">Start a Conversation</a></li>
+</ul>
+<button aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation menu" class="nav-toggle" type="button">Menu</button></div>
 </nav>
-
 <section class="page-hero">
-  <div class="container">
-    <span class="eyebrow">How We Partner</span>
-    <h1>I Don't Sell a Menu.<br/>I Take Work Off Your Plate.</h1>
-    <p>I work directly with founders and business owners on the decisions and the work they are carrying. I help you decide what stays with you, build the structure to hand the rest off, and stay on for the calls you cannot make alone.</p>
-  </div>
+<div class="container">
+<span class="eyebrow">How We Partner</span>
+<h1>Experienced Perspective. Practical Partnership.</h1>
+<p>I work directly with founders, business owners, and executive leaders on consequential decisions, leadership challenges, and the changes needed to move the business forward.</p>
+</div>
 </section>
-
 <section class="partner-intro">
-  <div class="container">
-    <p>"The goal is not to add layers. The goal is to get you out of the middle."</p>
-  </div>
+<div class="container">
+<p>“Good advice should clarify the decision, and help turn it into action.”</p>
+</div>
 </section>
-
 <section class="sol-section">
-  <div class="container">
-    <div class="sol-grid">
-
-      <div class="sol-card" id="ongoing-partnership">
-        <span class="sol-num">01</span>
-        <h3>Ongoing Partnership</h3>
-        <p class="sol-lead">A monthly relationship as your advisor and thought partner, for owners who want me close as the company grows.</p>
-        <ul class="sol-focus">
-          <li>Decisions you should not make alone</li>
-          <li>Real work I take on and hand off</li>
-          <li>Leadership and hiring calls</li>
-          <li>Where AI can carry the work</li>
-          <li>A standing conversation with me</li>
-        </ul>
-        <p style="color:var(--gray);font-size:0.9rem;line-height:1.7;margin:0 0 1.25rem;">I work with a small number of owners at a time. We talk first, and scope comes after I understand what you are carrying.</p>
-        <a href="contact.html" class="btn btn-navy">Start a Conversation</a>
-      </div>
-
-      <div class="sol-card" id="scaling">
-        <span class="sol-num">02</span>
-        <h3>Hand-Off Work</h3>
-        <p class="sol-lead">A defined piece of work I take on and build the structure around, so it moves off your desk for good.</p>
-        <ul class="sol-focus">
-          <li>Who decides what</li>
-          <li>Roles and accountability</li>
-          <li>A weekly operating rhythm</li>
-          <li>Hiring and onboarding the right leaders</li>
-          <li>Documented hand-offs that hold</li>
-        </ul>
-        <a href="contact.html" class="btn btn-navy">Start a Conversation</a>
-      </div>
-
-    </div>
-  </div>
+<div class="container">
+<div class="sol-grid">
+<div class="sol-card" id="ongoing-partnership">
+<span class="sol-num">01</span>
+<h3>Ongoing Partnership</h3>
+<p class="sol-lead">A continuing strategic advisory relationship for leaders who value an experienced, independent perspective as their business evolves.</p>
+<ul class="sol-focus"><li>Strategic decisions and competing priorities</li><li>Leadership, talent, and organizational challenges</li><li>Accountability and execution</li><li>Operating changes as the business grows</li><li>Regular direct access and candid counsel</li></ul>
+<p style="color:var(--gray);font-size:0.9rem;line-height:1.7;margin:0 0 1.25rem;">I work with a limited number of clients so I can stay close to the priorities and decisions that matter. We define the relationship together after an initial conversation.</p>
+<a class="btn btn-navy" href="contact.html">Start a Conversation</a>
+</div>
+<div class="sol-card" id="scaling">
+<span class="sol-num">02</span>
+<h3>Defined Project Work</h3>
+<p class="sol-lead">Focused support for a specific business or organizational challenge, with a clear scope, tangible deliverables, and practical implementation.</p>
+<ul class="sol-focus"><li>Organizational structure and decision rights</li><li>Leadership roles, accountability, and alignment</li><li>Operating models and ways of working</li><li>Talent and succession priorities</li><li>Implementation plans and sustainable handoffs</li></ul>
+<a class="btn btn-navy" href="contact.html">Start a Conversation</a>
+</div>
+</div>
+</div>
 </section>
-
 <!-- FOUNDER SCALE SESSION -->
 <section class="fss-section" id="founder-scale-session">
-  <img class="fss-bg" src="next-chapter-ascent.svg" alt=""/>
-  <div class="fss-fade"></div>
-  <div class="container">
-    <div class="fss-inner">
-      <span class="eyebrow">Where Most Owners Start</span>
-      <h2>Founder Scale Session™</h2>
-      <p>A working session for founders and business owners who are tired of being the middle of every decision. You leave with a one-page Hand-Off Map.</p>
-      <div class="fss-map">
-        <div class="fss-stage">
-          <h5>Keep</h5>
-          <p>What only you should decide.</p>
-        </div>
-        <div class="fss-stage">
-          <h5>Hand Off</h5>
-          <p>What moves, and to whom.</p>
-        </div>
-        <div class="fss-stage">
-          <h5>Take On</h5>
-          <p>What I carry for you, and where AI helps.</p>
-        </div>
-      </div>
-      <p style="font-size:0.92rem;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;">The output is a Hand-Off Map: what you keep, what you hand off, and what I take on. After the session, we can keep working together as your ongoing advisor and thought partner.</p>
-      <a href="founder-scale-session.html" class="btn btn-gold">Start a Conversation</a>
-    </div>
-  </div>
+<img alt="" class="fss-bg" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYwMCA5MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcm9sZT0iaW1nIj4KPHRpdGxlPkFic3RyYWN0IGFydHdvcmsgcmVwcmVzZW50aW5nIHJlaW52ZW50aW9uIGFuZCBhc2NlbnQgZm9yIGV4ZWN1dGl2ZXMgYnVpbGRpbmcgdGhlaXIgbmV4dCBjaGFwdGVyPC90aXRsZT4KPGRlc2M+QSBjb21wb3NpdGlvbiBvZiBhc2NlbmRpbmcgbmF2eSBhbmQgZ29sZCBnZW9tZXRyaWMgc3RlcHMgcmlzaW5nIGZyb20gbG93ZXIgbGVmdCB0byB1cHBlciByaWdodCwgc3VnZ2VzdGluZyBmb3J3YXJkIG1vbWVudHVtIGFuZCB0cmFuc2Zvcm1hdGlvbiByYXRoZXIgdGhhbiByZXRpcmVtZW50LjwvZGVzYz4KCjxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0iIzBEMUIyRSIvPgoKPGcgb3BhY2l0eT0iMC45NSI+CjxyZWN0IHg9IjEyMCIgeT0iNzAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iIzE2MzI0RSIvPgo8cmVjdCB4PSIzNDAiIHk9IjYwMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9IiMxMjJBNDIiLz4KPHJlY3QgeD0iNTYwIiB5PSI0OTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMzUwIiBmaWxsPSIjMEYyMjM2Ii8+CjxyZWN0IHg9Ijc4MCIgeT0iMzcwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjQ3MCIgZmlsbD0iIzE2MzI0RSIvPgo8cmVjdCB4PSIxMDAwIiB5PSIyNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iNTkwIiBmaWxsPSIjMTIyQTQyIi8+CjxyZWN0IHg9IjEyMjAiIHk9IjE1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI2OTAiIGZpbGw9IiMwRjIyMzYiLz4KPC9nPgoKPGcgc3Ryb2tlPSIjQTA3ODIwIiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC41Ij4KPGxpbmUgeDE9IjEyMCIgeTE9IjcwMCIgeDI9IjMyMCIgeTI9IjcwMCIvPgo8bGluZSB4MT0iMzQwIiB5MT0iNjAwIiB4Mj0iNTQwIiB5Mj0iNjAwIi8+CjxsaW5lIHgxPSI1NjAiIHkxPSI0OTAiIHgyPSI3NjAiIHkyPSI0OTAiLz4KPGxpbmUgeDE9Ijc4MCIgeTE9IjM3MCIgeDI9Ijk4MCIgeTI9IjM3MCIvPgo8bGluZSB4MT0iMTAwMCIgeTE9IjI1MCIgeDI9IjEyMDAiIHkyPSIyNTAiLz4KPGxpbmUgeDE9IjEyMjAiIHkxPSIxNTAiIHgyPSIxNDIwIiB5Mj0iMTUwIi8+CjwvZz4KCjxwYXRoIGQ9Ik0xNzAsNzAwIEwzOTAsNjAwIEw2MTAsNDkwIEw4MzAsMzcwIEwxMDUwLDI1MCBMMTI3MCwxNTAiIHN0cm9rZT0iI0M0QTk2QSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBzdHJva2UtZGFzaGFycmF5PSIyIDgiIG9wYWNpdHk9IjAuNiIvPgoKPGNpcmNsZSBjeD0iMTI3MCIgY3k9IjE1MCIgcj0iNDAiIGZpbGw9IiNBMDc4MjAiIG9wYWNpdHk9IjAuMTUiLz4KPGNpcmNsZSBjeD0iMTI3MCIgY3k9IjE1MCIgcj0iMjQiIGZpbGw9IiNBMDc4MjAiIG9wYWNpdHk9IjAuMyIvPgo8Y2lyY2xlIGN4PSIxMjcwIiBjeT0iMTUwIiByPSIxMCIgZmlsbD0iI0U4RDlCMCIvPgoKPGcgb3BhY2l0eT0iMC41Ij4KPGNpcmNsZSBjeD0iMTM4MCIgY3k9IjkwIiByPSIyIiBmaWxsPSIjRThEOUIwIi8+CjxjaXJjbGUgY3g9IjE0NDAiIGN5PSIxMzAiIHI9IjEuNiIgZmlsbD0iI0U4RDlCMCIvPgo8Y2lyY2xlIGN4PSIxMzUwIiBjeT0iMjAwIiByPSIxLjgiIGZpbGw9IiNFOEQ5QjAiLz4KPGNpcmNsZSBjeD0iMTQ4MCIgY3k9IjIwMCIgcj0iMiIgZmlsbD0iI0U4RDlCMCIvPgo8L2c+CgoKCgo8L3N2Zz4K"/>
+<div class="fss-fade"></div>
+<div class="container">
+<div class="fss-inner">
+<span class="eyebrow">An Optional Starting Point</span>
+<h2>Founder Scale Session™</h2>
+<p>A focused working session to identify where your business depends too heavily on you, clarify what needs to change, and decide on practical next steps. The session stands on its own; an ongoing engagement is not required.</p>
+<div class="fss-map">
+<div class="fss-stage">
+<h5>Keep</h5>
+<p>The decisions that need your direct attention.</p>
+</div>
+<div class="fss-stage">
+<h5>Hand Off</h5>
+<p>Responsibilities others can own with the right support.</p>
+</div>
+<div class="fss-stage">
+<h5>Prioritize</h5>
+<p>The changes that will make the biggest difference next.</p>
+</div>
+</div>
+<p style="font-size:0.92rem;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;">You leave with a one-page Hand-Off Map showing what to keep, what to delegate, and where to focus next.</p>
+<a class="btn btn-gold" href="founder-scale-session.html">Start a Conversation</a>
+</div>
+</div>
 </section>
-
 <!-- CAPABILITY DEPTH -->
 <section class="capability-band">
-  <div class="container">
-    <span class="eyebrow">Proof of Depth</span>
-    <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
-    <h2 style="margin-top:1.25rem;">The Experience Beneath the Advice</h2>
-    <p style="color:var(--gray);max-width:580px;margin:0.75rem auto 0;">My work draws on years of building leadership systems, talent strategy, and operating models inside large companies.</p>
-    <div class="capability-grid">
-      <div class="cap-tile">
-        <h4>Strategy &amp; Transformation</h4>
-        <p>Clarify priorities and build execution roadmaps.</p>
-      </div>
-      <div class="cap-tile">
-        <h4>Operating Model Design</h4>
-        <p>Build structures and systems that support scale.</p>
-      </div>
-      <div class="cap-tile">
-        <h4>People &amp; Leadership Systems</h4>
-        <p>Develop leadership capability and talent strategy.</p>
-      </div>
-      <div class="cap-tile">
-        <h4>AI-Enabled Transformation</h4>
-        <p>Prepare leaders and teams for how work is changing.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<span class="eyebrow">Capabilities Behind the Work</span>
+<div class="gold-rule" style="margin:1.2rem auto 0;"></div>
+<h2 style="margin-top:1.25rem;">The Experience Beneath the Advice</h2>
+<p style="color:var(--gray);max-width:580px;margin:0.75rem auto 0;">My work draws on years of building leadership systems, talent strategy, and operating models inside large companies.</p>
+<div class="capability-grid">
+<div class="cap-tile">
+<h4>Strategy &amp; Transformation</h4>
+<p>Clarify priorities and build execution roadmaps.</p>
+</div>
+<div class="cap-tile">
+<h4>Operating Model Design</h4>
+<p>Build structures and systems that support scale.</p>
+</div>
+<div class="cap-tile">
+<h4>People &amp; Leadership Systems</h4>
+<p>Develop leadership capability and talent strategy.</p>
+</div>
+<div class="cap-tile">
+<h4>AI-Enabled Transformation</h4>
+<p>Prepare leaders and teams for how work is changing.</p>
+</div>
+</div>
+</div>
 </section>
-
 <section class="cta-band">
-  <div class="container">
-    <span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">Not Sure Where to Start?</span>
-    <h2>Tell Me What You're Carrying.</h2>
-    <p>Every partnership starts with a conversation about what is on your plate and whether I am the right person to help.</p>
-    <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
-  </div>
+<div class="container">
+<span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">Not Sure Where to Start?</span>
+<h2>Let’s Talk About Your Priorities.</h2>
+<p>Tell me what your business is facing. We’ll determine whether ongoing advisory or a defined project is the right way to work together.</p>
+<a class="btn btn-gold" href="contact.html">Start a Conversation</a>
+</div>
 </section>
-
 <footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
-        <p>A JWP Consulting LLC Company<br/>A trusted advisor for founders who can't be in every decision.<br/>Atlanta, GA · National</p>
-      </div>
-      <div class="footer-links">
-        <h5>The Firm</h5>
-        <ul>
-          <li><a href="who-we-help.html">Who We Help</a></li>
-          <li><a href="our-firm.html">Our Firm</a></li>
-          <li><a href="jackie-parker.html">Jackie Parker</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="insights.html">Insights</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h5>How We Partner</h5>
-        <ul>
-          <li><a href="solutions.html#founder-scale-session">Founder Scale Session™</a></li>
-          <li><a href="solutions.html#ongoing-partnership">Ongoing Partnership</a></li>
-          <li><a href="solutions.html#scaling">Hand-Off Work</a></li>
-          <li><a href="ai-adoption-read.html">The AI Adoption Read™</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="mailto:jackie@deepsightstrategy.com">jackie@deepsightstrategy.com</a></li>
-          <li><a href="https://www.linkedin.com/in/jackie-parker-atlanta" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="contact.html">Start a Conversation</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
-    </div>
-  </div>
+<div class="container">
+<div class="footer-inner">
+<div class="footer-brand">
+<span style="font-family:Georgia,serif;color:white;font-size:1.05rem;display:block;">DeepSight Strategy™</span>
+<p>A JWP Consulting LLC Company<br/>Strategic perspective for leaders building what’s next.<br/>Atlanta, GA · National</p>
+</div>
+<div class="footer-links">
+<h5>The Firm</h5>
+<ul>
+<li><a href="who-we-help.html">Who We Help</a></li>
+<li><a href="our-firm.html">Our Firm</a></li>
+<li><a href="jackie-parker.html">Jackie Parker</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="insights.html">Insights</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h5>How We Partner</h5>
+<ul><li><a href="solutions.html#ongoing-partnership">Ongoing Partnership</a></li><li><a href="solutions.html#scaling">Defined Project Work</a></li><li><a href="solutions.html#founder-scale-session">Founder Scale Session™</a></li><li><a href="ai-adoption-read.html">The AI Adoption Read™</a></li></ul>
+</div>
+<div class="footer-links">
+<h5>Contact</h5>
+<ul>
+<li><a href="mailto:jackie@deepsightstrategy.com">jackie@deepsightstrategy.com</a></li>
+<li><a href="https://www.linkedin.com/in/jackie-parker-atlanta" rel="noopener" target="_blank">LinkedIn</a></li>
+<li><a href="contact.html">Start a Conversation</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
+</div>
+</div>
 </footer>
-
-</body>
+<script>(function(){const b=document.querySelector('.nav-toggle');const n=document.getElementById('main-nav');if(!b||!n)return;b.addEventListener('click',function(){const open=n.classList.toggle('nav-open');b.setAttribute('aria-expanded',String(open));b.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');b.textContent=open?'Close':'Menu';});})();</script></body>
 </html>
