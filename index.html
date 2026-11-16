@@ -10,8 +10,8 @@
 </script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DeepSight Strategy™: Scale Without Breaking What Made You Successful</title>
-  <meta name="description" content="DeepSight Strategy™ is a principal-led advisory practice helping founders, CEOs, and investors scale companies without breaking what made them successful, building the leadership systems, operating rhythms, and organizational discipline required to move from growth to scale."/>
+  <title>DeepSight Strategy™: A Trusted Advisor for Founders Who Can't Be in Every Decision</title>
+  <meta name="description" content="DeepSight Strategy™ is a principal-led advisory practice for founders and business owners whose companies grew past what one person can run. I help you decide what stays with you, hand off the rest, and think the big calls through."/>
   <link rel="stylesheet" href="style.css"/>
   <style>
     .hero { min-height:92vh; background:#0D1B2E; display:flex; align-items:center; padding-top:72px; position:relative; overflow:hidden; }
@@ -85,7 +85,72 @@
     .proof-card p { font-size:0.84rem; color:var(--gray); line-height:1.65; }
     @media(max-width:900px) { .proof-grid { grid-template-columns:1fr 1fr; } }
     @media(max-width:640px) { .proof-grid { grid-template-columns:1fr; } }
+    .infographic { background:#0D1B2E; border-radius:6px; padding:2.25rem 2rem 0; overflow:hidden; }
+    .trap-grid { position:relative; gap:1.5rem !important; }
+    .trap-grid::before { content:""; position:absolute; top:calc(2rem + 17px); left:16.6%; right:16.6%; height:2px; background:repeating-linear-gradient(90deg,#A07820 0 8px,transparent 8px 14px); }
+    .trap-card { position:relative; background:transparent; border:none; padding:2rem 1rem 1.9rem; color:#fff; text-align:center; }
+    .trap-num { width:34px; height:34px; border-radius:50%; background:#A07820; color:#0D1B2E; font:700 1.05rem Georgia,serif; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; position:relative; z-index:1; box-shadow:0 0 0 6px #0D1B2E; }
+    .trap-card h4 { color:#fff; font-size:1.05rem; margin-bottom:0.4rem; letter-spacing:0.02em; }
+    .trap-card svg { width:100%; height:auto; margin:0.6rem 0 0.8rem; }
+    .trap-card p { color:rgba(255,255,255,0.72); font-size:0.86rem; line-height:1.65; margin:0; }
+    .trap-card .trap-src { color:var(--gold-l); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; margin-top:0.9rem; }
+    .info-banner { margin:1.75rem -2rem 0; background:#A07820; color:#0D1B2E; text-align:center; padding:1.15rem 1.5rem; font-family:Georgia,serif; font-size:1.15rem; }
+    @media(max-width:900px) { .trap-grid { grid-template-columns:1fr !important; } .trap-grid::before { display:none; } }
+    .cta-band { background-image:linear-gradient(rgba(13,27,46,0.55),rgba(13,27,46,0.82)),url(cta-bokeh.svg); background-size:cover; background-position:center; }
+    /* ---- MOTION ---- */
+    .hero-bg { transform-origin:62% 70%; animation:camdrift 30s ease-in-out infinite alternate; will-change:transform; }
+    .hero-overlay { background:radial-gradient(ellipse at 50% 46%, rgba(13,27,46,0.62) 0%, rgba(13,27,46,0) 62%), linear-gradient(180deg, rgba(13,27,46,0.5) 0%, rgba(13,27,46,0.18) 55%, rgba(13,27,46,0.45) 100%); }
+    @keyframes camdrift { 0%{transform:scale(1.03) translate3d(0,0,0)} 100%{transform:scale(1.13) translate3d(-2.2%,-1.6%,0)} }
+    @keyframes fadeup { 0%{opacity:0;transform:translateY(26px)} 100%{opacity:1;transform:none} }
+    .hero-eyebrow, .hero h1, .hero-sub, .hero-actions { opacity:0; animation:fadeup 1s cubic-bezier(.2,.7,.2,1) forwards; }
+    .hero-eyebrow { animation-delay:.25s; }
+    .hero h1 { animation-delay:.55s; }
+    .hero-sub { animation-delay:1s; }
+    .hero-actions { animation-delay:1.35s; }
+    .hero-actions .btn { position:relative; overflow:hidden; }
+    .hero-actions .btn::after { content:""; position:absolute; top:0; left:-60%; width:40%; height:100%; background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent); transform:skewX(-20deg); animation:sheen 5.5s ease-in-out 3s infinite; }
+    @keyframes sheen { 0%,70%,100%{left:-60%} 85%{left:130%} }
+    .js .reveal { opacity:0; transform:translateY(30px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+    .js .reveal.in { opacity:1; transform:none; }
+    .js .reveal.d1 { transition-delay:.12s; } .js .reveal.d2 { transition-delay:.24s; } .js .reveal.d3 { transition-delay:.36s; }
+    .proof-card, .path-card, .solution-card, .card { transition:transform .35s ease, box-shadow .35s ease; }
+    .proof-card:hover, .path-card:hover, .solution-card:hover, .card:hover { transform:translateY(-5px); }
+    /* infographic build */
+    .js .infographic .trap-num { transform:scale(0); }
+    .js .infographic .trap-grid::before { transform:scaleX(0); transform-origin:left; }
+    .js .infographic .trap-card h4, .js .infographic .trap-card p { opacity:0; transform:translateY(14px); }
+    .js .infographic .trap-card svg text.big { opacity:0; }
+    .js .infographic .pop { opacity:0; transform-box:fill-box; transform-origin:50% 100%; transform:scale(.3); }
+    .js .infographic .bar { transform-box:fill-box; transform-origin:50% 100%; transform:scaleY(0); }
+    .js .infographic .lbl { opacity:0; }
+    .js .infographic .info-banner { opacity:0; transform:translateY(16px); }
+    .infographic.in .trap-grid::before { transform:scaleX(1); transition:transform 1.8s ease .2s; }
+    .infographic.in .trap-num { transform:scale(1); transition:transform .6s cubic-bezier(.3,1.6,.5,1); }
+    .infographic.in .trap-card:nth-child(1) .trap-num { transition-delay:.3s; }
+    .infographic.in .trap-card:nth-child(2) .trap-num { transition-delay:1s; }
+    .infographic.in .trap-card:nth-child(3) .trap-num { transition-delay:1.7s; }
+    .infographic.in .trap-card h4, .infographic.in .trap-card p { opacity:1; transform:none; transition:opacity .8s ease, transform .8s ease; }
+    .infographic.in .trap-card:nth-child(1) h4, .infographic.in .trap-card:nth-child(1) p { transition-delay:.5s; }
+    .infographic.in .trap-card:nth-child(2) h4, .infographic.in .trap-card:nth-child(2) p { transition-delay:1.2s; }
+    .infographic.in .trap-card:nth-child(3) h4, .infographic.in .trap-card:nth-child(3) p { transition-delay:1.9s; }
+    .js .infographic.in svg text.big { opacity:1; transition:opacity .7s ease; }
+    .js .infographic.in .trap-card:nth-child(1) text.big { transition-delay:.6s; }
+    .js .infographic.in .trap-card:nth-child(2) text.big { transition-delay:1.3s; }
+    .infographic.in .pop { opacity:1; transform:scale(1); transition:opacity .45s ease, transform .6s cubic-bezier(.3,1.6,.5,1); transition-delay:calc(var(--i) * .16s + var(--b) * 1s); }
+    .infographic.in .bar { transform:scaleY(1); transition:transform 1s cubic-bezier(.2,.8,.2,1); transition-delay:calc(2s + var(--i) * .22s); }
+    .infographic.in .lbl { opacity:1; transition:opacity .6s ease; transition-delay:calc(2.7s + var(--i) * .22s); }
+    .infographic.in .gold-pulse { animation:goldpulse 2.6s ease-in-out 3.4s infinite; transform-box:fill-box; transform-origin:50% 50%; }
+    @keyframes goldpulse { 0%,100%{filter:drop-shadow(0 0 0 rgba(217,168,80,0))} 50%{filter:drop-shadow(0 0 7px rgba(217,168,80,.85))} }
+    .infographic.in .info-banner { opacity:1; transform:none; transition:opacity .9s ease 3.3s, transform .9s ease 3.3s; }
+    /* cta bokeh drift */
+    .cta-band { background-size:130% 130%, cover; animation:bokehdrift 22s ease-in-out infinite alternate; }
+    @keyframes bokehdrift { 0%{background-position:0% 40%, center} 100%{background-position:100% 60%, center} }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation:none !important; transition:none !important; }
+      .hero-eyebrow, .hero h1, .hero-sub, .hero-actions, .js .reveal, .js .infographic * { opacity:1 !important; transform:none !important; }
+    }
   </style>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -113,6 +178,7 @@
       <li><a href="solutions.html">How We Partner</a></li>
       <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
       <li><a href="our-firm.html">Our Firm</a></li>
+      <li><a href="resources.html">Resources</a></li>
       <li><a href="insights.html">Insights</a></li>
       <li><a href="contact.html" class="nav-cta">Start a Conversation</a></li>
     </ul>
@@ -121,16 +187,14 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="hero-horizon.svg" alt=""/>
+  <img class="hero-bg" src="hero-cinematic.svg" alt=""/>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <span class="hero-eyebrow">DeepSight Strategy™ · A JWP Consulting LLC Company</span>
-    <h1>Scale Without Breaking What Made You Successful.</h1>
-    <p class="hero-sub">I help founders and CEOs scale companies without breaking what made them successful. Through DeepSight Strategy™, I bring Fortune 10 and Fortune 500 operating experience to the leadership systems, operating rhythms, and organizational discipline companies need to move from growth to scale.</p>
-    <p class="hero-sub" style="font-size:0.95rem;">DeepSight Strategy™ is a principal-led advisory practice for founders, CEOs, investors, and senior executive teams navigating the moment when growth outpaces the organization behind it.</p>
+    <h1>You Can't Be in Every Decision Anymore.</h1>
+    <p class="hero-sub">I'm Jackie Parker. I work directly with founders and business owners whose companies grew past what one person can run.</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
-      <a href="solutions.html#founder-scale-session" class="btn btn-outline">Explore the Founder Scale Session™</a>
     </div>
   </div>
 </section>
@@ -168,67 +232,87 @@
   </div>
 </section>
 
-<!-- THE PROBLEM -->
+<!-- THREE TRAPS -->
 <section class="path-section">
   <div class="container">
     <div class="path-head">
-      <span class="eyebrow">When Growth Outpaces the Company Behind It</span>
+      <span class="eyebrow">Where Fast Growth Gets Stuck</span>
       <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
-      <h2 style="margin-top:1.25rem;">Most Founders and CEOs Do Not Wake Up Thinking, "I Need HR."</h2>
+      <h2 style="margin-top:1.25rem;">Three Traps Fast-Growing Companies Fall Into</h2>
     </div>
-    <div style="max-width:680px;margin:0 auto 2.5rem;">
-      <p style="font-family:var(--serif);font-style:italic;color:var(--navy);font-size:1.1rem;text-align:center;line-height:1.8;margin-bottom:2rem;">They think something closer to this:</p>
-      <ul class="path-list" style="border:1.5px solid var(--gray-l);border-radius:var(--radius);padding:0.5rem 1.5rem;">
-        <li><span class="path-check">✓</span> We grew fast, and the company is getting harder to run.</li>
-        <li><span class="path-check">✓</span> My leadership team is not scaling with the business.</li>
-        <li><span class="path-check">✓</span> Too many decisions still run through me.</li>
-        <li><span class="path-check">✓</span> We need operators, not corporate bureaucracy.</li>
-        <li><span class="path-check">✓</span> Investors are asking about leadership depth and succession.</li>
-        <li><span class="path-check">✓</span> We need structure without killing our culture.</li>
-        <li><span class="path-check">✓</span> AI is changing how work gets done, and we are not built for it yet.</li>
-      </ul>
+    <div class="infographic">
+    <div class="proof-grid trap-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="trap-card">
+        <div class="trap-num">1</div>
+        <h4>The Delegation Trap</h4>
+        <svg viewBox="0 0 300 150" role="img" aria-label="One in four founders has strong delegation talent">
+          <text x="150" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="54" fill="#D9A850">1 in 4</text>
+          <g fill="#D9A850"><circle cx="55" cy="92" r="11"/><path d="M39,140 v-14 a16,16 0 0 1 32,0 v14 z"/></g>
+          <g fill="#4A6482"><circle cx="120" cy="92" r="11"/><path d="M104,140 v-14 a16,16 0 0 1 32,0 v14 z"/><circle cx="185" cy="92" r="11"/><path d="M169,140 v-14 a16,16 0 0 1 32,0 v14 z"/><circle cx="250" cy="92" r="11"/><path d="M234,140 v-14 a16,16 0 0 1 32,0 v14 z"/></g>
+        </svg>
+        <p>US founders with employees who have strong delegation talent. Among the fast-growing Inc. 500 leaders Gallup studied, those who delegate well averaged faster growth and higher revenue.</p>
+        <p class="trap-src">Gallup</p>
+      </div>
+      <div class="trap-card">
+        <div class="trap-num">2</div>
+        <h4>The Time Trap</h4>
+        <svg viewBox="0 0 300 150" role="img" aria-label="About one in ten owners calls controlling their own time a critical problem">
+          <text x="150" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="54" fill="#D9A850">1 in 10</text>
+          <g fill="#4A6482"><circle cx="110" cy="88" r="13"/><circle cx="150" cy="88" r="13"/><circle cx="190" cy="88" r="13"/><circle cx="230" cy="88" r="13"/><circle cx="70" cy="124" r="13"/><circle cx="110" cy="124" r="13"/><circle cx="150" cy="124" r="13"/><circle cx="190" cy="124" r="13"/><circle cx="230" cy="124" r="13"/></g>
+          <circle cx="70" cy="88" r="13" fill="#D9A850"/>
+        </svg>
+        <p>US small business owners who call controlling their own time a critical problem, about the same at every company size. Gallup's advice for growing founders: work on the business, not intensely in it.</p>
+        <p class="trap-src">NFIB · Gallup</p>
+      </div>
+      <div class="trap-card">
+        <div class="trap-num">3</div>
+        <h4>The People Trap</h4>
+        <svg viewBox="0 0 300 170" role="img" aria-label="Owners calling managing employees critical rises from 6.5% to 16.1% as teams grow">
+          <line x1="20" y1="130" x2="280" y2="130" stroke="#4A6482" stroke-width="1"/>
+          <g fill="#4A6482"><rect x="30" y="93.7" width="44" height="36.3"/><rect x="90" y="73.5" width="44" height="56.5"/><rect x="150" y="57.3" width="44" height="72.7"/></g>
+          <rect x="210" y="40" width="44" height="90" fill="#D9A850"/>
+          <g font-family="Arial,sans-serif" font-size="12" fill="#E8D9B0" text-anchor="middle"><text x="52" y="87">6.5%</text><text x="112" y="67">10.1%</text><text x="172" y="51">13.0%</text><text x="232" y="33" fill="#D9A850" font-weight="bold" font-size="14">16.1%</text></g>
+          <g font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle"><text x="52" y="147">1 to 4</text><text x="112" y="147">5 to 9</text><text x="172" y="147">10 to 19</text><text x="232" y="147">20 to 49</text><text x="150" y="164" font-size="10" fill="rgba(255,255,255,0.5)">employees</text></g>
+        </svg>
+        <p>Owners calling "managing employees" a critical problem climbs as teams grow. At 20 to 49 employees it ranks 9th of 75 problems.</p>
+        <p class="trap-src">NFIB</p>
+      </div>
     </div>
-    <div style="text-align:center;max-width:600px;margin:0 auto;">
-      <p style="color:var(--gray);font-size:1.05rem;line-height:1.85;">That is where DeepSight comes in. DeepSight helps leaders identify what must evolve before growth creates unnecessary friction.</p>
+    <div class="info-banner">I've spent my career on the other side of this. I help you get out of all three.</div>
     </div>
+    <p style="text-align:center;color:var(--gray);font-size:0.78rem;margin-top:1.25rem;">Sources: <a href="https://news.gallup.com/businessjournal/182414/delegating-huge-management-challenge-entrepreneurs.aspx" style="color:var(--gold);">Gallup, 2015</a> · <a href="https://nfib.com/wp-content/uploads/2024/10/2024-Small-Business-Problems-Priorities.pdf" style="color:var(--gold);">NFIB Small Business Problems &amp; Priorities, 2024</a></p>
   </div>
 </section>
 
-<!-- WHAT DEEPSIGHT BUILDS -->
+<!-- HOW I WORK WITH YOU -->
 <section class="solutions-teaser">
   <div class="container">
     <div class="teaser-head">
-      <span class="eyebrow">Build What Growth Requires Next</span>
+      <span class="eyebrow">What You Get</span>
       <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
-      <h2 style="margin-top:1.25rem;">DeepSight Helps Founders, CEOs, and Executive Teams Build the Company Behind the Growth</h2>
-      <p style="color:var(--gray);margin-top:1rem;">The goal is not corporate bureaucracy. The goal is structure that protects momentum.</p>
+      <h2 style="margin-top:1.25rem;">How I Work With Founders and Business Owners</h2>
     </div>
     <div class="teaser-grid">
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>Leadership Systems &amp; Operating Rhythms</h4>
-        <p>The decision rights, cadences, and accountability structures that let a leadership team operate at the next level.</p>
+        <h4>A Second You</h4>
+        <p>I help you decide which calls stay with you and which move to someone else, so the company keeps moving without you in the room.</p>
       </div>
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>Talent Strategy &amp; Culture Infrastructure</h4>
-        <p>The organizational discipline and succession depth that let growth continue without losing what built it.</p>
+        <h4>A Trusted Advisor</h4>
+        <p>Straight counsel from someone who has sat in the seat and has no reason to flatter you.</p>
       </div>
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>Organizational Discipline &amp; Scaling Readiness</h4>
-        <p>The systems and structures that support growth without creating bureaucracy.</p>
+        <h4>Work Off Your Plate</h4>
+        <p>I take on real work and build the structure to hand it off for good. Where AI can carry the work, I show you where.</p>
       </div>
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>AI-Enabled Ways of Working</h4>
-        <p>Preparing leaders and teams for how work, decisions, and accountability are changing.</p>
-        <a href="ai-adoption-read.html" class="teaser-link">Take the AI Adoption Read™ →</a>
+        <h4>A Thought Partner</h4>
+        <p>A standing conversation for the calls you can't make alone.</p>
       </div>
-    </div>
-    <br/>
-    <div style="text-align:center;margin-top:1rem;">
-      <a href="solutions.html" class="btn btn-navy">Explore How We Partner</a>
     </div>
   </div>
 </section>
@@ -241,45 +325,22 @@
     <div class="signature-inner">
       <span class="eyebrow" style="color:var(--gold-l);">Signature Offering</span>
       <h2>Founder Scale Session™</h2>
-      <p>A focused advisory experience for founders and CEOs asking: what needs to evolve for this company to reach its next stage? The output is the DeepSight Growth Map™, a clear view of what to protect, what must evolve, and what to build next.</p>
+      <p>A working session for founders and business owners who are tired of being the middle of every decision. You leave with a one-page Hand-Off Map. After the session, we can keep working together as your ongoing advisor and thought partner.</p>
       <div class="signature-journey">
         <div class="sig-stage">
-          <h5>Protect</h5>
-          <p>What made you successful.</p>
+          <h5>Keep</h5>
+          <p>What only you should decide.</p>
         </div>
         <div class="sig-stage">
-          <h5>Evolve</h5>
-          <p>What needs to change.</p>
+          <h5>Hand Off</h5>
+          <p>What moves, and to whom.</p>
         </div>
         <div class="sig-stage">
-          <h5>Build</h5>
-          <p>What the next stage requires.</p>
+          <h5>Take On</h5>
+          <p>What I carry for you, and where AI helps.</p>
         </div>
       </div>
       <a href="founder-scale-session.html" class="btn btn-gold">Explore the Founder Scale Session™</a>
-      <a href="https://buy.stripe.com/dRm9AU5qRg9d60x0jg08g00" class="btn btn-outline" style="margin-left:0.75rem;">Reserve the Session · $2,500</a>
-    </div>
-  </div>
-</section>
-
-<!-- COMPANION OFFERINGS -->
-<section class="companion-band">
-  <div class="container">
-    <div class="companion-row">
-      <div>
-        <span class="eyebrow">For the Leader's Next Stage</span>
-        <h3>Executive Next Chapter™</h3>
-        <p>Founder Scale Session™ is for the company's next stage. Executive Next Chapter™ is for the leader's, helping founders and senior executives turn experience into a platform for what comes after this chapter.</p>
-      </div>
-      <a href="executive-next-chapter.html" class="btn btn-outline-dark" style="white-space:nowrap;">Explore Executive Next Chapter™</a>
-    </div>
-    <div class="companion-row">
-      <div>
-        <span class="eyebrow">For Leadership Teams Navigating AI</span>
-        <h3>The AI Adoption Read™</h3>
-        <p>A short, personal read on where AI adoption is actually breaking down in your leadership team, not the technology, the behavior around it. Five minutes, reviewed personally by Jackie Parker.</p>
-      </div>
-      <a href="ai-adoption-read.html" class="btn btn-outline-dark" style="white-space:nowrap;">Take the AI Adoption Read™</a>
     </div>
   </div>
 </section>
@@ -288,12 +349,10 @@
 <section class="why-section">
   <div class="container">
     <div class="why-inner">
-      <img class="why-photo" src="jackie-parker.jpg" alt="Jackie Parker, Founder of DeepSight Strategy"/>
+      <img class="why-photo" src="jackie-parker-new.jpg" style="object-position:50% 22%;" alt="Jackie Parker, Founder of DeepSight Strategy"/>
       <div class="why-text">
         <span class="eyebrow">Why DeepSight</span>
         <h2 style="margin-top:0.75rem;">Principal-Led Advisory. Direct Access to Jackie Parker.</h2>
-        <p class="pull">"I understand the decisions leaders face because I have helped make them."</p>
-        <p style="color:var(--gray);line-height:1.85;">Fortune 10 and Fortune 500 operating judgment, without consulting bloat. DeepSight combines enterprise leadership experience with strategic advisory methods to help leaders navigate growth, complexity, and change.</p>
         <br/>
         <a href="our-firm.html" class="btn btn-outline-dark">Learn About Our Firm</a>
       </div>
@@ -304,9 +363,9 @@
 <!-- CTA -->
 <section class="cta-band">
   <div class="container">
-    <span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">Ready to Build What's Next?</span>
+    <span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">Ready to Get Out of the Middle?</span>
     <h2>Let's Start a Conversation.</h2>
-    <p>Whether it's your company's next stage or your own, let's explore what's possible.</p>
+    <p>Tell me what you're carrying. We'll talk about what should come off your plate.</p>
     <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
   </div>
 </section>
@@ -331,7 +390,7 @@
         <h5>How We Partner</h5>
         <ul>
           <li><a href="solutions.html#founder-scale-session">Founder Scale Session™</a></li>
-          <li><a href="solutions.html#ceo-advisory">Founder &amp; CEO Advisory</a></li>
+          <li><a href="solutions.html#ceo-advisory">Founder &amp; Business Owner Advisory</a></li>
           <li><a href="solutions.html#scaling">Scaling Advisory</a></li>
           <li><a href="executive-next-chapter.html">Executive Next Chapter™</a></li>
           <li><a href="ai-adoption-read.html">The AI Adoption Read™</a></li>
@@ -348,10 +407,53 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 JWP Consulting LLC · DeepSight Strategy™ is a trademark of JWP Consulting LLC · All rights reserved.</p>
-      <p>Scale Without Breaking What Made You Successful.</p>
     </div>
   </div>
 </footer>
 
+<script>
+(function(){
+  var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sel = '.proof-section .container > *, .path-section .container > *:not(.infographic), .solutions-teaser .container > *, .signature-section .container > *, .why-section .container > *, .cta-band .container > *';
+  var els = document.querySelectorAll(sel);
+  els.forEach(function(el,i){ el.classList.add('reveal'); var d=i%4; if(d) el.classList.add('d'+Math.min(d,3)); });
+  var info = document.querySelector('.infographic');
+  if(info){
+    info.querySelectorAll('.trap-card').forEach(function(card,ci){
+      var svg = card.querySelector('svg'); if(!svg) return;
+      var big = svg.querySelector('text'); if(ci<2 && big) big.classList.add('big');
+      if(ci<2){
+        var shapes = svg.querySelectorAll('g > circle, g > path, svg > circle');
+        var k=0; shapes.forEach(function(sh){ sh.classList.add('pop'); sh.style.setProperty('--i', k++); sh.style.setProperty('--b', ci+1); });
+        var gold = svg.querySelector('g[fill="#D9A850"]') || svg.querySelector('circle[fill="#D9A850"]'); if(gold) gold.classList.add('gold-pulse');
+      } else {
+        var rects = svg.querySelectorAll('rect'); var j=0;
+        rects.forEach(function(r){ r.classList.add('bar'); r.style.setProperty('--i', j++); });
+        var labels = svg.querySelectorAll('g[font-size="12"] text'); j=0;
+        labels.forEach(function(t){ t.classList.add('lbl'); t.style.setProperty('--i', j++); t.dataset.target = t.textContent; });
+        if(rects.length) rects[rects.length-1].classList.add('gold-pulse');
+      }
+    });
+  }
+  function countUp(){
+    document.querySelectorAll('.infographic .lbl').forEach(function(t,i){
+      var tgt = parseFloat(t.dataset.target), start = null, delay = 2700 + i*220;
+      if(rm || isNaN(tgt)) return;
+      t.textContent = '0.0%';
+      setTimeout(function(){
+        function step(ts){ if(!start) start=ts; var p=Math.min((ts-start)/1100,1), e=1-Math.pow(1-p,3); t.textContent=(tgt*e).toFixed(1)+'%'; if(p<1) requestAnimationFrame(step); }
+        requestAnimationFrame(step);
+      }, delay);
+      setTimeout(function(){ t.textContent = t.dataset.target; }, delay + 1500);
+    });
+  }
+  if(!('IntersectionObserver' in window)){ document.querySelectorAll('.reveal,.infographic').forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); if(en.target===info) countUp(); io.unobserve(en.target); } });
+  }, {threshold:0.18, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(e){ io.observe(e); });
+  if(info) io.observe(info);
+})();
+</script>
 </body>
 </html>
