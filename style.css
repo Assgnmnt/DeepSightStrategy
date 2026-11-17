@@ -78,7 +78,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(13,27
 .nav-links { display:flex; align-items:center; gap:1.6rem; list-style:none; }
 .nav-links a { font-size:0.76rem; font-weight:400; letter-spacing:0.05em; color:rgba(255,255,255,0.7); text-decoration:none; transition:var(--ease); white-space:nowrap; }
 .nav-links a:hover { color:var(--gold-l); }
-.nav-cta { font-size:0.73rem !important; padding:0.48rem 1.2rem; background:var(--gold) !important; color:var(--white) !important; border-radius:var(--radius); }
+.nav-cta { white-space:nowrap; font-size:0.73rem !important; padding:0.48rem 1.2rem; background:var(--gold) !important; color:var(--white) !important; border-radius:var(--radius); }
 .nav-cta:hover { background:#8A6818 !important; }
 
 /* ── Logo SVG helper ── */
