@@ -310,7 +310,7 @@
           <div class="panel-head">
             <span class="eyebrow">The starting point</span>
             <h1>The tools got funded.<br>The behavior didn't change.</h1>
-            <p class="lede">The AI Adoption Read is where we name that gap precisely. You answer a short set of questions about where AI adoption is actually breaking down in your leadership team, not the technology, the behavior around it. I read every response myself, and I come back to you with a first read on what's really going on.</p>
+            <p class="lede">The AI Adoption Read is a complimentary five-minute leadership diagnostic where we name that gap precisely. You answer a short set of questions about where AI adoption is actually breaking down in your leadership team, not the technology, the behavior around it. Jackie reads every response herself, and we come back to you with a first read on what's really going on.</p>
           </div>
 
           <div class="welcome-meta">
@@ -337,14 +337,14 @@
           <div class="panel-head">
             <span class="eyebrow">First, the basics</span>
             <h2>You and the organization.</h2>
-            <p class="lede tight">Enough for me to understand who I'm reading and where you sit in the organization.</p>
+            <p class="lede tight">Enough for us to understand who we're reading and where you sit in the organization.</p>
           </div>
 
           <div class="fields">
             <div class="field" data-require="name">
               <label for="f_name">Your name</label>
               <input type="text" id="f_name" name="name" autocomplete="name" placeholder="First and last">
-              <span class="err-msg">Add your name so I know who I'm writing back to.</span>
+              <span class="err-msg">Add your name so we know who we're writing back to.</span>
             </div>
             <div class="field">
               <label for="f_role">Your role <span class="opt">(optional)</span></label>
@@ -465,7 +465,7 @@
           <div class="panel-head">
             <span class="eyebrow">Context that matters</span>
             <h2>The moment you're in.</h2>
-            <p class="lede tight">Timing tells me as much as the diagnostic does.</p>
+            <p class="lede tight">Timing tells us as much as the diagnostic does.</p>
           </div>
 
           <div class="q" data-q="timing" style="margin-bottom:34px">
@@ -480,7 +480,7 @@
           </div>
 
           <div class="field full">
-            <label for="f_success">What would make this conversation worth your time? <span class="opt">(optional, but the most useful thing you can tell me)</span></label>
+            <label for="f_success">What would make this conversation worth your time? <span class="opt">(optional, but the most useful thing you can tell us)</span></label>
             <textarea id="f_success" name="what_success_looks_like" placeholder="A sentence or two on what you'd want to walk away understanding."></textarea>
           </div>
 
@@ -498,14 +498,14 @@
           <div class="panel-head">
             <span class="eyebrow">Last step</span>
             <h2>How to reach you.</h2>
-            <p class="lede tight">This goes directly to me. Not a list, not a sequence.</p>
+            <p class="lede tight">This goes directly to Jackie. Not a list, not a sequence.</p>
           </div>
 
           <div class="fields">
             <div class="field full" data-require="email">
               <label for="f_email">Email</label>
               <input type="email" id="f_email" name="email" autocomplete="email" placeholder="you@company.com">
-              <span class="err-msg">I need a working email to send your read back to.</span>
+              <span class="err-msg">We need a working email to send your read back to.</span>
             </div>
             <div class="field">
               <label for="f_phone">Phone <span class="opt">(optional)</span></label>
@@ -516,14 +516,14 @@
               <select id="f_next" name="preferred_next_step">
                 <option value="" selected disabled>Choose one</option>
                 <option>A short Google Meet to talk it through</option>
-                <option>A written read back from me first</option>
+                <option>A written read back from us first</option>
                 <option>Not sure yet, open to your suggestion</option>
               </select>
             </div>
           </div>
 
           <div class="controls">
-            <span class="progress-text">By sending this you agree I can use it to respond. Nothing more.</span>
+            <span class="progress-text">By sending this you agree we can use it to respond. Nothing more.</span>
             <div class="btn-row">
               <button type="button" class="btn btn-ghost" data-back>Back</button>
               <button type="button" class="btn btn-primary" id="submitBtn">Start the conversation</button>
@@ -542,7 +542,7 @@
         <p class="reflect" id="confirmReflect"></p>
         <div class="next">
           <div class="k">What happens now</div>
-          <p>I read every AI Adoption Read personally, not a team, not a tool. You'll have a first read from me within two business days.</p>
+          <p>Jackie reads every AI Adoption Read personally, not a team, not a tool. You'll have our first read within two business days.</p>
           <p>If what we find together warrants it, the next step is usually a Leadership Signal Read: a short set of interviews across your leadership team that tells us, with real evidence, whether what you suspect is actually true.</p>
         </div>
         <a class="home-link" href="index.html">Return to DeepSight Strategy&trade;</a>
@@ -656,7 +656,7 @@
   }
 
   var REFLECTIONS = {
-    model: "From your answers, the sharpest pressure right now sits in <strong>Model</strong>. Your leadership team has approved AI more than it has visibly used it, and adoption follows what leaders do, not what they authorize. That's the first thing I'd want to look at with you: what it would take for your own leadership team to visibly close that gap.",
+    model: "From your answers, the sharpest pressure right now sits in <strong>Model</strong>. Your leadership team has approved AI more than it has visibly used it, and adoption follows what leaders do, not what they authorize. That's the first thing we'd want to look at with you: what it would take for your own leadership team to visibly close that gap.",
     move: "From your answers, the center of gravity is <strong>Move</strong>. Pilots are starting, but they're not consistently reaching real, redesigned workflows, and that usually traces back to no one having clear authority to change how the work actually gets done. That's a more solvable problem than it feels like from the inside, but it needs a named owner.",
     prove: "From your answers, the work ahead is mostly <strong>Prove</strong>. You can't yet point to a specific, defensible result, and that's more common than most leadership teams want to admit out loud. The useful next step isn't inventing a number under pressure, it's understanding honestly what you can and can't currently show, and building from there.",
     balanced: "Your answers spread across all three, <strong>Model, Move, and Prove</strong>. That's common when AI adoption has been underway for a while without a clear owner. The real question isn't which one to fix, it's which one to fix first, and that's exactly what a closer look would tell us."
@@ -718,7 +718,7 @@
       submitBtn.disabled = false;
       submitBtn.textContent = 'Start the conversation';
       var c = panels[current].querySelector('.progress-text');
-      c.innerHTML = "Something went wrong sending this. Email me directly at <a href='mailto:jackie@deepsightstrategy.com' style='color:var(--gold);font-weight:600'>jackie@deepsightstrategy.com</a> and I'll pick it up.";
+      c.innerHTML = "Something went wrong sending this. Email us directly at <a href='mailto:jackie@deepsightstrategy.com' style='color:var(--gold);font-weight:600'>jackie@deepsightstrategy.com</a> and we'll pick it up.";
       c.style.color = '#B4452F';
     });
   });
