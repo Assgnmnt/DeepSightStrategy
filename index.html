@@ -43,7 +43,7 @@
     .teaser-card { background:var(--white); border:1.5px solid var(--gray-l); padding:1.75rem 1.5rem; border-radius:var(--radius); transition:var(--ease); }
     .teaser-card:hover { border-color:var(--gold); }
     .teaser-bar { width:28px; height:2px; background:var(--gold); margin-bottom:1.1rem; }
-    .teaser-card h4 { font-size:0.95rem; margin-bottom:0.5rem; }
+    .teaser-card h3 { font-size:0.95rem; margin-bottom:0.5rem; }
     .teaser-card p { font-size:0.82rem; color:var(--gray); line-height:1.6; }
     .teaser-card .teaser-link { display:inline-block; margin-top:0.9rem; font-size:0.8rem; font-weight:600; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px; }
 
@@ -57,7 +57,7 @@
     .signature-journey { display:flex; gap:0; margin-bottom:2.5rem; }
     .sig-stage { flex:1; padding:1rem 1.25rem 1rem 0; border-left:2px solid rgba(255,255,255,0.12); padding-left:1.25rem; }
     .sig-stage:first-child { border-left:none; padding-left:0; }
-    .sig-stage h5 { color:var(--white); font-size:0.95rem; margin-bottom:0.3rem; }
+    .sig-stage h3 { color:var(--white); font-size:0.95rem; margin-bottom:0.3rem; }
     .sig-stage p { color:rgba(255,255,255,0.45); font-size:0.8rem; margin:0; }
 
     .companion-band { background:var(--cream); padding:4rem 0; border-top:1.5px solid var(--gray-l); border-bottom:1.5px solid var(--gray-l); }
@@ -81,7 +81,7 @@
     .proof-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
     .proof-card { background:var(--white); border:1.5px solid var(--gray-l); border-radius:var(--radius); padding:1.9rem 1.5rem; }
     .proof-num { font-family:var(--serif); font-size:2.4rem; color:var(--gold); line-height:1; margin-bottom:0.9rem; }
-    .proof-card h4 { font-size:0.95rem; margin-bottom:0.5rem; }
+    .proof-card h3 { font-size:0.95rem; margin-bottom:0.5rem; }
     .proof-card p { font-size:0.84rem; color:var(--gray); line-height:1.65; }
     @media(max-width:900px) { .proof-grid { grid-template-columns:1fr 1fr; } }
     @media(max-width:640px) { .proof-grid { grid-template-columns:1fr; } }
@@ -90,7 +90,7 @@
     .trap-grid::before { content:""; position:absolute; top:calc(2rem + 17px); left:16.6%; right:16.6%; height:2px; background:repeating-linear-gradient(90deg,#A07820 0 8px,transparent 8px 14px); }
     .trap-card { position:relative; background:transparent; border:none; padding:2rem 1rem 1.9rem; color:#fff; text-align:center; }
     .trap-num { width:34px; height:34px; border-radius:50%; background:#A07820; color:#0D1B2E; font:700 1.05rem Georgia,serif; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; position:relative; z-index:1; box-shadow:0 0 0 6px #0D1B2E; }
-    .trap-card h4 { color:#fff; font-size:1.05rem; margin-bottom:0.4rem; letter-spacing:0.02em; }
+    .trap-card h3 { color:#fff; font-size:1.05rem; margin-bottom:0.4rem; letter-spacing:0.02em; }
     .trap-card svg { width:100%; height:auto; margin:0.6rem 0 0.8rem; }
     .trap-card p { color:rgba(255,255,255,0.72); font-size:0.86rem; line-height:1.65; margin:0; }
     .trap-card .trap-src { color:var(--gold-l); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; margin-top:0.9rem; }
@@ -118,7 +118,7 @@
     /* infographic build */
     .js .infographic .trap-num { transform:scale(0); }
     .js .infographic .trap-grid::before { transform:scaleX(0); transform-origin:left; }
-    .js .infographic .trap-card h4, .js .infographic .trap-card p { opacity:0; transform:translateY(14px); }
+    .js .infographic .trap-card h3, .js .infographic .trap-card p { opacity:0; transform:translateY(14px); }
     .js .infographic .trap-card svg text.big { opacity:0; }
     .js .infographic .pop { opacity:0; transform-box:fill-box; transform-origin:50% 100%; transform:scale(.3); }
     .js .infographic .bar { transform-box:fill-box; transform-origin:50% 100%; transform:scaleY(0); }
@@ -129,10 +129,10 @@
     .infographic.in .trap-card:nth-child(1) .trap-num { transition-delay:.3s; }
     .infographic.in .trap-card:nth-child(2) .trap-num { transition-delay:1s; }
     .infographic.in .trap-card:nth-child(3) .trap-num { transition-delay:1.7s; }
-    .infographic.in .trap-card h4, .infographic.in .trap-card p { opacity:1; transform:none; transition:opacity .8s ease, transform .8s ease; }
-    .infographic.in .trap-card:nth-child(1) h4, .infographic.in .trap-card:nth-child(1) p { transition-delay:.5s; }
-    .infographic.in .trap-card:nth-child(2) h4, .infographic.in .trap-card:nth-child(2) p { transition-delay:1.2s; }
-    .infographic.in .trap-card:nth-child(3) h4, .infographic.in .trap-card:nth-child(3) p { transition-delay:1.9s; }
+    .infographic.in .trap-card h3, .infographic.in .trap-card p { opacity:1; transform:none; transition:opacity .8s ease, transform .8s ease; }
+    .infographic.in .trap-card:nth-child(1) h3, .infographic.in .trap-card:nth-child(1) p { transition-delay:.5s; }
+    .infographic.in .trap-card:nth-child(2) h3, .infographic.in .trap-card:nth-child(2) p { transition-delay:1.2s; }
+    .infographic.in .trap-card:nth-child(3) h3, .infographic.in .trap-card:nth-child(3) p { transition-delay:1.9s; }
     .js .infographic.in svg text.big { opacity:1; transition:opacity .7s ease; }
     .js .infographic.in .trap-card:nth-child(1) text.big { transition-delay:.6s; }
     .js .infographic.in .trap-card:nth-child(2) text.big { transition-delay:1.3s; }
@@ -208,22 +208,22 @@
     <div class="proof-grid">
       <div class="proof-card">
         <div class="proof-num">22</div>
-        <h4>Executives, one succession plan</h4>
+        <h3>Executives, one succession plan</h3>
         <p>As SVP at Global Payments, a $7.4 billion NYSE-listed company operating in 40+ countries, I led succession governance for the top 22 executives.</p>
       </div>
       <div class="proof-card">
         <div class="proof-num">100+</div>
-        <h4>People led at enterprise scale</h4>
+        <h3>People led at enterprise scale</h3>
         <p>I built and led a leadership organization of more than 100 people inside a global, publicly traded company.</p>
       </div>
       <div class="proof-card">
         <div class="proof-num">$40M</div>
-        <h4>Portfolio run as a President</h4>
+        <h3>Portfolio run as a President</h3>
         <p>As President of the General Motors Foundation, I ran a $40 million philanthropic portfolio.</p>
       </div>
       <div class="proof-card">
         <div class="proof-num">1st</div>
-        <h4>Built from a blank page</h4>
+        <h3>Built from a blank page</h3>
         <p>Newell Rubbermaid chose me to establish its first corporate foundation, including its governance and operating model.</p>
       </div>
     </div>
@@ -242,7 +242,7 @@
     <div class="proof-grid trap-grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="trap-card">
         <div class="trap-num">1</div>
-        <h4>The Delegation Trap</h4>
+        <h3>The Delegation Trap</h3>
         <svg viewBox="0 0 300 150" role="img" aria-label="One in four founders has strong delegation talent">
           <text x="150" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="54" fill="#D9A850">1 in 4</text>
           <g fill="#D9A850"><circle cx="55" cy="92" r="11"/><path d="M39,140 v-14 a16,16 0 0 1 32,0 v14 z"/></g>
@@ -253,7 +253,7 @@
       </div>
       <div class="trap-card">
         <div class="trap-num">2</div>
-        <h4>The Time Trap</h4>
+        <h3>The Time Trap</h3>
         <svg viewBox="0 0 300 150" role="img" aria-label="About one in ten owners calls controlling their own time a critical problem">
           <text x="150" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="54" fill="#D9A850">1 in 10</text>
           <g fill="#4A6482"><circle cx="110" cy="88" r="13"/><circle cx="150" cy="88" r="13"/><circle cx="190" cy="88" r="13"/><circle cx="230" cy="88" r="13"/><circle cx="70" cy="124" r="13"/><circle cx="110" cy="124" r="13"/><circle cx="150" cy="124" r="13"/><circle cx="190" cy="124" r="13"/><circle cx="230" cy="124" r="13"/></g>
@@ -264,7 +264,7 @@
       </div>
       <div class="trap-card">
         <div class="trap-num">3</div>
-        <h4>The People Trap</h4>
+        <h3>The People Trap</h3>
         <svg viewBox="0 0 300 170" role="img" aria-label="Owners calling managing employees critical rises from 6.5% to 16.1% as teams grow">
           <line x1="20" y1="130" x2="280" y2="130" stroke="#4A6482" stroke-width="1"/>
           <g fill="#4A6482"><rect x="30" y="93.7" width="44" height="36.3"/><rect x="90" y="73.5" width="44" height="56.5"/><rect x="150" y="57.3" width="44" height="72.7"/></g>
@@ -293,22 +293,22 @@
     <div class="teaser-grid">
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>A Second You</h4>
+        <h3>A Second You</h3>
         <p>I help you decide which calls stay with you and which move to someone else, so the company keeps moving without you in the room.</p>
       </div>
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>A Trusted Advisor</h4>
+        <h3>A Trusted Advisor</h3>
         <p>Straight counsel from someone who has sat in the seat and has no reason to flatter you.</p>
       </div>
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>Work Off Your Plate</h4>
+        <h3>Work Off Your Plate</h3>
         <p>I take on real work and build the structure to hand it off for good. Where AI can carry the work, I show you where.</p>
       </div>
       <div class="teaser-card">
         <div class="teaser-bar"></div>
-        <h4>A Thought Partner</h4>
+        <h3>A Thought Partner</h3>
         <p>A standing conversation for the calls you can't make alone.</p>
       </div>
     </div>
@@ -326,15 +326,15 @@
       <p>A working session for founders and business owners who are tired of being the middle of every decision. You leave with a one-page Hand-Off Map. After the session, we can keep working together as your ongoing advisor and thought partner.</p>
       <div class="signature-journey">
         <div class="sig-stage">
-          <h5>Keep</h5>
+          <h3>Keep</h3>
           <p>What only you should decide.</p>
         </div>
         <div class="sig-stage">
-          <h5>Hand Off</h5>
+          <h3>Hand Off</h3>
           <p>What moves, and to whom.</p>
         </div>
         <div class="sig-stage">
-          <h5>Take On</h5>
+          <h3>Take On</h3>
           <p>What I carry for you, and where AI helps.</p>
         </div>
       </div>
