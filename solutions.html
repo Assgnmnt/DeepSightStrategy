@@ -85,102 +85,159 @@
   </div>
 </nav>
 
+<style>
+.hp-wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+.hp-sec{padding:5rem 0}.hp-sec.cream{background:var(--cream)}.hp-sec.navy{background:var(--navy)}
+.hp-sec h2{font-family:var(--serif);font-weight:400;color:var(--navy);margin:0.6rem 0 1rem;font-size:clamp(1.7rem,3vw,2.3rem)}
+.hp-sec.navy h2{color:#fff}.hp-lead{color:var(--gray);max-width:640px;line-height:1.8;margin-bottom:2.5rem}
+.hp-sec.navy .hp-lead{color:rgba(255,255,255,.6)}
+.hp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.hp-card{background:#fff;border:1px solid var(--gray-l);border-top:3px solid var(--gold);padding:1.75rem}
+.hp-card h3{font-family:var(--serif);font-weight:400;font-size:1.2rem;color:var(--navy);margin-bottom:.6rem}
+.hp-card p{color:var(--gray);font-size:.95rem;line-height:1.75}
+.hp-step{display:grid;grid-template-columns:70px 1fr;gap:1.5rem;padding:2.25rem 0;border-top:1px solid var(--gray-l)}
+.hp-step:first-of-type{border-top:0}
+.hp-num{font-family:var(--serif);font-size:2.2rem;color:var(--gold)}
+.hp-step h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;color:var(--navy);margin-bottom:1rem}
+.hp-rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.hp-rows h5{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.hp-rows p{color:var(--gray);font-size:.95rem;line-height:1.7}
+.hp-time{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.hp-time div{border-left:2px solid var(--gold);padding-left:1.25rem}
+.hp-time h4{color:#fff;font-family:var(--serif);font-weight:400;font-size:1.15rem;margin-bottom:.5rem}
+.hp-time p{color:rgba(255,255,255,.6);font-size:.95rem;line-height:1.7}
+.hp-list{list-style:none;padding:0;max-width:640px}
+.hp-list li{padding:.9rem 0 .9rem 1.5rem;border-bottom:1px solid var(--gray-l);color:var(--gray);line-height:1.7;position:relative}
+.hp-list li::before{content:'';position:absolute;left:0;top:1.5rem;width:7px;height:7px;background:var(--gold);border-radius:50%}
+@media(max-width:640px){.hp-step{grid-template-columns:1fr;gap:.5rem}}
+</style>
+
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow">How We Partner</span>
-    <h1>I Don't Sell a Menu.<br/>I Take Work Off Your Plate.</h1>
-    <p>I work directly with founders and business owners on the decisions and the work they are carrying. I help you decide what stays with you, build the structure to hand the rest off, and stay on for the calls you cannot make alone.</p>
+    <h1>Here Is What Happens<br/>When We Work Together.</h1>
+    <p>Your company keeps waiting on you. I work directly with you to find what only you should decide, move everything else to someone who owns it, and build the structure that keeps it moved. No menu. No team of strangers.</p>
   </div>
 </section>
 
-<section class="partner-intro">
-  <div class="container">
-    <p>"The goal is not to add layers. The goal is to get you out of the middle."</p>
+<section class="hp-sec">
+  <div class="hp-wrap">
+    <span class="eyebrow">What I Am Brought In To Fix</span>
+    <h2>When the Company Runs Through You</h2>
+    <p class="hp-lead">You built something that works. Now it works because you are in it. Here is what that looks like from the inside.</p>
+    <div class="hp-grid">
+      <div class="hp-card"><h3>Decisions wait for you</h3><p>Work stops until you weigh in, so the speed of the company is the speed of your calendar.</p></div>
+      <div class="hp-card"><h3>Good people stay small</h3><p>They bring you problems instead of solving them, because no one ever wrote down what they are allowed to decide.</p></div>
+      <div class="hp-card"><h3>You are the last review</h3><p>Quality depends on you catching things, which means you can never really step back.</p></div>
+      <div class="hp-card"><h3>Leader hires do not stick</h3><p>You hire a strong person, hand them a vague role, and end up taking the work back.</p></div>
+    </div>
   </div>
 </section>
 
-<section class="sol-section">
-  <div class="container">
-    <div class="sol-grid">
+<section class="hp-sec cream">
+  <div class="hp-wrap">
+    <span class="eyebrow">How It Works</span>
+    <h2>Four Steps, In Order</h2>
+    <p class="hp-lead">Each step has a clear output. You always know what I am doing, what I need from you, and what exists when the step is done.</p>
 
-      <div class="sol-card" id="ongoing-partnership">
-        <span class="sol-num">01</span>
-        <h3>Ongoing Partnership</h3>
-        <p class="sol-lead">A monthly relationship as your advisor and thought partner, for owners who want me close as the company grows.</p>
-        <ul class="sol-focus">
-          <li>Decisions you should not make alone</li>
-          <li>Real work I take on and hand off</li>
-          <li>Leadership and hiring calls</li>
-          <li>Where AI can carry the work</li>
-          <li>A standing conversation with me</li>
-        </ul>
-        <p style="color:var(--gray);font-size:0.9rem;line-height:1.7;margin:0 0 1.25rem;">We talk first, and scope comes after I understand what you are carrying.</p>
-        <a href="contact.html" class="btn btn-navy">Request Advisory Consultation</a>
+    <div class="hp-step" id="founder-scale-session">
+      <div class="hp-num">01</div>
+      <div>
+        <h3>Founder Scale Session™</h3>
+        <div class="hp-rows">
+          <div><h5>What I do</h5><p>Walk through the decisions and work you are carrying and sort each one into Keep, Hand Off, or Take On.</p></div>
+          <div><h5>What you do</h5><p>Bring your real calendar, your inbox, and the decisions sitting open right now.</p></div>
+          <div><h5>What exists after</h5><p>A one-page Hand-Off Map: what you keep, what moves and to whom, and what I carry for you.</p></div>
+        </div>
+        <p style="margin-top:1.5rem"><a href="founder-scale-session.html" class="btn btn-navy">Learn About the Session</a></p>
       </div>
+    </div>
 
-      <div class="sol-card" id="scaling">
-        <span class="sol-num">02</span>
+    <div class="hp-step" id="scaling">
+      <div class="hp-num">02</div>
+      <div>
         <h3>Hand-Off Work</h3>
-        <p class="sol-lead">A defined piece of work I take on and build the structure around, so it moves off your desk for good.</p>
-        <ul class="sol-focus">
-          <li>Who decides what</li>
-          <li>Roles and accountability</li>
-          <li>A weekly operating rhythm</li>
-          <li>Hiring and onboarding the right leaders</li>
-          <li>Documented hand-offs that hold</li>
-        </ul>
-        <a href="contact.html" class="btn btn-navy">Request Advisory Consultation</a>
+        <div class="hp-rows">
+          <div><h5>What I do</h5><p>Write down who decides what, define roles and accountability, set a weekly operating rhythm, and help you hire or onboard the leader who takes the work.</p></div>
+          <div><h5>What you do</h5><p>Make the calls only you can make, and introduce me to the people taking the work.</p></div>
+          <div><h5>What exists after</h5><p>Written hand-offs your team can run without you in the room.</p></div>
+        </div>
       </div>
+    </div>
 
+    <div class="hp-step" id="ongoing-partnership">
+      <div class="hp-num">03</div>
+      <div>
+        <h3>Ongoing Partnership</h3>
+        <div class="hp-rows">
+          <div><h5>What I do</h5><p>Stay on as your advisor and thought partner, take on work that has no owner yet, and keep the weekly rhythm honest.</p></div>
+          <div><h5>What you do</h5><p>Bring me the decisions you should not make alone.</p></div>
+          <div><h5>What exists after</h5><p>A company that keeps moving while you are out, and someone senior to think with when it matters.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hp-step">
+      <div class="hp-num">04</div>
+      <div>
+        <h3>AI Where It Carries Real Work</h3>
+        <div class="hp-rows">
+          <div><h5>What I do</h5><p>Once the structure exists, I look at the work that repeats and show where AI can do part of it, with a named person who owns the result.</p></div>
+          <div><h5>What you do</h5><p>Approve what gets handed to AI and what stays with a person.</p></div>
+          <div><h5>What exists after</h5><p>Less routine work landing on your team, and a clear owner for every piece of it. See <a href="ai-adoption-read.html" style="color:var(--gold)">The AI Adoption Read™</a>.</p></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER SCALE SESSION -->
-<section class="fss-section" id="founder-scale-session">
-  <img class="fss-bg" src="next-chapter-ascent.svg" alt=""/>
-  <div class="fss-fade"></div>
-  <div class="container">
-    <div class="fss-inner">
-      <span class="eyebrow">Where Most Owners Start</span>
-      <h2>Founder Scale Session™</h2>
-      <p>One working session, one page: a Hand-Off Map of what you keep, what you hand off, and what I take on.</p>
-      <a href="founder-scale-session.html" class="btn btn-gold">Learn About the Session</a>
+<section class="hp-sec">
+  <div class="hp-wrap">
+    <span class="eyebrow">What You Walk Away With</span>
+    <h2>Things You Can Hold Up</h2>
+    <p class="hp-lead">Every engagement leaves behind working documents, not a slide deck.</p>
+    <div class="hp-grid">
+      <div class="hp-card"><h3>Hand-Off Map</h3><p>One page showing what you keep, what you hand off, and what I take on.</p></div>
+      <div class="hp-card"><h3>Who-decides-what chart</h3><p>The decisions your people can make alone, the ones that need a check-in, and the ones that stay with you.</p></div>
+      <div class="hp-card"><h3>Role and accountability sheets</h3><p>For each person taking work: what they own, how it is measured, and who they answer to.</p></div>
+      <div class="hp-card"><h3>Weekly operating rhythm</h3><p>The short meeting set that replaces the ad hoc check-ins that now route through you.</p></div>
+      <div class="hp-card"><h3>Hiring profile for the next leader</h3><p>What the role actually requires, written before you interview anyone.</p></div>
+      <div class="hp-card"><h3>Written hand-offs</h3><p>Each piece of work you moved, documented so it holds when people change.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CAPABILITY DEPTH -->
-<section class="capability-band">
-  <div class="container">
-    <span class="eyebrow">Proof of Depth</span>
-    <div class="gold-rule" style="margin:1.2rem auto 0;"></div>
-    <h2 style="margin-top:1.25rem;">The Experience Beneath the Advice</h2>
-    <p style="color:var(--gray);max-width:580px;margin:0.75rem auto 0;">My work draws on years of building leadership systems, talent strategy, and operating models inside large companies.</p>
-    <div class="capability-grid">
-      <div class="cap-tile">
-        <h4>Strategy &amp; Transformation</h4>
-        <p>Clarify priorities and build execution roadmaps.</p>
-      </div>
-      <div class="cap-tile">
-        <h4>Operating Model Design</h4>
-        <p>Build structures and systems that support scale.</p>
-      </div>
-      <div class="cap-tile">
-        <h4>People &amp; Leadership Systems</h4>
-        <p>Develop leadership capability and talent strategy.</p>
-      </div>
-      <div class="cap-tile">
-        <h4>AI-Enabled Transformation</h4>
-        <p>Prepare leaders and teams for how work is changing.</p>
-      </div>
+<section class="hp-sec navy">
+  <div class="hp-wrap">
+    <span class="eyebrow" style="color:var(--gold-l)">The First 90 Days</span>
+    <h2>What a Typical Start Looks Like</h2>
+    <p class="hp-lead">Timing shifts with the size of the company and how much I take on. This is the usual shape.</p>
+    <div class="hp-time">
+      <div><h4>Weeks 1 to 2</h4><p>Founder Scale Session. You leave with the Hand-Off Map and a clear first priority.</p></div>
+      <div><h4>Weeks 3 to 6</h4><p>I build the first hand-off, starting with the one costing you the most time or money.</p></div>
+      <div><h4>Weeks 7 to 12</h4><p>The new rhythm runs. We adjust what is not holding and move the next piece of work.</p></div>
+      <div><h4>Day 90</h4><p>You decide whether to continue as an ongoing partnership. Either answer is fine.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="hp-sec">
+  <div class="hp-wrap">
+    <span class="eyebrow">Why Me</span>
+    <h2>I Have Done This Inside Large Companies</h2>
+    <p class="hp-lead">I led succession governance for the top 22 executives at Global Payments. I built and led a leadership organization of more than 100 people. Newell Rubbermaid chose me to establish its first corporate foundation, including its governance and operating model. Moving work to the right owner, and making it stick, is what I have done for a career. I bring it to your company directly.</p>
+    <span class="eyebrow">When I Am Not the Right Fit</span>
+    <ul class="hp-list" style="margin-top:1rem">
+      <li>You want a report to review, not a partner who does the work with you.</li>
+      <li>You want to keep every decision and are not ready to move any of them.</li>
+      <li>You are looking for someone to run the company for you.</li>
+    </ul>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">Not Sure Where to Start?</span>
+    <span class="eyebrow" style="color:var(--gold-l);margin-bottom:1rem;">How We Start</span>
     <h2>Tell Me What You're Carrying.</h2>
     <p>Every partnership starts with a conversation about what is on your plate and whether I am the right person to help.</p>
     <a href="contact.html" class="btn btn-gold">Request Advisory Consultation</a>
