@@ -108,6 +108,40 @@
 .hp-list{list-style:none;padding:0;max-width:640px}
 .hp-list li{padding:.9rem 0 .9rem 1.5rem;border-bottom:1px solid var(--gray-l);color:var(--gray);line-height:1.7;position:relative}
 .hp-list li::before{content:'';position:absolute;left:0;top:1.5rem;width:7px;height:7px;background:var(--gold);border-radius:50%}
+.tw-sec{padding:5rem 0;background:#fff}
+.tw-head{text-align:center;margin-bottom:3rem}
+.tw-eyebrow{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#4A6785;font-weight:500}
+.tw-head h2{font-family:'DM Sans',var(--sans,Arial),sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.2rem);color:#0D1B2E;margin:.8rem 0 1rem;letter-spacing:-.01em}
+.tw-head p{color:#5B6573;font-size:1.15rem;max-width:640px;margin:0 auto;line-height:1.6}
+.tw-vis{max-width:680px;margin:0 auto 3rem}.tw-vis svg{width:100%;height:auto;font-family:'DM Sans',Arial,sans-serif}
+.tw-row{border-top:1px solid #D9DEE5;padding:2.5rem 0;display:grid;grid-template-columns:230px 1fr;gap:1.5rem 2rem}
+.tw-num{display:block;font-size:3.4rem;font-weight:700;color:#4A6785;line-height:1}
+.tw-title h3{font-family:'DM Sans',Arial,sans-serif;font-weight:700;font-size:1.9rem;line-height:1.1;color:#0D1B2E;margin-top:.5rem}
+.tw-cols{display:grid;grid-template-columns:repeat(3,1fr)}
+.tw-cols>div{padding:0 1.25rem}.tw-cols>div:first-child{padding-left:0}
+.tw-cols>div+div{border-left:1px solid #D9DEE5}
+.tw-cols h5,.tw-box h5{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#4A6785;font-weight:600;margin-bottom:.6rem}
+.tw-cols p,.tw-box p{color:#1F2937;font-size:.95rem;line-height:1.6}
+.tw-box{grid-column:2;display:grid;grid-template-columns:1.2fr 1fr;border:1px solid #C9D2DF;border-radius:8px;background:#F3F6FA}
+.tw-box>div{padding:1.25rem 1.4rem}.tw-box>div+div{border-left:1px solid #C9D2DF}
+.tw-box p{position:relative;padding-left:1.8rem}
+.tw-ico{position:absolute;left:0;top:.2rem;width:1.05rem;height:1.05rem;border-radius:50%;background:#4A6785}
+.tw-no{background:#6B7482}
+.tw-yes::after{content:'';position:absolute;left:.33rem;top:.15rem;width:.28rem;height:.5rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.tw-no::after{content:'';position:absolute;left:.25rem;top:.47rem;width:.55rem;height:2px;background:#fff}
+.tw-start{border-top:1px solid #D9DEE5;padding-top:1.75rem;text-align:center;color:#5B6573}
+.tw-start a{color:#0D1B2E;font-weight:600}
+@media(max-width:900px){.tw-row{grid-template-columns:1fr}.tw-box{grid-column:1}.tw-cols{grid-template-columns:1fr;gap:1.25rem}.tw-cols>div,.tw-cols>div:first-child{padding:0;border-left:0}.tw-box{grid-template-columns:1fr}.tw-box>div+div{border-left:0;border-top:1px solid #C9D2DF}}
+.hu-sec{padding:5rem 0;background:#fff}
+.hu-eyebrow{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#4A6785;font-weight:500}
+.hu-sec h2{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:clamp(2rem,4.5vw,2.8rem);color:#0D1B2E;margin:.7rem 0 .9rem;letter-spacing:-.01em}
+.hu-lead{color:#1F2937;font-size:1.1rem;margin-bottom:2.5rem}
+.hu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.hu-card{border:1px solid #8B95A3;border-top:9px solid #0D1B2E;padding:1.9rem 1.5rem 2rem;min-height:300px;background:#fff}
+.hu-card svg{display:block;margin-bottom:2.2rem}
+.hu-card h3{font-family:'DM Sans',Arial,sans-serif;font-weight:700;font-size:1.3rem;line-height:1.15;color:#0D1B2E;margin-bottom:.8rem}
+.hu-card p{color:#1F2937;font-size:.97rem;line-height:1.55}
+@media(max-width:900px){.hu-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.hu-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.hp-step{grid-template-columns:1fr;gap:.5rem}}
 </style>
 
@@ -133,79 +167,79 @@
   </div>
 </section>
 
-<section class="hp-sec cream">
+<section class="tw-sec">
   <div class="hp-wrap">
-    <span class="eyebrow">How It Works</span>
-    <h2>Four Steps, In Order</h2>
-    <p class="hp-lead">Each step has a clear output. You always know what we are doing, what we need from you, and what exists when the step is done.</p>
+    <div class="tw-head">
+      <span class="tw-eyebrow">Engagement Models</span>
+      <h2>Two Ways to Partner</h2>
+      <p>We take on real work, make it visible, and build AI-ready structures to hand it off.</p>
+    </div>
 
-    <div class="hp-step" id="founder-scale-session">
-      <div class="hp-num">01</div>
-      <div>
-        <h3>Founder Scale Session™</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>Walk through the decisions and work you are carrying and sort each one into Keep, Hand Off, or Take On.</p></div>
-          <div><h5>What you do</h5><p>Bring your real calendar, your inbox, and the decisions sitting open right now.</p></div>
-          <div><h5>What exists after</h5><p>A one-page Hand-Off Map: what you keep, what moves and to whom, and what we carry for you.</p></div>
-        </div>
-        <p style="margin-top:1.5rem"><a href="founder-scale-session.html" class="btn btn-navy">Learn About the Session</a></p>
+    <div class="tw-vis">
+      <svg viewBox="0 0 680 290" role="img" aria-labelledby="tw-t tw-d">
+        <title id="tw-t">How the load on the founder shrinks across three stages</title>
+        <desc id="tw-d">Three stages left to right. The bar above each stage gets shorter: it all lands on you, you keep the calls only you can make, then you think with us. Each stage ends with something concrete: a Hand-Off Map, written hand-offs, a senior thinking partner.</desc>
+        <defs><marker id="twa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#A07820" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <rect x="40" y="20" width="180" height="140" rx="6" fill="#0D1B2E"/>
+        <text x="130" y="82" text-anchor="middle" fill="#fff" font-size="15" font-weight="600">It all lands on you</text>
+        <text x="130" y="106" text-anchor="middle" fill="#B9C6D6" font-size="12.5">Where most founders start</text>
+        <rect x="250" y="70" width="180" height="90" rx="6" fill="#4A6785"/>
+        <text x="340" y="108" text-anchor="middle" fill="#fff" font-size="15" font-weight="600">You keep the calls</text>
+        <text x="340" y="132" text-anchor="middle" fill="#E3EAF2" font-size="12.5">Only you can make</text>
+        <rect x="460" y="112" width="180" height="48" rx="6" fill="#DCE5EF"/>
+        <text x="550" y="141" text-anchor="middle" fill="#0D1B2E" font-size="15" font-weight="600">You think with us</text>
+        <rect x="40" y="190" width="180" height="66" rx="6" fill="#fff" stroke="#C9D2DF"/>
+        <text x="130" y="214" text-anchor="middle" fill="#0D1B2E" font-size="14.5" font-weight="600">Founder Scale Session</text>
+        <text x="130" y="236" text-anchor="middle" fill="#5B6573" font-size="12.5">One-page Hand-Off Map</text>
+        <rect x="250" y="190" width="180" height="66" rx="6" fill="#fff" stroke="#C9D2DF"/>
+        <text x="340" y="214" text-anchor="middle" fill="#0D1B2E" font-size="14.5" font-weight="600">Hand-Off Work</text>
+        <text x="340" y="236" text-anchor="middle" fill="#5B6573" font-size="12.5">Written hand-offs</text>
+        <rect x="460" y="190" width="180" height="66" rx="6" fill="#fff" stroke="#C9D2DF"/>
+        <text x="550" y="214" text-anchor="middle" fill="#0D1B2E" font-size="14.5" font-weight="600">Ongoing Partnership</text>
+        <text x="550" y="236" text-anchor="middle" fill="#5B6573" font-size="12.5">Senior thinking partner</text>
+        <line x1="224" y1="223" x2="246" y2="223" stroke="#A07820" stroke-width="1.6" marker-end="url(#twa)"/>
+        <line x1="434" y1="223" x2="456" y2="223" stroke="#A07820" stroke-width="1.6" marker-end="url(#twa)"/>
+      </svg>
+    </div>
+
+    <div class="tw-row" id="scaling">
+      <div class="tw-title"><span class="tw-num">01</span><h3>Hand-Off Work</h3></div>
+      <div class="tw-cols">
+        <div><h5>What we do</h5><p>Write down who decides what, define roles and accountability, set a weekly operating rhythm, and help you hire or onboard the leader who takes the work.</p></div>
+        <div><h5>What you do</h5><p>Make the calls only you can make, and introduce us to the people taking the work.</p></div>
+        <div><h5>What exists after</h5><p>Written hand-offs and AI-enabled workflows your team can run without you in the room.</p></div>
+      </div>
+      <div class="tw-box">
+        <div><h5>What we install</h5><p><span class="tw-ico tw-yes" aria-hidden="true"></span>Role clarity and decision rights, lightweight 90-day priority and weekly scorecard rhythm, hiring scorecards, 30-60-90 onboarding playbooks, and practical AI workflows where repetitive work slows your team down.</p></div>
+        <div><h5>What we do not do</h5><p><span class="tw-ico tw-no" aria-hidden="true"></span>We do not act as full-time recruiters sourcing resumes, and we do not stay on as permanent staff running your weekly meetings.</p></div>
       </div>
     </div>
 
-    <div class="hp-step" id="scaling">
-      <div class="hp-num">02</div>
-      <div>
-        <h3>Hand-Off Work</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>Write down who decides what, define roles and accountability, set a weekly operating rhythm, and help you hire or onboard the leader who takes the work.</p></div>
-          <div><h5>What you do</h5><p>Make the calls only you can make, and introduce us to the people taking the work.</p></div>
-          <div><h5>What exists after</h5><p>Written hand-offs your team can run without you in the room.</p></div>
-        </div>
-        <div class="hp-rows" style="margin-top:1.5rem">
-          <div><h5>What we install</h5><p>Role clarity and decision rights. A lightweight 90-day priority and weekly scorecard rhythm. Hiring scorecards, 30-60-90 onboarding playbooks, and practical AI workflows. Then we hand them off for your internal leads to run.</p></div>
-          <div><h5>What we do not do</h5><p>We do not act as full-time recruiters sourcing resumes, and we do not stay on as permanent staff running your weekly meetings. Our job is to build it and hand it off.</p></div>
-        </div>
+    <div class="tw-row" id="ongoing-partnership">
+      <div class="tw-title"><span class="tw-num">02</span><h3>Ongoing Partnership</h3></div>
+      <div class="tw-cols">
+        <div><h5>What we do</h5><p>We stay on as your advisor and thought partner, take on work that has no owner yet, and keep the weekly rhythm honest.</p></div>
+        <div><h5>What you do</h5><p>Bring us the decisions you should not make alone.</p></div>
+        <div><h5>What exists after</h5><p>A company that keeps moving while you are out, and someone senior to think with when it matters.</p></div>
       </div>
     </div>
 
-    <div class="hp-step" id="ongoing-partnership">
-      <div class="hp-num">03</div>
-      <div>
-        <h3>Ongoing Partnership</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>We stay on as your advisor and thought partner, take on work that has no owner yet, and keep the weekly rhythm honest.</p></div>
-          <div><h5>What you do</h5><p>Bring us the decisions you should not make alone.</p></div>
-          <div><h5>What exists after</h5><p>A company that keeps moving while you are out, and someone senior to think with when it matters.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hp-step">
-      <div class="hp-num">04</div>
-      <div>
-        <h3>AI Where It Carries Real Work</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>Once the structure exists, we look at the work that repeats and show where AI can do part of it, with a named person who owns the result.</p></div>
-          <div><h5>What you do</h5><p>Approve what gets handed to AI and what stays with a person.</p></div>
-          <div><h5>What exists after</h5><p>Less routine work landing on your team, and a clear owner for every piece of it. See <a href="ai-adoption-read.html" style="color:var(--gold)">The AI Adoption Read™</a>.</p></div>
-        </div>
-      </div>
-    </div>
+    <p class="tw-start" id="founder-scale-session">Every engagement starts with a <a href="founder-scale-session.html">Founder Scale Session™</a>.</p>
   </div>
 </section>
 
-<section class="hp-sec">
+<section class="hu-sec">
   <div class="hp-wrap">
-    <span class="eyebrow">What You Walk Away With</span>
+    <span class="hu-eyebrow">What You Walk Away With</span>
     <h2>Things You Can Hold Up</h2>
-    <p class="hp-lead">Every engagement leaves behind working documents, not a slide deck.</p>
-    <div class="hp-grid">
-      <div class="hp-card"><h3>Hand-Off Map</h3><p>One page showing what you keep, what you hand off, and what we take on.</p></div>
-      <div class="hp-card"><h3>Who-decides-what chart</h3><p>The decisions your people can make alone, the ones that need a check-in, and the ones that stay with you.</p></div>
-      <div class="hp-card"><h3>Role and accountability sheets</h3><p>For each person taking work: what they own, how it is measured, and who they answer to.</p></div>
-      <div class="hp-card"><h3>Weekly operating rhythm</h3><p>The short meeting set that replaces the ad hoc check-ins that now route through you.</p></div>
-      <div class="hp-card"><h3>Hiring profile for the next leader</h3><p>What the role actually requires, written before you interview anyone.</p></div>
-      <div class="hp-card"><h3>Written hand-offs</h3><p>Each piece of work you moved, documented so it holds when people change.</p></div>
+    <p class="hu-lead">Every engagement leaves behind working documents, not a slide deck.</p>
+    <div class="hu-grid">
+      <div class="hu-card"><svg width="44" height="44" viewBox="0 0 40 40" fill="none" stroke="#0D1B2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8l10-3 12 4 10-3v26l-10 3-12-4-10 3z"/><path d="M14 5v26M26 9v26"/></svg><h3>Hand-Off Map</h3><p>One page showing what you keep, what you hand off, and what we take on.</p></div>
+      <div class="hu-card"><svg width="44" height="44" viewBox="0 0 40 40" fill="none" stroke="#0D1B2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="4" width="10" height="9"/><rect x="2" y="26" width="9" height="9"/><rect x="15" y="26" width="9" height="9"/><rect x="28" y="26" width="9" height="9"/><path d="M19 13v6M6 26v-7h27v7M19 19v7"/></svg><h3>Who-Decides-What Chart</h3><p>The decisions your people can make alone, the ones that need a check-in, and the ones that stay with you.</p></div>
+      <div class="hu-card"><svg width="44" height="44" viewBox="0 0 40 40" fill="none" stroke="#0D1B2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="32" height="34" rx="3"/><rect x="8" y="9" width="5" height="5"/><rect x="8" y="17" width="5" height="5"/><rect x="8" y="25" width="5" height="5"/><path d="M17 11h14M17 19h14M17 27h14"/></svg><h3>Role and Accountability Sheets</h3><p>For each person taking work: what they own, how it is measured, and who they answer to.</p></div>
+      <div class="hu-card"><svg width="44" height="44" viewBox="0 0 40 40" fill="none" stroke="#0D1B2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="26" height="25" rx="3"/><path d="M9 3v7M23 3v7M3 14h26"/><circle cx="29" cy="30" r="8" fill="#fff"/><path d="M29 25v5l3 2"/></svg><h3>Weekly Operating Rhythm</h3><p>The short meeting set that replaces the ad hoc check-ins that now route through you.</p></div>
+      <div class="hu-card"><svg width="44" height="44" viewBox="0 0 40 40" fill="none" stroke="#0D1B2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="10" r="6"/><path d="M3 34c0-7 6-12 13-12 3 0 5 1 7 2"/><circle cx="28" cy="28" r="6"/><path d="M32 32l5 5"/></svg><h3>Hiring Profile for the Next Leader</h3><p>What the role actually requires, written before you interview anyone.</p></div>
+      <div class="hu-card"><svg width="44" height="44" viewBox="0 0 40 40" fill="none" stroke="#0D1B2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4h14l8 8v24H12z"/><path d="M26 4v8h8M2 20h16M13 15l5 5-5 5M24 24h14M33 19l5 5-5 5" transform="translate(0,0)"/></svg><h3>Written Hand-Offs</h3><p>Each piece of work you moved, documented so it holds when people change.</p></div>
     </div>
   </div>
 </section>
