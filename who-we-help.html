@@ -14,19 +14,20 @@
   <meta name="description" content="We work directly with founders and business owners of $1M to $50M companies with 10 to 50 employees, and help them get out of the middle of every decision."/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .segment-section { padding:5.5rem 0; }
-    .segment-section:nth-child(odd) { background:var(--white); }
-    .segment-section:nth-child(even) { background:var(--cream); }
-    .segment-inner { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-    .segment-num { font-family:var(--serif); font-size:1.6rem; color:var(--gold); margin-bottom:1rem; }
-    .segment-inner h2 { font-size:1.6rem; margin-bottom:1rem; }
-    .segment-inner p.lead { color:var(--gray); line-height:1.85; }
-    .signs-list { list-style:none; }
-    .signs-list li { font-size:0.95rem; color:var(--navy); padding:0.6rem 0; border-top:1px solid var(--gray-l); display:flex; gap:0.7rem; align-items:flex-start; }
-    .signs-list li:first-child { border-top:none; }
-    .signs-check { color:var(--gold); flex-shrink:0; font-weight:bold; }
-
-    @media(max-width:900px) { .segment-inner { grid-template-columns:1fr; gap:1.5rem; } }
+    .wc-sec{padding:4.5rem 0 5.5rem;background:#fff}
+    .wc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;align-items:start}
+    .wc{border:1px solid #D9DEE5;border-top:12px solid #0D1B2E;padding:1.75rem 1.6rem 1.5rem;background:#fff;height:100%}
+    .wc-2{border-top-color:#0D1B2E}.wc-3{border-top-color:#4A6785}
+    .wc-tag{font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:#4A6785;font-weight:500;margin-bottom:.9rem}
+    .wc-tag::after{content:' |';color:#0D1B2E}
+    .wc h2{font-family:'DM Sans',Arial,sans-serif;font-weight:700;font-size:1.3rem;line-height:1.15;text-transform:uppercase;color:#0D1B2E;margin-bottom:.8rem}
+    .wc-3 h2{color:#4A6785}
+    .wc-lead{color:#1F2937;font-size:.95rem;line-height:1.55;padding-bottom:1.25rem;border-bottom:1px solid #C9D2DF;margin-bottom:.5rem}
+    .wc ul{list-style:none;padding:0}
+    .wc li{display:flex;gap:.75rem;align-items:flex-start;padding:.7rem 0;color:#0D1B2E;font-size:.97rem;line-height:1.45}
+    .wc-ck{flex:none;position:relative;width:1.2rem;height:1.2rem;border:1.5px solid #4A6785;border-radius:50%;margin-top:.1rem}
+    .wc-ck::after{content:'';position:absolute;left:.36rem;top:.17rem;width:.28rem;height:.52rem;border:solid #4A6785;border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+    @media(max-width:1000px){.wc-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -63,65 +64,31 @@
   <div class="container">
     <span class="eyebrow">Who We Help</span>
     <h1>Built for Founders Who Can't Be<br/>in Every Decision Anymore</h1>
-    <p>You built something that works. Now it still runs through you, and we help you get out of the middle. We built this practice for founder-led companies with $1M to $50M in revenue and 10 to 50 employees.</p>
+    <p>We help you get out of the middle. We built this practice for founder-led companies with $1M to $50M in revenue and 10 to 50 employees.</p>
   </div>
 </section>
 
-<section class="segment-section">
+<section class="wc-sec">
   <div class="container">
-    <div class="segment-inner">
-      <div>
-        <span class="segment-num">01</span>
+    <div class="wc-grid">
+      <article class="wc wc-1">
+        <div class="wc-tag">01</div>
         <h2>Founders &amp; Business Owners</h2>
-        <p class="lead">For owners whose companies have grown beyond the systems and habits that got them here.</p>
-      </div>
-      <ul class="signs-list">
-        <li><span class="signs-check">✓</span> Growth is creating more complexity than the team can absorb.</li>
-        <li><span class="signs-check">✓</span> The founder is still central to too many decisions.</li>
-        <li><span class="signs-check">✓</span> The owner carries too much.</li>
-        <li><span class="signs-check">✓</span> Growth feels harder than before.</li>
-        <li><span class="signs-check">✓</span> Roles, decision rights, and accountability need to mature.</li>
-        <li><span class="signs-check">✓</span> The company needs more structure without losing its original edge.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="segment-section">
-  <div class="container">
-    <div class="segment-inner">
-      <div>
-        <span class="segment-num" style="font-size:1rem;letter-spacing:.14em;text-transform:uppercase">Also</span>
+        <p class="wc-lead">For owners whose companies have grown beyond the systems and habits that got them here.</p>
+        <ul><li><span class="wc-ck" aria-hidden="true"></span>Growth is creating more complexity than the team can absorb.</li><li><span class="wc-ck" aria-hidden="true"></span>The founder is still central to too many decisions.</li><li><span class="wc-ck" aria-hidden="true"></span>The owner carries too much.</li><li><span class="wc-ck" aria-hidden="true"></span>Growth feels harder than before.</li><li><span class="wc-ck" aria-hidden="true"></span>Roles, decision rights, and accountability need to mature.</li><li><span class="wc-ck" aria-hidden="true"></span>The company needs more structure without losing its original edge.</li></ul>
+      </article>
+      <article class="wc wc-2">
+        <div class="wc-tag">Also</div>
         <h2>C-Suite Leaders</h2>
-        <p class="lead">For executives responsible for building the leadership capacity, operating discipline, and organizational systems required for the next stage.</p>
-      </div>
-      <ul class="signs-list">
-        <li><span class="signs-check">✓</span> Teams are moving, but not always in the same direction.</li>
-        <li><span class="signs-check">✓</span> Decision rights are unclear.</li>
-        <li><span class="signs-check">✓</span> More meetings are creating less clarity.</li>
-        <li><span class="signs-check">✓</span> Leaders need stronger enterprise capability.</li>
-        <li><span class="signs-check">✓</span> Execution depends too much on individual effort instead of system discipline.</li>
-        <li><span class="signs-check">✓</span> AI is changing how work gets done, and leadership needs a clearer operating response.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="segment-section">
-  <div class="container">
-    <div class="segment-inner">
-      <div>
-        <span class="segment-num" style="font-size:1rem;letter-spacing:.14em;text-transform:uppercase">Also</span>
+        <p class="wc-lead">For executives responsible for building the leadership capacity, operating discipline, and organizational systems required for the next stage.</p>
+        <ul><li><span class="wc-ck" aria-hidden="true"></span>Teams are moving, but not always in the same direction.</li><li><span class="wc-ck" aria-hidden="true"></span>Decision rights are unclear.</li><li><span class="wc-ck" aria-hidden="true"></span>More meetings are creating less clarity.</li><li><span class="wc-ck" aria-hidden="true"></span>Leaders need stronger enterprise capability.</li><li><span class="wc-ck" aria-hidden="true"></span>Execution depends too much on individual effort instead of system discipline.</li><li><span class="wc-ck" aria-hidden="true"></span>AI is changing how work gets done, and leadership needs a clearer operating response.</li></ul>
+      </article>
+      <article class="wc wc-3">
+        <div class="wc-tag">Also</div>
         <h2>Investors, Boards &amp; Advisors</h2>
-        <p class="lead">For stakeholders who need confidence that growth is supported by leadership maturity, execution discipline, and enterprise readiness.</p>
-      </div>
-      <ul class="signs-list">
-        <li><span class="signs-check">✓</span> The company is scaling quickly.</li>
-        <li><span class="signs-check">✓</span> Leadership dependency risk is increasing.</li>
-        <li><span class="signs-check">✓</span> Operating maturity needs to catch up with growth.</li>
-        <li><span class="signs-check">✓</span> Founder or leadership transition planning is becoming more important.</li>
-        <li><span class="signs-check">✓</span> Investors need confidence in leadership depth, succession, and scalability.</li>
-      </ul>
+        <p class="wc-lead">For stakeholders who need confidence that growth is supported by leadership maturity, execution discipline, and enterprise readiness.</p>
+        <ul><li><span class="wc-ck" aria-hidden="true"></span>The company is scaling quickly.</li><li><span class="wc-ck" aria-hidden="true"></span>Leadership dependency risk is increasing.</li><li><span class="wc-ck" aria-hidden="true"></span>Operating maturity needs to catch up with growth.</li><li><span class="wc-ck" aria-hidden="true"></span>Founder or leadership transition planning is becoming more important.</li><li><span class="wc-ck" aria-hidden="true"></span>Investors need confidence in leadership depth, succession, and scalability.</li></ul>
+      </article>
     </div>
   </div>
 </section>
