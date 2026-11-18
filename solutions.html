@@ -108,6 +108,29 @@
 .hp-list{list-style:none;padding:0;max-width:640px}
 .hp-list li{padding:.9rem 0 .9rem 1.5rem;border-bottom:1px solid var(--gray-l);color:var(--gray);line-height:1.7;position:relative}
 .hp-list li::before{content:'';position:absolute;left:0;top:1.5rem;width:7px;height:7px;background:var(--gold);border-radius:50%}
+.tw-sec{padding:5rem 0;background:#fff}
+.tw-head{text-align:center;margin-bottom:3rem}
+.tw-eyebrow{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#4A6785;font-weight:500}
+.tw-head h2{font-family:'DM Sans',var(--sans,Arial),sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.2rem);color:#0D1B2E;margin:.8rem 0 1rem;letter-spacing:-.01em}
+.tw-head p{color:#5B6573;font-size:1.15rem;max-width:640px;margin:0 auto;line-height:1.6}
+.tw-row{border-top:1px solid #D9DEE5;padding:2.5rem 0;display:grid;grid-template-columns:230px 1fr;gap:1.5rem 2rem}
+.tw-num{display:block;font-size:3.4rem;font-weight:700;color:#4A6785;line-height:1}
+.tw-title h3{font-family:'DM Sans',Arial,sans-serif;font-weight:700;font-size:1.9rem;line-height:1.1;color:#0D1B2E;margin-top:.5rem}
+.tw-cols{display:grid;grid-template-columns:repeat(3,1fr)}
+.tw-cols>div{padding:0 1.25rem}.tw-cols>div:first-child{padding-left:0}
+.tw-cols>div+div{border-left:1px solid #D9DEE5}
+.tw-cols h5,.tw-box h5{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#4A6785;font-weight:600;margin-bottom:.6rem}
+.tw-cols p,.tw-box p{color:#1F2937;font-size:.95rem;line-height:1.6}
+.tw-box{grid-column:2;display:grid;grid-template-columns:1.2fr 1fr;border:1px solid #C9D2DF;border-radius:8px;background:#F3F6FA}
+.tw-box>div{padding:1.25rem 1.4rem}.tw-box>div+div{border-left:1px solid #C9D2DF}
+.tw-box p{position:relative;padding-left:1.8rem}
+.tw-ico{position:absolute;left:0;top:.2rem;width:1.05rem;height:1.05rem;border-radius:50%;background:#4A6785}
+.tw-no{background:#6B7482}
+.tw-yes::after{content:'';position:absolute;left:.33rem;top:.15rem;width:.28rem;height:.5rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.tw-no::after{content:'';position:absolute;left:.25rem;top:.47rem;width:.55rem;height:2px;background:#fff}
+.tw-start{border-top:1px solid #D9DEE5;padding-top:1.75rem;text-align:center;color:#5B6573}
+.tw-start a{color:#0D1B2E;font-weight:600}
+@media(max-width:900px){.tw-row{grid-template-columns:1fr}.tw-box{grid-column:1}.tw-cols{grid-template-columns:1fr;gap:1.25rem}.tw-cols>div,.tw-cols>div:first-child{padding:0;border-left:0}.tw-box{grid-template-columns:1fr}.tw-box>div+div{border-left:0;border-top:1px solid #C9D2DF}}
 @media(max-width:640px){.hp-step{grid-template-columns:1fr;gap:.5rem}}
 </style>
 
@@ -133,64 +156,37 @@
   </div>
 </section>
 
-<section class="hp-sec cream">
+<section class="tw-sec">
   <div class="hp-wrap">
-    <span class="eyebrow">How It Works</span>
-    <h2>Four Steps, In Order</h2>
-    <p class="hp-lead">Each step has a clear output. You always know what we are doing, what we need from you, and what exists when the step is done.</p>
+    <div class="tw-head">
+      <span class="tw-eyebrow">Engagement Models</span>
+      <h2>Two Ways to Partner</h2>
+      <p>We take on real work, make it visible, and build AI-ready structures to hand it off.</p>
+    </div>
 
-    <div class="hp-step" id="founder-scale-session">
-      <div class="hp-num">01</div>
-      <div>
-        <h3>Founder Scale Session™</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>Walk through the decisions and work you are carrying and sort each one into Keep, Hand Off, or Take On.</p></div>
-          <div><h5>What you do</h5><p>Bring your real calendar, your inbox, and the decisions sitting open right now.</p></div>
-          <div><h5>What exists after</h5><p>A one-page Hand-Off Map: what you keep, what moves and to whom, and what we carry for you.</p></div>
-        </div>
-        <p style="margin-top:1.5rem"><a href="founder-scale-session.html" class="btn btn-navy">Learn About the Session</a></p>
+    <div class="tw-row" id="scaling">
+      <div class="tw-title"><span class="tw-num">01</span><h3>Hand-Off Work</h3></div>
+      <div class="tw-cols">
+        <div><h5>What we do</h5><p>Write down who decides what, define roles and accountability, set a weekly operating rhythm, and help you hire or onboard the leader who takes the work.</p></div>
+        <div><h5>What you do</h5><p>Make the calls only you can make, and introduce us to the people taking the work.</p></div>
+        <div><h5>What exists after</h5><p>Written hand-offs and AI-enabled workflows your team can run without you in the room.</p></div>
+      </div>
+      <div class="tw-box">
+        <div><h5>What we install</h5><p><span class="tw-ico tw-yes" aria-hidden="true"></span>Role clarity and decision rights, lightweight 90-day priority and weekly scorecard rhythm, hiring scorecards, 30-60-90 onboarding playbooks, and practical AI workflows where repetitive work slows your team down.</p></div>
+        <div><h5>What we do not do</h5><p><span class="tw-ico tw-no" aria-hidden="true"></span>We do not act as full-time recruiters sourcing resumes, and we do not stay on as permanent staff running your weekly meetings.</p></div>
       </div>
     </div>
 
-    <div class="hp-step" id="scaling">
-      <div class="hp-num">02</div>
-      <div>
-        <h3>Hand-Off Work</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>Write down who decides what, define roles and accountability, set a weekly operating rhythm, and help you hire or onboard the leader who takes the work.</p></div>
-          <div><h5>What you do</h5><p>Make the calls only you can make, and introduce us to the people taking the work.</p></div>
-          <div><h5>What exists after</h5><p>Written hand-offs your team can run without you in the room.</p></div>
-        </div>
-        <div class="hp-rows" style="margin-top:1.5rem">
-          <div><h5>What we install</h5><p>Role clarity and decision rights. A lightweight 90-day priority and weekly scorecard rhythm. Hiring scorecards, 30-60-90 onboarding playbooks, and practical AI workflows. Then we hand them off for your internal leads to run.</p></div>
-          <div><h5>What we do not do</h5><p>We do not act as full-time recruiters sourcing resumes, and we do not stay on as permanent staff running your weekly meetings. Our job is to build it and hand it off.</p></div>
-        </div>
+    <div class="tw-row" id="ongoing-partnership">
+      <div class="tw-title"><span class="tw-num">02</span><h3>Ongoing Partnership</h3></div>
+      <div class="tw-cols">
+        <div><h5>What we do</h5><p>We stay on as your advisor and thought partner, take on work that has no owner yet, and keep the weekly rhythm honest.</p></div>
+        <div><h5>What you do</h5><p>Bring us the decisions you should not make alone.</p></div>
+        <div><h5>What exists after</h5><p>A company that keeps moving while you are out, and someone senior to think with when it matters.</p></div>
       </div>
     </div>
 
-    <div class="hp-step" id="ongoing-partnership">
-      <div class="hp-num">03</div>
-      <div>
-        <h3>Ongoing Partnership</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>We stay on as your advisor and thought partner, take on work that has no owner yet, and keep the weekly rhythm honest.</p></div>
-          <div><h5>What you do</h5><p>Bring us the decisions you should not make alone.</p></div>
-          <div><h5>What exists after</h5><p>A company that keeps moving while you are out, and someone senior to think with when it matters.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hp-step">
-      <div class="hp-num">04</div>
-      <div>
-        <h3>AI Where It Carries Real Work</h3>
-        <div class="hp-rows">
-          <div><h5>What we do</h5><p>Once the structure exists, we look at the work that repeats and show where AI can do part of it, with a named person who owns the result.</p></div>
-          <div><h5>What you do</h5><p>Approve what gets handed to AI and what stays with a person.</p></div>
-          <div><h5>What exists after</h5><p>Less routine work landing on your team, and a clear owner for every piece of it. See <a href="ai-adoption-read.html" style="color:var(--gold)">The AI Adoption Read™</a>.</p></div>
-        </div>
-      </div>
-    </div>
+    <p class="tw-start" id="founder-scale-session">Every engagement starts with a <a href="founder-scale-session.html">Founder Scale Session™</a>.</p>
   </div>
 </section>
 
